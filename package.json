@@ -19,10 +19,6 @@
     "url": "https://gitlab.com/reactjs-atx/website/-/issues"
   },
   "homepage": "https://gitlab.com/reactjs-atx/website/-/tree/main#reactjs-atx",
-  "browserslist": [
-    "defaults",
-    "not IE 11"
-  ],
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8",
