@@ -1,0 +1,78 @@
+@layer base {
+  *,
+  *::after,
+  *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  body {
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    font-family: var(--font-poppins), "sans-serif";
+    font-style: normal;
+    font-size: var(--16px);
+    line-height: var(--24px);
+    color: var(--text-primary);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  fieldset {
+    padding: 0;
+    border: none;
+    border-width: 0;
+  }
+
+  ul,
+  ol,
+  dd {
+    list-style: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: var(--medium);
+    color: var(--text-primary);
+  }
+  h1 {
+    font-size: var(--64px);
+    line-height: 76px;
+  }
+  h2 {
+    font-size: var(--48px);
+    line-height: 72px;
+  }
+  h3 {
+    margin-top: 15px;
+    margin-bottom: 24px;
+    font-size: var(--32px);
+    line-height: 42px;
+  }
+  h4 {
+    font-size: var(--28px);
+    line-height: 42px;
+  }
+  h5 {
+    font-size: var(--26px);
+    line-height: 34px;
+  }
+  h6 {
+    font-size: var(--24px);
+    line-height: 36px;
+  }
+
+  p {
+    margin-top: 8px;
+    font-weight: var(--regular);
+  }
+}

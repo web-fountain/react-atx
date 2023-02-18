@@ -1,0 +1,76 @@
+.speakers {
+  min-height: 100vh;
+}
+
+.speakerContainer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  border: 4px solid var(--primary-color);
+  padding: 0.75rem;
+}
+
+.speakerFormInputs {
+  display: grid;
+  gap: 1rem;
+}
+
+.speakerFormInputs .formControl {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.speakerFormInputs .formControl input {
+  padding: 1rem 0.5rem;
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+.speakerFormInputs .formControl input::placeholder {
+  color: var(--text-primary);
+  opacity: 0.5;
+}
+
+.speakerFormChecks {
+  display: grid;
+  gap: 1rem;
+}
+
+.speakerFormCheck {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.speakerFormCheck label {
+  font-weight: 500;
+}
+
+.speakerFormCheck p {
+  grid-column: 2;
+}
+
+.speakerForm button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .speakerFormInputs {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+
+  .speakerFormChecks {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+
+  .speakerForm button {
+    height: 4rem;
+  }
+}

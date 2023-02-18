@@ -1,0 +1,49 @@
+.linkButton {
+  background-color: var(--primary-color);
+  height: 4rem;
+  width: 15rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 3;
+  color: var(--text-white);
+  position: absolute;
+}
+
+.svgWrapper {
+  height: 100%;
+  width: 100%;
+  display: block;
+  stroke: var(--primary-color);
+}
+
+.svgWrapper line {
+  stroke: var(--primary-color);
+}
+
+.linkButton:hover {
+  background-color: transparent;
+}
+
+.linkButton:hover .text {
+  color: var(--text-primary);
+}
+
+.linkButton:hover .arrow {
+  stroke: var(--text-primary);
+}
+
+.linkButton:hover .arrow path {
+  fill: var(--text-primary);
+  stroke: var(--text-primary);
+}

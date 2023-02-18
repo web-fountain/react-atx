@@ -1,0 +1,29 @@
+.toggleBtn {
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  background-color: var(--primary-color);
+  height: 32px;
+  width: 64px;
+  border-radius: 16;
+}
+
+.toggleBtn.toggle {
+  background-color: var(--text-primary);
+}
+
+.ball {
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color);
+  height: 100%;
+  width: 50%;
+  border-radius: 50%;
+  transition: transform linear 25ms;
+}
+
+.toggleBtn.toggle .ball {
+  transform: translateX(32px);
+  background-color: var(--primary-color);
+  border-color: var(--text-primary);
+}
