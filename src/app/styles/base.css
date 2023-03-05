@@ -10,7 +10,7 @@
   body {
     box-sizing: border-box;
     background-color: var(--background-color);
-    font-family: var(--font-poppins), "sans-serif";
+    font-family: 'Poppins Regular';
     font-style: normal;
     font-size: var(--16px);
     line-height: var(--24px);
@@ -27,20 +27,13 @@
     border-width: 0;
   }
 
-  ul,
-  ol,
-  dd {
+  ul, ol, dd {
     list-style: none;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-poppins);
-    font-style: normal;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins Bold';
+    font-style: bold;
     font-weight: var(--medium);
     color: var(--text-primary);
   }

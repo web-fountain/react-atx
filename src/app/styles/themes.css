@@ -1,7 +1,6 @@
 :root {
   --primary-color: #007aff;
-  --secondary-color: #c6e6ff;
-  /* --background-color: #e5e5e5; */
+  --secondary-color: #c6e6ff99;
   --background-color: rgb(255, 255, 255);
   --text-primary: #14273a;
   --text-secondary: ;
@@ -9,7 +8,7 @@
   --text-danger: ;
   --text-warning: ;
   --text-info: ;
-  --text-light: ;
+  --text-light: lightgrey;
   --text-dark: ;
   --text-muted: ;
   --text-white: white;
@@ -17,7 +16,7 @@
 
 [data-theme="dark"] {
   --primary-color: #2658cb;
-  --secondary-color: #acddff;
+  --secondary-color: #2A363F;
   --background-color: #0f0f0f;
   --text-primary: #ffffff;
   --text-secondary: #acddff;
@@ -25,7 +24,7 @@
   --text-danger: ;
   --text-warning: ;
   --text-info: ;
-  --text-light: ;
+  --text-light: lightgrey;
   --text-dark: ;
   --text-muted: ;
   --text-white: white;

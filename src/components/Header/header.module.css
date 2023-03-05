@@ -1,21 +1,17 @@
 .header {
+  background-color: var(--background-color);
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
-  --header-height: 112px;
+  --header-height: 10rem;
   height: var(--header-height);
-  background-color: var(--background-color);
-}
-
-.header img {
-  z-index: -1;
 }
 
 .container {
   height: 100%;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -25,8 +21,8 @@
 }
 
 .logo {
-  height: 32px;
-  width: 32px;
+  height: 3rem;
+  width: 3rem;
 }
 
 .mainNav {
@@ -45,29 +41,134 @@
   color: var(--text-color);
 }
 
-.signInLink {
-  background-color: var(--primary-color);
-  color: white !important;
-  padding: 0.5rem 1rem;
+.toggleBtn {
+  all: unset;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  background-color: var(--primary-color);
+  height: 2rem;
+  width: 4rem;
+  border-radius: 1rem;
 }
+
+.toggleBtn.toggle {
+  background-color: var(--text-primary);
+}
+
+.ball {
+  background-color: var(--background-color);
+  height: calc(2rem - 0.5rem);
+  width: calc(2rem - 0.5rem);
+  border-radius: 50%;
+  transform: translateX(0.25rem);
+  transition: transform linear 0.1s;
+}
+
+.toggleBtn.toggle .ball {
+  transform: translateX(2.25rem);
+  background-color: var(--primary-color);
+  border-color: var(--text-primary);
+}
+
+.signInBtn {
+  all: unset;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  cursor: pointer;
+  height: 3rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
+  transition: clip-path 0.3s;
+}
+
+.signInBtn:hover {
+  clip-path: polygon(5% 0%, 100% 0, 100% 0, 100% 75%, 95% 100%, 0 100%, 0 100%, 0% 25%);
+}
+
+.signInBtnInnerBox {
+  height: calc(100% - 0.25rem);
+  width: calc(100% - 0.25rem);
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  background-color: transparent;
+  clip-path: polygon(5% 0%, 100% 0, 100% 0, 100% 75%, 95% 100%, 0 100%, 0 100%, 0% 25%);
+  transition: background-color 0.3s;
+}
+
+.signInBtnInnerBox:hover {
+  background-color: var(--background-color);
+}
+
+.signInBtnText {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins Medium";
+  font-size: var(--24px);
+  line-height: 30px;
+  text-decoration: none;
+  color: var(--text-white);
+  transition: color 0.3s;
+}
+
+.arrow {
+  margin-left: 8px;
+  transform: rotate(-45deg);
+  stroke: var(--text-white);
+  fill: var(--text-white);
+  transition: all 0.3s;
+}
+
+.signInBtn:hover .signInBtnText {
+  color: var(--text-primary);
+}
+
+.signInBtn:hover .arrow {
+  fill: var(--text-primary);
+  stroke: var(--text-primary);
+}
+
 
 @media screen and (max-width: 600px) {
   .navList {
     display: none;
   }
-  .navList.open {
-    background-color: var(--background-color);
-    display: flex;
-    align-items: center;
+
+  .signInBtn {
+    display: none;
+  }
+
+  .toggleBtn {
+    display: none;
+  }
+
+  .header.mobileHeader {
+    height: 100vh;
+  }
+
+  .header.mobileHeader img {
+    display: none;
+  }
+
+  .header.mobileHeader .container {
     flex-direction: column;
     justify-content: space-around;
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    min-height: calc(100vh - var(--header-height));
+  }
+
+  .header.mobileHeader .navList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header.mobileHeader .toggleBtn {
+    display: flex;
+  }
+
+  .header.mobileHeader .signInBtn {
+    display: flex;
   }
 }

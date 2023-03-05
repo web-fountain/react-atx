@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.intro > p {
+  font-family: "Poppins Regular";
+  font-size: var(--24px);
+  line-height: 36px;
+  margin-bottom: 2rem;
+}
+
+.hostList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0.5rem;
+}
+
+.hostList li {
+  border-top: 3px solid var(--primary-color);
+  /* border-bottom: 3px solid var(--primary-color); */
+  padding: 0.5rem 0;
+}
+
+.hostList li  > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.position {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.position span {
+  color: var(--primary-color);
+}
