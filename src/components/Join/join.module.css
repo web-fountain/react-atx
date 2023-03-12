@@ -57,7 +57,7 @@
 }
 
 .input::placeholder {
-  color: var(--text-white);
+  color: gray;
 }
 
 .subscribeBtn {
@@ -71,6 +71,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.subscribeBtn:focus-visible {
+  border-radius: 0.25rem;
+  outline: 2px solid black;
 }
 
 @media screen and (min-width: 768px) {
@@ -158,5 +163,3 @@
   height: 500%;
   width: 1px;
 }
-
-

@@ -1,7 +1,19 @@
+"use client"
+import React from "react"
 import { ArrowRightIcon, BulbIcon, ReactMediumLogo, SlackIcon } from "../Icons"
 import styles from "./join.module.css"
 
 export default function Join() {
+  const [joinInput, setJoinInput] = React.useState("")
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    if (joinInput.trim() !== "") {
+      console.log(joinInput)
+      setJoinInput("")
+    }
+  }
   return (
     <section className={styles.container}>
       <div>
@@ -12,11 +24,13 @@ export default function Join() {
             <h2>Join the Community</h2>
             <p>Subscribe to monthly meetup events.</p>
           </div>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <input
               type="text"
               className={styles.input}
               placeholder="example@mail.com"
+              value={joinInput}
+              onChange={(e) => setJoinInput(e.target.value)}
             />
             <button type="submit" className={styles.subscribeBtn}>
               Subscribe <ArrowRightIcon className={styles.arrow} />
