@@ -10,12 +10,12 @@
   overflow: hidden;
 }
 
-.header img {
+/* .header img {
   position: absolute;
   top: 0;
   width: 100vw;
   height: 10rem;
-}
+} */
 
 .container {
   height: 100%;

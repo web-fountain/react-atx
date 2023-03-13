@@ -17,17 +17,20 @@
 
 .socialMedia {
   display: flex;
-  justify-content: space-around;
-  width: 200px;
+  justify-content: space-evenly;
+  min-width: 200px;
 }
 
 .policy {
-  display: flex;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
 }
 
 .policy a {
   color: var(--text-primary);
+  font-size: clamp(0.75rem, 3vw, 1rem);
+  text-align: center;
 }
 
 .rights {

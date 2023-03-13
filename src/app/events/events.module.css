@@ -6,13 +6,13 @@
 }
 
 .dates {
-  background-color: rgba(24, 34, 41, 1);
+  background-color: var(--secondary-color);
+  display: none;
 }
 
 .monthsList,
 .yearsList {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1rem;
   padding: 1rem;
 }
@@ -20,6 +20,145 @@
 .monthBtn,
 .yearBtn {
   all: unset;
-  color: var(--text-white);
+  color: var(--text-primary);
   cursor: pointer;
+}
+
+.eventSec {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hourglassBtn {
+  all: unset;
+  background-color: var(--primary-color);
+  line-height: 1;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.eventServices {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  height: 4rem;
+}
+
+.eventServices > a {
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.arrow {
+  transform: rotate(-45deg);
+  margin-left: 0.25rem;
+  width: clamp(0.5rem, 4vw, 2rem);
+}
+
+.arrow path {
+  stroke: var(--text-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .eventServices {
+    height: 8rem;
+  }
+}
+
+.yearListContainer > h3 {
+  font-family: "Poppins Medium";
+  font-size: var(--24px);
+}
+
+.eventList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1rem;
+}
+
+.eventList li {
+  border: 1px solid var(--primary-color);
+  display: flex;
+  height: 12rem;
+  width: 100%;
+}
+
+.imgContainer{
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgWrapper > img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.date {
+  position: absolute;
+  background-color: var(--primary-color);
+  top: 0;
+  right: 0;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: var(--24px);
+}
+
+.warning {
+  color: var(--text-warning);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.warning > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.eventInfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.time span {
+  color: var(--text-light);
+}
+
+.attenders {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }

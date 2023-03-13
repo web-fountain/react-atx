@@ -5,10 +5,10 @@
   --text-primary: #14273a;
   --text-secondary: ;
   --text-success: ;
-  --text-danger: ;
-  --text-warning: ;
+  --text-danger: #E76E6E;
+  --text-warning: #E76E6E;
   --text-info: ;
-  --text-light: lightgrey;
+  --text-light: rgba(181, 183, 185, 1);
   --text-dark: ;
   --text-muted: ;
   --text-white: white;
@@ -21,10 +21,10 @@
   --text-primary: #ffffff;
   --text-secondary: #acddff;
   --text-success: ;
-  --text-danger: ;
-  --text-warning: ;
+  --text-danger: #E76E6E;
+  --text-warning: #E76E6E;
   --text-info: ;
-  --text-light: lightgrey;
+  --text-light: rgba(181, 183, 185, 1);
   --text-dark: ;
   --text-muted: ;
   --text-white: white;

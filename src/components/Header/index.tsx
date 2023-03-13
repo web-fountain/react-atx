@@ -31,6 +31,7 @@ export default function Header() {
         src={darkMode ? headerImgDark : headerImgLight}
         alt="header image"
         priority={true}
+        fill={true}
       />
       {/* Header container */}
       <div className={styles.container}>

@@ -7,9 +7,6 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p className={styles.rights}>
-          ReactJS ATX &copy; {footerYear}. All Rights Reserved.
-        </p>
         <div className={styles.socialMedia}>
           <TwitterIcon />
           <LinkedInIcon />
@@ -20,6 +17,9 @@ export default function Footer() {
           <Link href="/">Cookie Policy</Link>
           <Link href="/">Terms of Service</Link>
         </div>
+        <p className={styles.rights}>
+          ReactJS ATX &copy; {footerYear}. All Rights Reserved.
+        </p>
       </div>
     </footer>
   )
