@@ -44,7 +44,7 @@ export default function Speakers() {
     console.log(speakerForm)
   }
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="speakers">
       <div className={styles.top}>
         <h2>Speakers</h2>
         <p>Interested in speaking at our next event?</p>

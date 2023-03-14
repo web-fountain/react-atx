@@ -1,9 +1,9 @@
-import styles from "../../app/events/events.module.css"
+import styles from "./eventYears.module.css"
 
-export default function EventDates() {
+export default function EventDates({ showYears }: { showYears: boolean }) {
   const currentYear = new Date().getFullYear()
   return (
-    <aside className={styles.dates}>
+    <aside className={`${styles.years} ${showYears && styles.showYears}`}>
       <h3>{currentYear}</h3>
       <ul className={styles.monthsList}>
         <li>

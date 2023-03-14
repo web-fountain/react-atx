@@ -29,7 +29,9 @@ export default function AboutUs() {
       </div>
       <ul className={styles.hostList}>
         <li>
-          <Image src={hostImg} alt="host" />
+          <div className={styles.imgWrapper}>
+            <Image src={hostImg} alt="host" />
+          </div>
           <h4 className={styles.position}>
             Position: <span>HOST</span>
           </h4>
@@ -40,7 +42,9 @@ export default function AboutUs() {
           </p>
         </li>
         <li>
-          <Image src={hostImg} alt="host" />
+          <div className={styles.imgWrapper}>
+            <Image src={hostImg} alt="host" />
+          </div>
           <h4 className={styles.position}>
             Position: <span>HOST</span>
           </h4>
@@ -51,7 +55,9 @@ export default function AboutUs() {
           </p>
         </li>
         <li>
-          <Image src={hostImg} alt="host" />
+          <div className={styles.imgWrapper}>
+            <Image src={hostImg} alt="host" />
+          </div>
           <h4 className={styles.position}>
             Position: <span>HOST</span>
           </h4>

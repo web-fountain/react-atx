@@ -1,0 +1,41 @@
+.years {
+  background-color: var(--secondary-color);
+  display: none;
+  padding: 0 1rem;
+}
+
+.years.showYears {
+  display: block;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.monthsList,
+.yearsList {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.monthBtn,
+.yearBtn {
+  all: unset;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.yearListContainer > h3 {
+  font-family: "Poppins Medium";
+  font-size: var(--24px);
+}
+
+@media screen and (min-width: 768px) {
+  .years {
+    display: block;
+    padding: 0 1rem;
+  }
+}

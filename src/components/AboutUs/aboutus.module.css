@@ -14,17 +14,16 @@
 
 .hostList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 0.5rem;
 }
 
 .hostList li {
   border-top: 3px solid var(--primary-color);
-  /* border-bottom: 3px solid var(--primary-color); */
   padding: 0.5rem 0;
 }
 
-.hostList li  > img {
+.imgWrapper > img {
   width: 100%;
   aspect-ratio: 1 / 1;
 }

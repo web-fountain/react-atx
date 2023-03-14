@@ -53,7 +53,7 @@ export default function Partnerships() {
   }
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="partnership">
       <h2>Partnership</h2>
       <h3>Interested in sponsoring?</h3>
       <form onSubmit={handleSubmit}>
