@@ -6,6 +6,10 @@ import Speakers from "@/components/Speakers"
 import Partnerships from "@/components/Partnerships"
 import AboutUs from "@/components/AboutUs"
 
+export const metadata = {
+  title: "React ATX | Home",
+}
+
 export default function Home() {
   return (
     <main className="main-layout">

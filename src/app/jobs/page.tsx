@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "React ATX | Jobs",
+}
+
 export default function Jobs() {
   return (
     <main className="main-layout">
