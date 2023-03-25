@@ -16,5 +16,5 @@ export default function LinkedInIcon() {
         fill="var(--text-primary)"
       />
     </svg>
-  )
+  );
 }

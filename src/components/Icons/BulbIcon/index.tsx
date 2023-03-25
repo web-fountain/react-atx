@@ -14,5 +14,5 @@ export default function BulbIcon() {
         fill="white"
       />
     </svg>
-  )
+  );
 }

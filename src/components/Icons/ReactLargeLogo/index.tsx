@@ -1,4 +1,5 @@
-import styles from "./reactLargeLogo.module.css"
+import styles from './reactLargeLogo.module.css';
+
 
 export default function ReactLargeLogo() {
   return (
@@ -90,5 +91,5 @@ export default function ReactLargeLogo() {
         </defs>
       </svg>
     </div>
-  )
+  );
 }

@@ -44,5 +44,5 @@ export default function OtherIcon() {
         strokeWidth="4"
       />
     </svg>
-  )
+  );
 }

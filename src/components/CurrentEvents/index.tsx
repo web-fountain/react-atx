@@ -1,8 +1,9 @@
-import Image from "next/image"
-import styles from "./currentEvents.module.css"
-import { balloons } from "@/assets/images"
-import ExclamationIcon from "../Icons/ExclamationIcon"
-import { AvatarIcon, ClockIcon } from "../Icons"
+import Image from 'next/image';
+import styles from './currentEvents.module.css';
+import { balloons } from '@/assets/images';
+import ExclamationIcon from '../Icons/ExclamationIcon';
+import { AvatarIcon, ClockIcon } from '../Icons';
+
 
 export default function CurrentEvents() {
   return (
@@ -110,5 +111,5 @@ export default function CurrentEvents() {
         </li>
       </ul>
     </div>
-  )
+  );
 }

@@ -1,15 +1,16 @@
-"use client"
-import styles from "../../app/events/events.module.css"
-import EventsHeading from "../EventsHeading"
-import EventYears from "../EventYears"
-import { SponsoringIcon, ArrowRightIcon, SpeakersSmallIcon } from "../Icons"
-import Link from "next/link"
-import React from "react"
-import CurrentEvents from "../CurrentEvents"
-import PastEvents from "../PastEvents"
+'use client';
+import styles from '../../app/events/events.module.css';
+import EventsHeading from '../EventsHeading';
+import EventYears from '../EventYears';
+import { SponsoringIcon, ArrowRightIcon, SpeakersSmallIcon } from '../Icons';
+import Link from 'next/link';
+import React from 'react';
+import CurrentEvents from '../CurrentEvents';
+import PastEvents from '../PastEvents';
+
 
 export default function EventLayout() {
-  const [showYears, setShowYears] = React.useState<boolean>(false)
+  const [showYears, setShowYears] = React.useState<boolean>(false);
   return (
     <div className={styles.eventLayout}>
       <EventYears showYears={showYears} />
@@ -38,5 +39,5 @@ export default function EventLayout() {
         <PastEvents />
       </div>
     </div>
-  )
+  );
 }

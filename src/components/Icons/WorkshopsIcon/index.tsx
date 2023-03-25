@@ -71,5 +71,5 @@ export default function WorkshopsIcon() {
         strokeLinecap="round"
       />
     </svg>
-  )
+  );
 }

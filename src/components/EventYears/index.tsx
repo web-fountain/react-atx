@@ -1,7 +1,8 @@
-import styles from "./eventYears.module.css"
+import styles from './eventYears.module.css';
+
 
 export default function EventDates({ showYears }: { showYears: boolean }) {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   return (
     <aside className={`${styles.years} ${showYears && styles.showYears}`}>
       <h3>{currentYear}</h3>
@@ -86,5 +87,5 @@ export default function EventDates({ showYears }: { showYears: boolean }) {
         </li>
       </ul>
     </aside>
-  )
+  );
 }

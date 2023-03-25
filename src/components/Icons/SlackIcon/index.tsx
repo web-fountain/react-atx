@@ -47,5 +47,5 @@ export default function SlackIcon() {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }

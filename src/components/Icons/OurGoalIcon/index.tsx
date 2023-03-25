@@ -1,6 +1,7 @@
-import React from "react"
+import React from 'react';
 
-export default function OurGoal({ stroke = "var(--text-primary" }) {
+
+export default function OurGoal({ stroke = 'var(--text-primary' }) {
   return (
     <svg
       width="110"
@@ -77,5 +78,5 @@ export default function OurGoal({ stroke = "var(--text-primary" }) {
         strokeDasharray="8 8"
       />
     </svg>
-  )
+  );
 }

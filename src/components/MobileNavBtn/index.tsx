@@ -1,5 +1,6 @@
-import React from "react"
-import styles from "./mobileNavBtn.module.css"
+import React from 'react';
+import styles from './mobileNavBtn.module.css';
+
 
 interface Props {
   showNav: boolean
@@ -43,5 +44,5 @@ export default function MobileNavBtn({ showNav, setShowNav }: Props) {
         />
       </svg>
     </button>
-  )
+  );
 }

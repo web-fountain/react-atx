@@ -12,5 +12,5 @@ export default function TwitterIcon() {
         fill="var(--text-primary)"
       />
     </svg>
-  )
+  );
 }

@@ -1,5 +1,6 @@
-import styles from "./hero.module.css"
-import { ArrowRightIcon, ReactLargeLogo } from "../Icons"
+import styles from './hero.module.css';
+import { ArrowRightIcon, ReactLargeLogo } from '../Icons';
+
 
 export default function Hero() {
   return (
@@ -26,5 +27,5 @@ export default function Hero() {
       </div>
       <ReactLargeLogo />
     </section>
-  )
+  );
 }

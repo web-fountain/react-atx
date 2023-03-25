@@ -1,6 +1,7 @@
-import { hostImg } from "@/assets/images"
-import Image from "next/image"
-import styles from "./aboutus.module.css"
+import { hostImg } from '@/assets/images';
+import Image from 'next/image';
+import styles from './aboutus.module.css';
+
 
 export default function AboutUs() {
   return (
@@ -69,5 +70,5 @@ export default function AboutUs() {
         </li>
       </ul>
     </section>
-  )
+  );
 }

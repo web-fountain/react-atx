@@ -13,5 +13,5 @@ export default function HourGlassIcon() {
         strokeWidth="2"
       />
     </svg>
-  )
+  );
 }

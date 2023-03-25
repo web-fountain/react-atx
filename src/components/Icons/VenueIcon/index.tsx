@@ -14,5 +14,5 @@ export default function VenueIcon() {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }

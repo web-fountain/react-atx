@@ -1,28 +1,29 @@
-"use client"
-import Link from "next/link"
-import Image from "next/image"
-import React from "react"
-import styles from "./header.module.css"
-import { headerImgDark, headerImgLight } from "../../assets/images"
-import { ArrowRightIcon, ReactSmallLogo } from "../Icons"
-import MobileNavBtn from "../MobileNavBtn"
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import React from 'react';
+import styles from './header.module.css';
+import { headerImgDark, headerImgLight } from '../../assets/images';
+import { ArrowRightIcon, ReactSmallLogo } from '../Icons';
+import MobileNavBtn from '../MobileNavBtn';
+
 
 export default function Header() {
-  const [showNav, setShowNav] = React.useState(false)
-  const [darkMode, setDarkMode] = React.useState(false)
+  const [showNav, setShowNav] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(false);
 
   React.useEffect(() => {
     if (darkMode) {
-      document.documentElement.setAttribute("data-theme", "dark")
-      localStorage.setItem("data-theme", "dark")
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('data-theme', 'dark');
     } else {
-      document.documentElement.setAttribute("data-theme", "light")
-      localStorage.setItem("data-theme", "light")
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('data-theme', 'light');
     }
-  }, [darkMode])
+  }, [darkMode]);
 
   function toggleTheme() {
-    setDarkMode((prev) => !prev)
+    setDarkMode((prev) => !prev);
   }
   return (
     <header className={`${styles.header} ${showNav && styles.mobileHeader}`}>
@@ -87,5 +88,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

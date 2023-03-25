@@ -1,6 +1,7 @@
-import CommunityItem from "../CommunityItem"
-import { OurGoalIcon, WhatWeDoIcon, WhatWeUseIcon } from "../Icons"
-import styles from "./community.module.css"
+import CommunityItem from '../CommunityItem';
+import { OurGoalIcon, WhatWeDoIcon, WhatWeUseIcon } from '../Icons';
+import styles from './community.module.css';
+
 
 export default function Community() {
   return (
@@ -48,5 +49,5 @@ export default function Community() {
         </CommunityItem>
       </ul>
     </section>
-  )
+  );
 }

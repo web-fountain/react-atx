@@ -39,5 +39,5 @@ export default function SpeakersIcon() {
         strokeLinecap="round"
       />
     </svg>
-  )
+  );
 }

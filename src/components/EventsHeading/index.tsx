@@ -1,6 +1,7 @@
-import styles from "./eventsHeading.module.css"
-import { HourGlassIcon } from "../Icons"
-import React from "react"
+import styles from './eventsHeading.module.css';
+import { HourGlassIcon } from '../Icons';
+import React from 'react';
+
 
 interface Props {
   setShowYears: React.Dispatch<React.SetStateAction<boolean>>
@@ -18,5 +19,5 @@ export default function EventsHeading({ setShowYears }: Props) {
         <HourGlassIcon />
       </button>
     </div>
-  )
+  );
 }

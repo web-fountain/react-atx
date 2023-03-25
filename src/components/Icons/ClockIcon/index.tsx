@@ -14,5 +14,5 @@ export default function ClockIcon() {
         fill="var(--text-primary)"
       />
     </svg>
-  )
+  );
 }

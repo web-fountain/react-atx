@@ -1,5 +1,5 @@
-"use client"
-import { useState } from "react"
+'use client';
+import { useState } from 'react';
 import {
   VenueIcon,
   FoodIcon,
@@ -7,9 +7,10 @@ import {
   SpeakersIcon,
   WorkshopsIcon,
   OtherIcon,
-  ArrowRightIcon,
-} from "../Icons"
-import styles from "./partnerships.module.css"
+  ArrowRightIcon
+} from '../Icons';
+import styles from './partnerships.module.css';
+
 
 interface FormDataTypes {
   name: string
@@ -26,30 +27,30 @@ interface FormDataTypes {
 
 export default function Partnerships() {
   const [formData, setFormData] = useState<FormDataTypes>({
-    name: "",
-    jobTitle: "",
-    email: "",
-    company: "",
+    name: '',
+    jobTitle: '',
+    email: '',
+    company: '',
     venue: false,
     food: false,
     drinks: false,
     speakers: false,
     workshops: false,
-    other: false,
-  })
+    other: false
+  });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const { name, value, type, checked } = e.target
+    const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === "checkbox" ? checked : value,
-    }))
+      [name]: type === 'checkbox' ? checked : value
+    }));
   }
 
   function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
+    e.preventDefault();
 
-    console.log(formData)
+    console.log(formData);
   }
 
   return (
@@ -194,5 +195,5 @@ export default function Partnerships() {
         </button>
       </form>
     </section>
-  )
+  );
 }

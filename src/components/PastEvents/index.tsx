@@ -1,8 +1,9 @@
-import { balloons } from "@/assets/images"
-import Image from "next/image"
-import { AvatarIcon, ClockIcon } from "../Icons"
-import ExclamationIcon from "../Icons/ExclamationIcon"
-import styles from "./pastEvents.module.css"
+import { balloons } from '@/assets/images';
+import Image from 'next/image';
+import { AvatarIcon, ClockIcon } from '../Icons';
+import ExclamationIcon from '../Icons/ExclamationIcon';
+import styles from './pastEvents.module.css';
+
 
 export default function PastEvents() {
   return (
@@ -110,5 +111,5 @@ export default function PastEvents() {
         </li>
       </ul>
     </div>
-  )
+  );
 }

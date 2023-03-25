@@ -1,17 +1,18 @@
-"use client"
-import React from "react"
-import { ArrowRightIcon, BulbIcon, ReactMediumLogo, SlackIcon } from "../Icons"
-import styles from "./join.module.css"
+'use client';
+import React from 'react';
+import { ArrowRightIcon, BulbIcon, ReactMediumLogo, SlackIcon } from '../Icons';
+import styles from './join.module.css';
+
 
 export default function Join() {
-  const [joinInput, setJoinInput] = React.useState("")
+  const [joinInput, setJoinInput] = React.useState('');
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (joinInput.trim() !== "") {
-      console.log(joinInput)
-      setJoinInput("")
+    if (joinInput.trim() !== '') {
+      console.log(joinInput);
+      setJoinInput('');
     }
   }
   return (
@@ -61,5 +62,5 @@ export default function Join() {
         </div>
       </div>
     </section>
-  )
+  );
 }

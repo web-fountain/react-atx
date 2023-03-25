@@ -1,9 +1,10 @@
-import styles from "./footer.module.css"
-import Link from "next/link"
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from "../Icons"
+import styles from './footer.module.css';
+import Link from 'next/link';
+import { GitHubIcon, LinkedInIcon, TwitterIcon } from '../Icons';
+
 
 export default function Footer() {
-  const footerYear = new Date().getFullYear()
+  const footerYear = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -22,5 +23,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }

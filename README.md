@@ -1,3 +1,24 @@
+## TODO:
+
+a. update ESLINT to provide a consistent code base
+b. 
+
+
+## Conventions
+
+### Best Practices
+- use single quotes
+- use semicolons
+- two spaces for indentation
+- no comma dangles
+
+### Imports/Exports
+- two newlines after imports
+- exports always go at the bottom
+- group exports whenever possible
+- avoid relative packages whenever possible
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -14,5 +14,5 @@ export default function ExclamationIcon() {
         fill="red"
       />
     </svg>
-  )
+  );
 }

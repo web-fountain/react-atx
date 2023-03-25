@@ -1,4 +1,4 @@
-function ReactSmallLogo({ className = "", width = "100%", height = "100%" }) {
+function ReactSmallLogo({ className = '', width = '100%', height = '100%' }) {
   return (
     <svg
       className={className}
@@ -16,7 +16,7 @@ function ReactSmallLogo({ className = "", width = "100%", height = "100%" }) {
         fill="var(--primary-color)"
       ></path>
     </svg>
-  )
+  );
 }
 
-export default ReactSmallLogo
+export default ReactSmallLogo;

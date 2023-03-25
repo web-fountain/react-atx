@@ -1,4 +1,4 @@
-export default function ReactMediumLogo({ className = "" }) {
+export default function ReactMediumLogo({ className = '' }) {
   return (
     <svg
       width="316"
@@ -17,5 +17,5 @@ export default function ReactMediumLogo({ className = "" }) {
         fill="#288FFF"
       />
     </svg>
-  )
+  );
 }

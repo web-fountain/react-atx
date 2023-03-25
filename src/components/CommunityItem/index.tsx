@@ -1,6 +1,7 @@
-"use client"
-import React, { useState } from "react"
-import styles from "../Community/community.module.css"
+'use client';
+import React, { useState } from 'react';
+import styles from '../Community/community.module.css';
+
 
 interface Props {
   children: React.ReactNode
@@ -9,7 +10,7 @@ interface Props {
 }
 
 export default function CommunityItem({ children, title, content }: Props) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <li className={`${styles.item} ${open && styles.open}`}>
@@ -21,8 +22,8 @@ export default function CommunityItem({ children, title, content }: Props) {
         onClick={() => setOpen((prev) => !prev)}
         className={styles.btn}
       >
-        Show {open ? "less" : "more"}
+        Show {open ? 'less' : 'more'}
       </button>
     </li>
-  )
+  );
 }

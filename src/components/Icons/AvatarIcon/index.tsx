@@ -47,5 +47,5 @@ export default function AvatarIcon() {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }

@@ -1,6 +1,7 @@
-import React from "react"
+import React from 'react';
 
-export default function WhatWeUse({ stroke = "var(--text-primary" }) {
+
+export default function WhatWeUse({ stroke = 'var(--text-primary' }) {
   return (
     <svg
       width="110"
@@ -32,5 +33,5 @@ export default function WhatWeUse({ stroke = "var(--text-primary" }) {
       <circle cx="87.9727" cy="17.5" r="2.5" fill={stroke} />
       <circle cx="15.9727" cy="49.5" r="2.5" fill={stroke} />
     </svg>
-  )
+  );
 }
