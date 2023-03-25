@@ -164,5 +164,4 @@ Temporary Items
 *.sketch
 
 # git comments & notes
-zComMsg.md
-zNotes.md
+z*.md
