@@ -1,15 +1,13 @@
 'use client';
+
 import { useState } from 'react';
+
 import {
-  VenueIcon,
-  FoodIcon,
-  DrinksIcon,
-  SpeakersIcon,
-  WorkshopsIcon,
-  OtherIcon,
+  VenueIcon, FoodIcon, DrinksIcon,
+  SpeakersIcon, WorkshopsIcon, OtherIcon,
   ArrowRightIcon
-} from '../../../components/Icons';
-import styles from './partnerships.module.css';
+} from '@Icons';
+import styles from './styles.module.css';
 
 
 interface FormDataTypes {
@@ -25,7 +23,7 @@ interface FormDataTypes {
   other: boolean
 }
 
-export default function Partnerships() {
+function Partnerships() {
   const [formData, setFormData] = useState<FormDataTypes>({
     name: '',
     jobTitle: '',
@@ -39,19 +37,19 @@ export default function Partnerships() {
     other: false
   });
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: type === 'checkbox' ? checked : value
     }));
-  }
+  };
 
-  function handleSubmit(e: React.FormEvent) {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     console.log(formData);
-  }
+  };
 
   return (
     <section className={styles.container} id="partnership">
@@ -197,3 +195,6 @@ export default function Partnerships() {
     </section>
   );
 }
+
+
+export default Partnerships;

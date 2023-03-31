@@ -1,8 +1,8 @@
-import styles from './hero.module.css';
-import { ArrowRightIcon, ReactLargeLogo } from '../../../components/Icons';
+import { ArrowRightIcon, ReactLargeLogo } from '@Icons';
+import styles from './styles.module.css';
 
 
-export default function Hero() {
+function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.intro}>
@@ -29,3 +29,6 @@ export default function Hero() {
     </section>
   );
 }
+
+
+export default Hero;

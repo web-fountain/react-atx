@@ -1,9 +1,9 @@
-import CommunityItem from '../CommunityItem';
-import { OurGoalIcon, WhatWeDoIcon, WhatWeUseIcon } from '../../../components/Icons';
-import styles from './community.module.css';
+import { OurGoalIcon, WhatWeDoIcon, WhatWeUseIcon } from '@Icons';
+import CommunityItem from './CommunityItem';
+import styles from './styles.module.css';
 
 
-export default function Community() {
+function Community() {
   return (
     <section className={styles.container}>
       <div className={styles.intro}>
@@ -51,3 +51,6 @@ export default function Community() {
     </section>
   );
 }
+
+
+export default Community;

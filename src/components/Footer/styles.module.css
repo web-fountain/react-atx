@@ -1,0 +1,38 @@
+.footer {
+  color: var(--text-primary);
+  padding: 1rem 0.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 200px;
+}
+
+.policy {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.policy a {
+  color: var(--text-primary);
+  font-size: clamp(0.75rem, 3vw, 1rem);
+  text-align: center;
+}
+
+.rights {
+  margin: 0 !important;
+}

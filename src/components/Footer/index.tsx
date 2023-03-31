@@ -1,10 +1,9 @@
-import styles from './footer.module.css';
+import styles from './styles.module.css';
 import Link from 'next/link';
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from '../Icons';
+import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@Icons';
 
 
-export default function Footer() {
-  const footerYear = new Date().getFullYear();
+function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -19,9 +18,12 @@ export default function Footer() {
           <Link href="/">Terms of Service</Link>
         </div>
         <p className={styles.rights}>
-          ReactJS ATX &copy; {footerYear}. All Rights Reserved.
+          ReactJS ATX &copy; 2023. All Rights Reserved.
         </p>
       </div>
     </footer>
   );
 }
+
+
+export default Footer;

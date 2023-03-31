@@ -1,6 +1,7 @@
-import { hostImg } from '@Images';
 import Image from 'next/image';
-import styles from './aboutus.module.css';
+
+import { hostImg } from '@Images';
+import styles from './styles.module.css';
 
 
 function AboutUs() {

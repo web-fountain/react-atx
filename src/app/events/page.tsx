@@ -1,12 +1,12 @@
 import styles from './events.module.css';
-import EventLayout from '@/components/EventLayout';
+import EventLayout from '@/app/events/EventLayout';
 
 
-export const metadata = {
+const metadata = {
   title: 'React ATX | Events'
 };
 
-export default function Events() {
+function Events() {
   return (
     <main className="main-layout">
       <section className={styles.container}>
@@ -15,3 +15,7 @@ export default function Events() {
     </main>
   );
 }
+
+
+export { metadata };
+export default Events;

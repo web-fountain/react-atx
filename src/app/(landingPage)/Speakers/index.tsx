@@ -1,7 +1,9 @@
 'use client';
+
 import React from 'react';
-import { ArrowRightIcon } from '../../../components/Icons';
-import styles from './speakers.module.css';
+
+import { ArrowRightIcon } from '@Icons';
+import styles from './styles.module.css';
 
 
 interface SpeakerFormTypes {
@@ -17,7 +19,7 @@ interface SpeakerFormTypes {
   lightningTalk: boolean
 }
 
-export default function Speakers() {
+function Speakers() {
   const [speakerForm, setSpeakerForm] = React.useState<SpeakerFormTypes>({
     name: '',
     jobTitle: '',
@@ -31,19 +33,19 @@ export default function Speakers() {
     lightningTalk: false
   });
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSpeakerForm((prev) => ({
       ...prev,
       [e.target.name]:
         e.target.type === 'checkbox' ? e.target.checked : e.target.value
     }));
-  }
+  };
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(e);
+  };
 
-    console.log(speakerForm);
-  }
   return (
     <section className={styles.container} id="speakers">
       <div className={styles.top}>
@@ -185,3 +187,6 @@ export default function Speakers() {
     </section>
   );
 }
+
+
+export default Speakers;

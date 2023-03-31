@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState } from 'react';
 import styles from '../Community/community.module.css';
 
@@ -9,7 +10,7 @@ interface Props {
   content: string
 }
 
-export default function CommunityItem({ children, title, content }: Props) {
+function CommunityItem({ children, title, content }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -27,3 +28,6 @@ export default function CommunityItem({ children, title, content }: Props) {
     </li>
   );
 }
+
+
+export default CommunityItem;
