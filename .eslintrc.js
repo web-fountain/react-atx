@@ -6,7 +6,7 @@ const ERROR = 2;    // ERROR or 2 - turn the rule on as an error (exit code will
 module.exports = {
   extends: 'next/core-web-vitals',
   rules: {
-    // best practice
+    // convention
     'comma-dangle': [ERROR, {
       arrays: 'never',
       objects: 'never',

@@ -25,9 +25,13 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"],
+      "@Components/*": ["./src/components/*"],
+      "@Icons/*": ["./src/components/Icons/*"],
+      "@Icons": ["./src/components/Icons"],
+      "@Images/*": ["./src/assets/images/*"],
+      "@Images": ["./src/assets/images"],
+      "@Styles/*": ["./src/assets/styles/*"]
     }
   },
   "include": [
