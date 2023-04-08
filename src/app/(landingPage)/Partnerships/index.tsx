@@ -3,9 +3,9 @@
 import { useState } from 'react';
 
 import {
-  VenueIcon, FoodIcon, DrinksIcon,
-  SpeakersIcon, WorkshopsIcon, OtherIcon,
-  ArrowRightIcon
+  Venue, Food, Drinks,
+  Speakers, Workshops, Other,
+  ArrowRight
 } from '@Icons';
 import styles from './styles.module.css';
 
@@ -113,7 +113,7 @@ function Partnerships() {
               checked={formData.venue}
             />
             <label htmlFor="venue" className={styles.checkboxLabel}>
-              <VenueIcon />
+              <Venue />
               Venue
             </label>
           </li>
@@ -126,7 +126,7 @@ function Partnerships() {
               checked={formData.food}
             />
             <label htmlFor="food" className={styles.checkboxLabel}>
-              <FoodIcon />
+              <Food />
               Food
             </label>
           </li>
@@ -139,7 +139,7 @@ function Partnerships() {
               checked={formData.drinks}
             />
             <label htmlFor="drinks" className={styles.checkboxLabel}>
-              <DrinksIcon />
+              <Drinks />
               Drinks
             </label>
           </li>
@@ -152,7 +152,7 @@ function Partnerships() {
               checked={formData.speakers}
             />
             <label htmlFor="speakers" className={styles.checkboxLabel}>
-              <SpeakersIcon />
+              <Speakers />
               Speakers
             </label>
           </li>
@@ -165,7 +165,7 @@ function Partnerships() {
               checked={formData.workshops}
             />
             <label htmlFor="workshops" className={styles.checkboxLabel}>
-              <WorkshopsIcon />
+              <Workshops />
               Workshops
             </label>
           </li>
@@ -178,7 +178,7 @@ function Partnerships() {
               checked={formData.other}
             />
             <label htmlFor="other" className={styles.checkboxLabel}>
-              <OtherIcon />
+              <Other />
               Other
             </label>
           </li>
@@ -187,7 +187,7 @@ function Partnerships() {
           <div className={styles.submitBtnInnerBox}>
             <span className={styles.submitBtnText}>
               Submit
-              <ArrowRightIcon className={styles.arrow} />
+              <ArrowRight className={styles.arrow} />
             </span>
           </div>
         </button>

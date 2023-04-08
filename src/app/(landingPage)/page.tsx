@@ -18,9 +18,9 @@ function Home() {
       <Hero />
       <Community />
       <Join />
-      <Speakers />
-      <Partnerships />
-      <AboutUs />
+      {/* <Speakers /> */}
+      {/* <Partnerships /> */}
+      {/* <AboutUs /> */}
     </main>
   );
 }

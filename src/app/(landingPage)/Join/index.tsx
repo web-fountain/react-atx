@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { ArrowRightIcon, BulbIcon, ReactMediumLogo, SlackIcon } from '@Icons';
+import Icons from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -13,7 +13,6 @@ function Join() {
     e.preventDefault();
 
     if (joinInput.trim() !== '') {
-      console.log(joinInput);
       setJoinInput('');
     }
   };
@@ -23,7 +22,7 @@ function Join() {
       <div>
         <div className={styles.top} />
         <div className={styles.main}>
-          <ReactMediumLogo className={styles.reactCornerSvg} />
+          <Icons name='react-logo-medium' className={styles.reactCornerSvg} />
           <div>
             <h2>Join the Community</h2>
             <p>Subscribe to monthly meetup events.</p>
@@ -37,14 +36,14 @@ function Join() {
               onChange={(e) => setJoinInput(e.target.value)}
             />
             <button type="submit" className={styles.subscribeBtn}>
-              Subscribe <ArrowRightIcon className={styles.arrow} />
+              Subscribe <Icons name='arrow-right' className={styles.arrow} />
             </button>
           </form>
         </div>
         <div className={styles.bottom} />
         <div className={styles.reactQuestions}>
           <div className={styles.bulb}>
-            <BulbIcon />
+            <Icons name='lightbulb' />
           </div>
           <div className={styles.text}>
             <p>
@@ -60,7 +59,7 @@ function Join() {
             >
               Open Slack
             </a>
-            <SlackIcon />
+            <Icons name='discord-white' />
           </div>
         </div>
       </div>

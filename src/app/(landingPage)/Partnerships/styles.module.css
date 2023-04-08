@@ -105,7 +105,7 @@
 
 .checkboxWrapper > input:hover + .checkboxLabel,
 .checkboxWrapper > input:checked + .checkboxLabel {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
 }
 
 @media screen and (max-width: 400px) {
@@ -200,7 +200,7 @@
 }
 
 .submitBtn:hover .submitBtnInnerBox {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
 }
 
 .submitBtn:hover .submitBtnText {

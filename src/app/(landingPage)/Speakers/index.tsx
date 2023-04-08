@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { ArrowRightIcon } from '@Icons';
+import { ArrowRight } from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -178,7 +178,7 @@ function Speakers() {
           <button type="submit" className={styles.btn}>
             <div className={styles.btnInnerBox}>
               <span className={styles.btnText}>
-                Submit <ArrowRightIcon className={styles.arrow} />
+                Submit <ArrowRight className={styles.arrow} />
               </span>
             </div>
           </button>

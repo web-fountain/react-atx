@@ -1,12 +1,10 @@
-import { OurGoalIcon, WhatWeDoIcon, WhatWeUseIcon } from '@Icons';
-import CommunityItem from './CommunityItem';
-import styles from './styles.module.css';
+import { container, intro } from './styles.module.css';
 
 
 function Community() {
   return (
-    <section className={styles.container}>
-      <div className={styles.intro}>
+    <section className={container}>
+      <div className={intro}>
         <h2>About our Community</h2>
         <p>
           React ATX is a Community-Driven frontend development group that
@@ -28,26 +26,6 @@ function Community() {
           information.
         </p>
       </div>
-      <ul className={styles.list}>
-        <CommunityItem
-          title="What we do?"
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis omnis optio nisi soluta, quae eaque at cupiditate aliquam quasi voluptatum!"
-        >
-          <WhatWeDoIcon />
-        </CommunityItem>
-        <CommunityItem
-          title="What is the goal?"
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis omnis optio nisi soluta, quae eaque at cupiditate aliquam quasi voluptatum!"
-        >
-          <OurGoalIcon />
-        </CommunityItem>
-        <CommunityItem
-          title="What We Use?"
-          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis omnis optio nisi soluta, quae eaque at cupiditate aliquam quasi voluptatum!"
-        >
-          <WhatWeUseIcon />
-        </CommunityItem>
-      </ul>
     </section>
   );
 }

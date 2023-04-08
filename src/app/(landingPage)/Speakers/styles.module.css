@@ -118,7 +118,7 @@
 }
 
 .btnInnerBox:hover {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
 }
 
 .btnText {
