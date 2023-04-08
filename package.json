@@ -6,18 +6,25 @@
     "start": "next dev",
     "build": "next build",
     "deploy": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "repack": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
-    "@types/node": "18.14.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
+    "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.5"
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@types/react-dom": "18.0.11",
+    "css-loader": "^6.7.3",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.3.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^8.3.0",
+    "style-loader": "^3.3.2"
   }
 }

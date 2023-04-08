@@ -4,6 +4,7 @@ const ERROR = 2;    // ERROR or 2 - turn the rule on as an error (exit code will
 
 
 module.exports = {
+  root: true,
   extends: 'next/core-web-vitals',
   rules: {
     // convention
