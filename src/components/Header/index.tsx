@@ -1,92 +1,73 @@
 'use client';
+
+import { useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import React from 'react';
-import styles from './header.module.css';
-import { headerImgDark, headerImgLight } from '../../assets/images';
-import { ArrowRightIcon, ReactSmallLogo } from '../Icons';
-import MobileNavBtn from '../MobileNavBtn';
+
+import Icons from '@Icons';
+import styles from './styles.module.css';
 
 
-export default function Header() {
-  const [showNav, setShowNav] = React.useState(false);
-  const [darkMode, setDarkMode] = React.useState(false);
+function setTheme(theme: 'dark' | 'light') {
+  const rootTag = document.documentElement;
+  rootTag.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme)
+};
 
-  React.useEffect(() => {
-    if (darkMode) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('data-theme', 'dark');
+function Header() {
+  useEffect(() => {
+    const themeToggle = document.getElementById('theme-toggle') as HTMLElement;
+    const rootTag = document.documentElement;
+
+    // check localstorage if theme is set (default: dark)
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+      rootTag.setAttribute('data-theme', theme);
     } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('data-theme', 'light');
+      localStorage.setItem('theme', 'dark');
     }
-  }, [darkMode]);
 
-  function toggleTheme() {
-    setDarkMode((prev) => !prev);
-  }
+    // set theme listener
+    themeToggle.addEventListener('input', event => {
+      //@ts-ignore
+      const isChecked =  event.target.checked;
+
+      isChecked
+        ? setTheme('light')
+        : setTheme('dark');
+    });
+  }, []);
+
   return (
-    <header className={`${styles.header} ${showNav && styles.mobileHeader}`}>
-      {/* Header background Image */}
-      <div className={styles.imgContainer}>
-        <Image
-          src={darkMode ? headerImgDark : headerImgLight}
-          alt="header image"
-          priority={true}
-        />
-        {/* </div> */}
-        {/* Header container */}
+    <header className={styles.header}>
+      <div className={styles['background-image']}>
         <div className={styles.container}>
-          {/* Header Logo */}
-          <Link href="/" onClick={() => setShowNav(false)}>
-            <ReactSmallLogo className={styles.logo} />
+          <Link href="/">
+            <Icons className={styles.logo} name="react-logo" />
           </Link>
-          {/* Main Navigation */}
-          <nav className={styles.mainNav}>
-            <ul className={`${styles.navList} ${showNav && styles.open}`}>
+
+          <nav aria-label="Main">
+            <ul className={styles.nav}>
               <li>
-                <Link href="/events" onClick={() => setShowNav(false)}>
-                  Events
-                </Link>
+                <Link href="/events">Events</Link>
               </li>
               <li>
-                <Link href="/projects" onClick={() => setShowNav(false)}>
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" onClick={() => setShowNav(false)}>
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link href="/jobs" onClick={() => setShowNav(false)}>
-                  Jobs
-                </Link>
+                <Link href="/news">News</Link>
               </li>
             </ul>
           </nav>
-          {/* Mobile Nav Button */}
-          <MobileNavBtn setShowNav={setShowNav} showNav={showNav} />
-          {/* Theme Toggle Button */}
-          <button
-            type="button"
-            className={`${styles.toggleBtn} ${darkMode && styles.toggle}`}
-            onClick={toggleTheme}
-          >
-            <span className={styles.ball} />
-          </button>
-          {/* Sign In Header Button */}
-          <button type="button" className={styles.signInBtn}>
-            <div className={styles.signInBtnInnerBox}>
-              <span className={styles.signInBtnText}>
-                Sign in
-                <ArrowRightIcon className={styles.arrow} />
-              </span>
-            </div>
-          </button>
+
+          <div className={styles['theme-toggle']}>
+            <input type="checkbox" id="theme-toggle" />
+            <label htmlFor="theme-toggle">
+              <Icons name="sun" className='sun'/>
+              <Icons name="moon" className='moon'/>
+            </label>
+          </div>
         </div>
       </div>
     </header>
   );
 }
+
+
+export default Header;

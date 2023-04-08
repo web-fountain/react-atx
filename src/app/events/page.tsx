@@ -10,7 +10,7 @@ function Events() {
   return (
     <main className="main-layout">
       <section className={styles.container}>
-        <EventLayout />
+        {/* <EventLayout /> */}
       </section>
     </main>
   );

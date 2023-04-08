@@ -1,11 +1,15 @@
 import Image from 'next/image';
-import styles from './currentEvents.module.css';
-import { balloons } from '@/assets/images';
-import ExclamationIcon from '../../../components/Icons/ExclamationIcon';
-import { AvatarIcon, ClockIcon } from '../../../components/Icons';
+
+import { balloons } from '@Images';
+import {
+  Exclamation as ExclamationIcon,
+  Avatar as AvatarIcon,
+  Clock as ClockIcon
+} from '@Icons';
+import styles from './styles.module.css';
 
 
-export default function CurrentEvents() {
+function CurrentEvents() {
   return (
     <div>
       <h3>March 2022</h3>
@@ -113,3 +117,6 @@ export default function CurrentEvents() {
     </div>
   );
 }
+
+
+export default CurrentEvents;

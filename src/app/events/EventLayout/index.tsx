@@ -1,4 +1,5 @@
 'use client';
+
 import styles from '../../app/events/events.module.css';
 import EventsHeading from '../../../components/EventsHeading';
 import EventYears from '../EventYears';

@@ -1,6 +1,7 @@
-import styles from './styles.module.css';
 import Link from 'next/link';
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@Icons';
+
+// import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon, Twitter as TwitterIcon } from '@Icons';
+import styles from './styles.module.css';
 
 
 function Footer() {
@@ -8,9 +9,9 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.socialMedia}>
-          <TwitterIcon />
+          {/* <TwitterIcon />
           <LinkedInIcon />
-          <GitHubIcon />
+          <GitHubIcon /> */}
         </div>
         <div className={styles.policy}>
           <Link href="/">Privacy Notice</Link>

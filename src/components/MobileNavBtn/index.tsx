@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './mobileNavBtn.module.css';
+import styles from './styles.module.css';
 
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   setShowNav: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function MobileNavBtn({ showNav, setShowNav }: Props) {
+function MobileNavBtn({ showNav, setShowNav }: Props) {
   return (
     <button
       type="button"
@@ -46,3 +46,6 @@ export default function MobileNavBtn({ showNav, setShowNav }: Props) {
     </button>
   );
 }
+
+
+export default MobileNavBtn;
