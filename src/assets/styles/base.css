@@ -9,9 +9,8 @@
 
   body {
     box-sizing: border-box;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     font-family: 'Poppins Regular';
-    font-style: normal;
     font-size: var(--16px);
     line-height: var(--24px);
     color: var(--text-primary);
@@ -33,7 +32,6 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins Bold';
-    font-style: bold;
     font-weight: var(--medium);
     color: var(--text-primary);
   }
