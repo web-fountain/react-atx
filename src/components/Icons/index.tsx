@@ -7,20 +7,21 @@ import Sun from './Sun';
 
 
 type Props = {
-  name: string;
+  color?: string;
   className?: string;
   inlineFill?: string;
   inlineStroke?: string;
+  name: string;
 };
 
 function Icons({ name, ...props }: Props): JSX.Element {
   const icons: Record<Props['name'], any> = {
     'arrow-up-right': <ArrowUpRight {...props} />,
-    'lightbulb': <Lightbulb {...props} />,
-    'discord-white': <DiscordWhite {...props} />,
-    'moon': <Moon {...props} />,
-    'react-logo': <ReactLogo {...props} />,
-    'sun': <Sun {...props} />
+    'lightbulb':      <Lightbulb {...props} />,
+    'discord-white':  <DiscordWhite {...props} />,
+    'moon':           <Moon {...props} />,
+    'react-logo':     <ReactLogo {...props} />,
+    'sun':            <Sun {...props} />
   };
 
   return icons[name];

@@ -1,4 +1,4 @@
-.outer-text-box {
+.container {
   height: 64px;
   max-width: 260px;
   margin-top: 46px;
@@ -11,7 +11,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
   transition: clip-path 0.3s;
 }
-.inner-text-box {
+.text-box {
   width: 252px;
   height: 56px;
 
@@ -29,28 +29,13 @@
   font-size: var(--24px);
   line-height: 30px;
   text-decoration: none;
-  color: var(--text-primary);
+  color: var(--text-white);
   transition: color 0.3s;
 }
 
-.outer-text-box:hover {
+.container:hover {
   clip-path: polygon(20px 0%, 100% 0, 100% 0, 100% 44px, 240px 100%, 0 100%, 0 100%, 0% 20px);
 }
-.inner-text-box:hover {
+.text-box:hover {
   background-color: var(--bg-color);
-}
-
-
-[data-theme='light'] .text {
-  color: var(--bg-color);
-}
-[data-theme='light'] .text svg path {
-  stroke: var(--bg-color) !important;
-  transition: stroke 0.3s;
-}
-[data-theme='light'] .inner-text-box:hover .text {
-  color: var(--text-primary);
-}
-[data-theme='light'] .inner-text-box:hover svg path {
-  stroke: var(--text-primary) !important;
 }

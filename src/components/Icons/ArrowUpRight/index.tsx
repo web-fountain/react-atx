@@ -1,15 +1,15 @@
-function ArrowRight({ className = '', fill = '', size = '32' }) {
-  const inlineFill = fill.length === 0
-    ? { fill: 'var(--text-primary)' }
-    : { fill };
+function ArrowRight({ className='', color='', size='32' }) {
+  const inlineFill = color.length > 0
+    ? { fill: color }
+    : { fill: 'var(--text-white)' };
 
   return (
     <svg
       className={className}
-      width="32"
-      height="32"
+      width={size}
+      height={size}
       viewBox="0 0 32 32"
-      fill="none"
+      color="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

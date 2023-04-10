@@ -12,6 +12,12 @@ $ pnpm start
 - two spaces for indentation
 - no comma dangles
 
+### JavaScript
+- assigned default parameters are not spaced
+```
+function foo(a='a', b=13, c=[1, 2, 3], d={ drink: 'coffee' })
+```
+
 ### Imports/Exports
 - two newlines after imports
 - exports always go at the bottom (export default is on the last line)
@@ -32,10 +38,9 @@ $ pnpm start
 # Resources
 
 ## Favicon
-
 1. [Set up](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
-## CSS
 
+## CSS
 1. [REM vs PX](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility)
 
 

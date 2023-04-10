@@ -2,13 +2,6 @@
   "name": "reactjs-atx",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "next dev",
-    "build": "next build",
-    "deploy": "next start",
-    "lint": "next lint",
-    "repack": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
-  },
   "dependencies": {
     "next": "13.3.0",
     "react": "18.2.0",
@@ -19,12 +12,14 @@
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
-    "css-loader": "^6.7.3",
     "eslint": "8.37.0",
-    "eslint-config-next": "13.3.0",
-    "mini-css-extract-plugin": "^2.7.5",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^8.3.0",
-    "style-loader": "^3.3.2"
+    "eslint-config-next": "13.3.0"
+  },
+  "scripts": {
+    "start": "next dev",
+    "build": "next build",
+    "deploy": "next start",
+    "lint": "next lint",
+    "repack": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
   }
 }
