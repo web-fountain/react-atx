@@ -1,4 +1,4 @@
-import styles from './eventYears.module.css';
+import styles from './styles.module.css';
 
 
 export default function EventDates({ showYears }: { showYears: boolean }) {

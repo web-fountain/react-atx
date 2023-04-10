@@ -1,5 +1,5 @@
 import styles from './eventsHeading.module.css';
-import { HourGlassIcon } from '../Icons';
+import Icons from '@Icons';
 import React from 'react';
 
 
@@ -16,7 +16,7 @@ export default function EventsHeading({ setShowYears }: Props) {
         className={styles.hourglassBtn}
         onClick={() => setShowYears((prev) => !prev)}
       >
-        <HourGlassIcon />
+        {/* <HourGlassIcon /> */}
       </button>
     </div>
   );

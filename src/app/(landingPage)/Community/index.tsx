@@ -1,10 +1,10 @@
-import { container, intro } from './styles.module.css';
+import styles from './styles.module.css';
 
 
 function Community() {
   return (
-    <section className={container}>
-      <div className={intro}>
+    <section className={styles.container}>
+      <div className={styles.intro}>
         <h2>About our Community</h2>
         <p>
           React ATX is a Community-Driven frontend development group that

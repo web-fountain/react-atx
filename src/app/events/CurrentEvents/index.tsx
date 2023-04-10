@@ -1,11 +1,7 @@
 import Image from 'next/image';
 
 import { balloons } from '@Images';
-import {
-  Exclamation as ExclamationIcon,
-  Avatar as AvatarIcon,
-  Clock as ClockIcon
-} from '@Icons';
+import Icons from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -22,18 +18,18 @@ function CurrentEvents() {
             <span className={styles.date}>12</span>
             <div className={styles.warning}>
               <span>
-                <ExclamationIcon />
+                {/* <ExclamationIcon /> */}
                 <span>Need a speaker</span>
               </span>
               <span>
-                <ExclamationIcon />
+                {/* <ExclamationIcon /> */}
                 <span>Need a sponsor</span>
               </span>
             </div>
           </div>
           <div className={styles.eventInfo}>
             <div className={styles.time}>
-              <ClockIcon /> <span>07:30 AM</span>
+              {/* <ClockIcon /> <span>07:30 AM</span> */}
             </div>
             <p className={styles.title}>
               Terraform with Azure for absolute beginning for now
@@ -43,7 +39,7 @@ function CurrentEvents() {
               Quibusdam, quaerat!
             </p>
             <div className={styles.attenders}>
-              <AvatarIcon /> <span>0</span>
+              {/* <AvatarIcon /> <span>0</span> */}
             </div>
           </div>
         </li>
@@ -55,18 +51,18 @@ function CurrentEvents() {
             <span className={styles.date}>12</span>
             <div className={styles.warning}>
               <span>
-                <ExclamationIcon />
+                {/* <ExclamationIcon /> */}
                 <span>Need a speaker</span>
               </span>
               <span>
-                <ExclamationIcon />
+                {/* <ExclamationIcon /> */}
                 <span>Need a sponsor</span>
               </span>
             </div>
           </div>
           <div className={styles.eventInfo}>
             <div className={styles.time}>
-              <ClockIcon /> <span>07:30 AM</span>
+              {/* <ClockIcon /> <span>07:30 AM</span> */}
             </div>
             <p className={styles.title}>
               Terraform with Azure for absolute beginning for now
@@ -76,7 +72,7 @@ function CurrentEvents() {
               Quibusdam, quaerat!
             </p>
             <div className={styles.attenders}>
-              <AvatarIcon /> <span>0</span>
+              {/* <AvatarIcon /> <span>0</span> */}
             </div>
           </div>
         </li>
@@ -88,18 +84,18 @@ function CurrentEvents() {
             <span className={styles.date}>12</span>
             <div className={styles.warning}>
               <span>
-                <ExclamationIcon />
+                {/* <ExclamationIcon /> */}
                 <span>Need a speaker</span>
               </span>
               <span>
-                <ExclamationIcon />
+                {/* <ExclamationIcon /> */}
                 <span>Need a sponsor</span>
               </span>
             </div>
           </div>
           <div className={styles.eventInfo}>
             <div className={styles.time}>
-              <ClockIcon /> <span>07:30 AM</span>
+              {/* <ClockIcon /> <span>07:30 AM</span> */}
             </div>
             <p className={styles.title}>
               Terraform with Azure for absolute beginning for now
@@ -109,7 +105,7 @@ function CurrentEvents() {
               Quibusdam, quaerat!
             </p>
             <div className={styles.attenders}>
-              <AvatarIcon /> <span>0</span>
+              {/* <AvatarIcon /> <span>0</span> */}
             </div>
           </div>
         </li>

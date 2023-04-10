@@ -1,0 +1,103 @@
+.eventList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.eventList > li {
+  border: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imgContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.imgWrapper {
+  height: 6rem;
+  width: 6rem;
+}
+
+.imgWrapper > img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.date {
+  position: absolute;
+  background-color: var(--primary-color);
+  top: 0;
+  right: 0;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: var(--24px);
+}
+
+.warning {
+  color: var(--text-warning);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.warning > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.eventInfo {
+  display: grid;
+  gap: 0.25rem;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.time > span {
+  color: var(--text-light);
+}
+
+.title {
+  font-family: "Poppins Semibold";
+  margin: 0;
+}
+
+.desc {
+  display: none;
+}
+
+.attenders {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .eventList > li {
+    grid-template-columns: 1fr;
+  }
+  .imgWrapper {
+    height: 10rem;
+  }
+  .desc {
+    display: block;
+    margin: 0;
+  }
+}

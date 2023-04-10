@@ -2,11 +2,7 @@
 
 import { useState } from 'react';
 
-import {
-  Venue, Food, Drinks,
-  Speakers, Workshops, Other,
-  ArrowRight
-} from '@Icons';
+import Icons from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -113,7 +109,7 @@ function Partnerships() {
               checked={formData.venue}
             />
             <label htmlFor="venue" className={styles.checkboxLabel}>
-              <Venue />
+              {/* <Venue /> */}
               Venue
             </label>
           </li>
@@ -126,7 +122,7 @@ function Partnerships() {
               checked={formData.food}
             />
             <label htmlFor="food" className={styles.checkboxLabel}>
-              <Food />
+              {/* <Food /> */}
               Food
             </label>
           </li>
@@ -139,7 +135,7 @@ function Partnerships() {
               checked={formData.drinks}
             />
             <label htmlFor="drinks" className={styles.checkboxLabel}>
-              <Drinks />
+              {/* <Drinks /> */}
               Drinks
             </label>
           </li>
@@ -152,7 +148,7 @@ function Partnerships() {
               checked={formData.speakers}
             />
             <label htmlFor="speakers" className={styles.checkboxLabel}>
-              <Speakers />
+              {/* <Speakers /> */}
               Speakers
             </label>
           </li>
@@ -165,7 +161,7 @@ function Partnerships() {
               checked={formData.workshops}
             />
             <label htmlFor="workshops" className={styles.checkboxLabel}>
-              <Workshops />
+              {/* <Workshops /> */}
               Workshops
             </label>
           </li>
@@ -178,7 +174,7 @@ function Partnerships() {
               checked={formData.other}
             />
             <label htmlFor="other" className={styles.checkboxLabel}>
-              <Other />
+              {/* <Other /> */}
               Other
             </label>
           </li>
@@ -187,7 +183,7 @@ function Partnerships() {
           <div className={styles.submitBtnInnerBox}>
             <span className={styles.submitBtnText}>
               Submit
-              <ArrowRight className={styles.arrow} />
+              <Icons name='arrow-right' className={styles.arrow} />
             </span>
           </div>
         </button>

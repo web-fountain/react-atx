@@ -1,9 +1,9 @@
 'use client';
 
 import styles from '../../app/events/events.module.css';
-import EventsHeading from '../../../components/EventsHeading';
+import EventsHeading from '../EventsHeading';
 import EventYears from '../EventYears';
-import { SponsoringIcon, ArrowRightIcon, SpeakersSmallIcon } from '../../../components/Icons';
+import Icons from '@Icons';
 import Link from 'next/link';
 import React from 'react';
 import CurrentEvents from '../CurrentEvents';
@@ -21,17 +21,17 @@ export default function EventLayout() {
           <h3>Interested in</h3>
           <div className={styles.eventServices}>
             <Link href="/#partnership">
-              <SponsoringIcon />
+              {/* <SponsoringIcon /> */}
               <span>
                 Sponsoring an event
-                <ArrowRightIcon className={styles.arrow} />
+                {/* <ArrowRightIcon className={styles.arrow} /> */}
               </span>
             </Link>
             <Link href="/#speakers">
-              <SpeakersSmallIcon />
+              {/* <SpeakersSmallIcon /> */}
               <span>
                 Speaking at an event
-                <ArrowRightIcon className={styles.arrow} />
+                {/* <ArrowRightIcon className={styles.arrow} /> */}
               </span>
             </Link>
           </div>
