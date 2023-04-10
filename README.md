@@ -18,6 +18,10 @@ $ pnpm start
 function foo(a='a', b=13, c=[1, 2, 3], d={ drink: 'coffee' })
 ```
 
+### React
+
+- the `Components` folder is for layout, reusable, and global components 
+
 ### Imports/Exports
 - two newlines after imports
 - exports always go at the bottom (export default is on the last line)

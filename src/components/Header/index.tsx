@@ -15,7 +15,7 @@ function Header() {
           </Link>
 
           <nav aria-label="Main">
-            <ul className={styles.nav}>
+            <ul className={styles['.nav-list']}>
               <li>
                 <Link href="/events">Events</Link>
               </li>

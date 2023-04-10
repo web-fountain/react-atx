@@ -16,6 +16,7 @@ function ThemeToggle() {
   useEffect(() => {
     const themeToggle = document.getElementById('theme-toggle') as HTMLInputElement;
 
+    // set theme listener on toggle
     themeToggle.addEventListener('input', event => {
       //@ts-ignore
       const isChecked =  event.target.checked;
