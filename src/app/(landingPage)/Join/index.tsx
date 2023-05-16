@@ -40,28 +40,6 @@ function Join() {
             </button>
           </form>
         </div>
-        <div className={styles.bottom} />
-        <div className={styles.reactQuestions}>
-          <div className={styles.bulb}>
-            <Icons name='lightbulb' />
-          </div>
-          <div className={styles.text}>
-            <p>
-              Have ReactJS questions? Seeking resources? Want to help others?
-              Join our Slack group!
-            </p>
-          </div>
-          <div className={styles.slackLink}>
-            <a
-              href="https://slack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open Slack
-            </a>
-            <Icons name='discord-white' />
-          </div>
-        </div>
       </div>
     </section>
   );

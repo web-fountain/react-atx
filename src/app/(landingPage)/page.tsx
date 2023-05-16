@@ -18,8 +18,8 @@ function Home() {
       <Hero />
       <Community />
       <Join />
+      <Partnerships />
       {/* <Speakers /> */}
-      {/* <Partnerships /> */}
       {/* <AboutUs /> */}
     </main>
   );

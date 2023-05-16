@@ -5,6 +5,9 @@ import ThemeToggle from './ThemeToggle';
 import styles from './styles.module.css';
 
 
+console.log(styles['nav-list'])
+
+
 function Header() {
   return (
     <header className={styles.header}>
@@ -14,8 +17,8 @@ function Header() {
             <Icons className={styles.logo} name="react-logo" />
           </Link>
 
-          <nav aria-label="Main">
-            <ul className={styles['.nav-list']}>
+          <nav aria-label="main">
+            <ul className={styles['nav-list']}>
               <li>
                 <Link href="/events">Events</Link>
               </li>
