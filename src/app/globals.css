@@ -3,147 +3,658 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: 'Poppins Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Regular'),
-    url('../assets/fonts/Poppins-Regular.ttf')
+  :root {
+    --primary-color: #007aff;
+    --secondary-color: #c6e6e6;
+    --background-color: #f5fbff;
+    --text-primary: #14273a;
+    --text-secondary: ;
+    --text-success: ;
+    --text-danger: #e76e6e;
+    --text-warning: #e76e6e;
+    --text-info: ;
+    --text-light: #b5b7b9;
+    --text-dark: ;
+    --text-muted: ;
+    --text-white: #ffffff;
+
+    --header-bg-linear-gradient: linear-gradient(
+      0deg,
+      rgba(245, 251, 255, 0.1) 0%,
+      rgb(255, 255, 255) 100%
+    );
+    --header-height: 101px;
+    /* --header-bg-image: url(~@Images/header-net-light.png); */
+    --2px: 0.125rem;
+    --4px: 0.25rem;
+    --8px: 0.5rem;
+    --12px: 0.75rem;
+    --16px: 1rem;
+    --24px: 1.5rem;
+    --32px: 2rem;
+    --40px: 2.5rem;
+    --48px: 3rem;
+    --56px: 3.5rem;
+    --64px: 4rem;
+
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+  }
+
+  [data-theme='dark'] {
+    --primary-color: #2658cb;
+    --secondary-color: #2a363f;
+    --background-color: #0f0f0f;
+    --text-primary: #ffffff;
+    --text-secondary: #acddff;
+    --text-success: ;
+    --text-danger: #e76e6e;
+    --text-warning: #e76e6e;
+    --text-info: ;
+    --text-light: #b5b7b9;
+    --text-dark: ;
+    --text-muted: ;
+    --text-white: #ffffff;
+
+    --header-bg-linear-gradient: linear-gradient(
+      0deg,
+      rgba(15, 15, 15, 0.1) 0%,
+      rgb(0, 0, 0) 100%
+    );
+    /* --header-bg-image: url(~@Images/header-net-dark.png); */
   }
 
   @font-face {
-    font-family: 'Poppins Italic';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Italic'),
-    url('../assets/fonts/Poppins-Italic.ttf')
+    font-weight: 100;
+    /* src: local('Poppins Thin'), */
+    src: url('../assets/fonts/poppins-thin-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-thin-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 100;
+    /* src: local('Poppins Thin Italic'), */
+    src: url('../assets/fonts/poppins-thinitalic-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-thinitalic-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    /* src: local('Poppins ExtraLight'), */
+    src: url('../assets/fonts/poppins-extralight-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-extralight-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 200;
+    /* src: local('Poppins ExtraLight Italic'), */
+    src: url('../assets/fonts/poppins-extralightitalic-webfont.woff2')
+        format('woff2'),
+      url('../assets/fonts/poppins-extralightitalic-webfont.woff')
+        format('woff');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    /* src: local('Poppins Light'), */
+    src: url('../assets/fonts/poppins-light-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-light-webfont.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    /* src: local('Poppins Light Italic'), */
+    src: url('../assets/fonts/poppins-lightitalic-webfont.woff2')
+        format('woff2'),
+      url('../assets/fonts/poppins-lightitalic-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Thin';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Thin'),
-    url('../assets/fonts/Poppins-Thin.ttf')
+    font-weight: 400;
+    /* src: local('Poppins Regular'), */
+    src: url('../assets/fonts/poppins-regular-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-regular-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Thin Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Thin Italic'),
-    url('../assets/fonts/Poppins-ThinItalic.ttf')
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    /* src: local('Poppins Italic'), */
+    src: url('../assets/fonts/poppins-regular-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-italic-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins ExtraLight';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: normal;
-    src: local('Poppins ExtraLight'),
-    url('../assets/fonts/Poppins-ExtraLight.ttf')
+    font-weight: 500;
+    /* src: local('Poppins Medium'), */
+    src: url('../assets/fonts/poppins-medium-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-medium-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins ExtraLight Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins ExtraLight Italic'),
-    url('../assets/fonts/Poppins-ExtraLightItalic.ttf')
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    /* src: local('Poppins Medium Italic'), */
+    src: url('../assets/fonts/poppins-mediumitalic-webfont.woff2')
+        format('woff2'),
+      url('../assets/fonts/poppins-mediumitalic-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Light';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Light'),
-    url('../assets/fonts/Poppins-Light.ttf')
+    font-weight: 600;
+    /* src: local('Poppins SemiBold'), */
+    src: url('../assets/fonts/poppins-semibold-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-semibold-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Light Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Light Italic'),
-    url('../assets/fonts/Poppins-LightItalic.ttf')
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    /* src: local('Poppins SemiBold Italic'), */
+    src: url('../assets/fonts/poppins-semibolditalic-webfont.woff2')
+        format('woff2'),
+      url('../assets/fonts/poppins-semibolditalic-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Medium';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Medium'),
-    url('../assets/fonts/Poppins-Medium.ttf')
+    font-weight: 700;
+    /* src: local('Poppins Bold'),  */
+    src: url('../assets/fonts/poppins-bold-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-bold-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Medium Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Medium Italic'),
-    url('../assets/fonts/Poppins-MediumItalic.ttf')
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    /* src: local('Poppins Bold Italic'), */
+    src: url('../assets/fonts/poppins-bolditalic-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-bolditalic-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins SemiBold';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: normal;
-    src: local('Poppins SemiBold'),
-    url('../assets/fonts/Poppins-SemiBold.ttf')
+    font-weight: 800;
+    /* src: local('Poppins ExtraBold'), */
+    src: url('../assets/fonts/poppins-extrabold-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-extrabold-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins SemiBold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins SemiBold Italic'),
-    url('../assets/fonts/Poppins-SemiBoldItalic.ttf')
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 800;
+    /* src: local('Poppins ExtraBold Italic'), */
+    src: url('../assets/fonts/poppins-extrabolditalic-webfont.woff2')
+      format('woff2')
+      url('../assets/fonts/poppins-extrabolditalic-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Bold';
+    font-family: 'Poppins';
     font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Bold'),
-    url('../assets/fonts/Poppins-Bold.ttf')
+    font-weight: 900;
+    /* src: local('Poppins Black'), */
+    src: url('../assets/fonts/poppins-black-webfont.woff2') format('woff2'),
+      url('../assets/fonts/poppins-black-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Poppins Bold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Bold Italic'),
-    url('../assets/fonts/Poppins-BoldItalic.ttf')
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 900;
+    /* src: local('Poppins Black Italic'), */
+    src: url('../assets/fonts/poppins-blackitalic-webfont.woff2')
+        format('woff2'),
+      url('../assets/fonts/poppins-blackitalic-webfont.woff') format('woff');
   }
 
-  @font-face {
-    font-family: 'Poppins ExtraBold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins ExtraBold'),
-    url('../assets/fonts/Poppins-ExtraBold.ttf')
+  /* Document
+   ========================================================================== */
+
+  /**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+  html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
   }
 
-  @font-face {
-    font-family: 'Poppins ExtraBold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins ExtraBold Italic'),
-    url('../assets/fonts/Poppins-ExtraBoldItalic.ttf')
+  /* Sections
+   ========================================================================== */
+
+  /**
+ * Remove the margin in all browsers.
+ */
+
+  body {
+    margin: 0;
   }
 
-  @font-face {
-    font-family: 'Poppins Black';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Black'),
-    url('../assets/fonts/Poppins-Black.ttf')
+  /**
+ * Render the `main` element consistently in IE.
+ */
+
+  main {
+    display: block;
   }
 
-  @font-face {
-    font-family: 'Poppins Black Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Poppins Black Italic'),
-    url('../assets/fonts/Poppins-BlackItalic.ttf')
+  /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  /* Grouping content
+   ========================================================================== */
+
+  /**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+
+  /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+
+  /* Text-level semantics
+   ========================================================================== */
+
+  /**
+ * Remove the gray background on active links in IE 10.
+ */
+
+  a {
+    background-color: transparent;
+  }
+
+  /**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+
+  /**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+
+  /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+
+  /**
+ * Add the correct font size in all browsers.
+ */
+
+  small {
+    font-size: 80%;
+  }
+
+  /**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  /* Embedded content
+   ========================================================================== */
+
+  /**
+ * Remove the border on images inside links in IE 10.
+ */
+
+  img {
+    border-style: none;
+  }
+
+  /* Forms
+   ========================================================================== */
+
+  /**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+
+  /**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+  button,
+  input {
+    /* 1 */
+    overflow: visible;
+  }
+
+  /**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+  button,
+  select {
+    /* 1 */
+    text-transform: none;
+  }
+
+  /**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    appearance: button;
+    -webkit-appearance: button;
+  }
+
+  /**
+ * Remove the inner border and padding in Firefox.
+ */
+
+  button::-moz-focus-inner,
+  [type='button']::-moz-focus-inner,
+  [type='reset']::-moz-focus-inner,
+  [type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  /**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+  button:-moz-focusring,
+  [type='button']:-moz-focusring,
+  [type='reset']:-moz-focusring,
+  [type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  /**
+ * Correct the padding in Firefox.
+ */
+
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+
+  /**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+
+  /**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  /**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+  textarea {
+    overflow: auto;
+  }
+
+  /**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+  [type='checkbox'],
+  [type='radio'] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+
+  /**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+  [type='number']::-webkit-inner-spin-button,
+  [type='number']::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  /**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+  [type='search'] {
+    appearance: textfield;
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+
+  /**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+  [type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  /**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+
+  /* Interactive
+   ========================================================================== */
+
+  /*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+  details {
+    display: block;
+  }
+
+  /*
+ * Add the correct display in all browsers.
+ */
+
+  summary {
+    display: list-item;
+  }
+
+  /* Misc
+   ========================================================================== */
+
+  /**
+ * Add the correct display in IE 10+.
+ */
+
+  template {
+    display: none;
+  }
+
+  /**
+ * Add the correct display in IE 10.
+ */
+
+  [hidden] {
+    display: none;
+  }
+
+  *, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  body {
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    font-family: 'Poppins';
+    font-size: var(--16px);
+    line-height: var(--24px);
+  }
+
+  main {
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  fieldset {
+    padding: 0;
+    border: none;
+    border-width: 0;
+  }
+
+  ul,
+  ol,
+  dd {
+    list-style: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Poppins';
+    font-weight: var(--bold);
+    color: var(--text-primary);
+  }
+  h1 {
+    font-size: var(--64px);
+    line-height: 76px;
+  }
+  h2 {
+    font-size: var(--48px);
+    line-height: 72px;
+  }
+  h3 {
+    margin-top: 15px;
+    margin-bottom: 24px;
+    font-size: var(--32px);
+    line-height: 42px;
+  }
+  h4 {
+    font-size: var(--28px);
+    line-height: 42px;
+  }
+  h5 {
+    font-size: var(--26px);
+    line-height: 34px;
+  }
+  h6 {
+    font-size: var(--24px);
+    line-height: 36px;
+  }
+  p {
+    margin-top: 8px;
+    font-weight: var(--regular);
   }
 }

@@ -23,6 +23,11 @@ module.exports = {
           dark: '#0F0F0F',
         },
       },
+      textColor: {
+        skin: {
+          base: 'var(--text-primary)',
+        },
+      },
       backgroundImage: {
         'header-gradient': {
           light: {

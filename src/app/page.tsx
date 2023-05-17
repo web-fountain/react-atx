@@ -5,10 +5,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <section>
-        <h2 className='text-primary-light bg-primary-dark'>Home</h2>
+    <div>
+      <section className='w-full max-w-6xl mx-auto'>
+        <h1>Home</h1>
       </section>
-    </main>
+    </div>
   );
 }

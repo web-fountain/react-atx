@@ -1,3 +1,4 @@
+import Header from '@/components/UI/Header';
 import './globals.css';
 
 export default function RootLayout({
@@ -6,8 +7,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='font-poppins'>
-      <body className=''>{children}</body>
+    <html lang='en'>
+      <body>
+        <Header />
+        <main className='pt-[101px]'>{children}</main>
+      </body>
     </html>
   );
 }
