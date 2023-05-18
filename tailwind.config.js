@@ -6,46 +6,44 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
 
     // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: {
-          light: '#007AFF',
-          dark: '#2658cb',
-        },
-      },
-      backgroundColor: {
-        primary: {
-          light: '#F5FBFF',
-          dark: '#0F0F0F',
-        },
-      },
-      textColor: {
-        skin: {
-          base: 'var(--text-primary)',
-        },
+        'primary-color': 'var(--primary-color)',
+        'secondary-color': 'var(--secondary-color)',
+        'background-color': 'var(--background-color)',
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
+        'text-success': 'var(--text-success)',
+        'text-danger': 'var(--text-danger)',
+        'text-warning': 'var(--text-warning)',
+        'text-info': 'var(--text-info)',
+        'text-light': 'var(--text-light)',
+        'text-dark': 'var(--text-dark)',
+        'text-muted': 'var(--text-muted',
+        'text-white': 'var(--text-white)'
       },
       backgroundImage: {
         'header-gradient': {
           light: {
             'linear-gradient':
-              '(0deg, rgba(245,251,255,0.1) 0%, rgb(255, 255, 255) 100%)',
+              '(0deg, rgba(245,251,255,0.1) 0%, rgb(255, 255, 255) 100%)'
           },
-          dark: '',
-        },
+          dark: ''
+        }
       },
       screens: {
         mobile: '375px',
         tablet: '960px',
-        desktop: '1248px',
+        desktop: '1248px'
       },
       fontFamily: {
-        poppins: ['Poppins, sans-serif'],
-      },
-    },
+        poppins: ['Poppins, sans-serif']
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };

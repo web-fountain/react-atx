@@ -33,11 +33,11 @@ export default function ThemeToggle() {
   return (
     <button
       type='button'
-      className='hidden lg:block h-8 w-16 rounded-2xl bg-blue-600 relative'
+      className='hidden lg:block h-8 w-16 rounded-2xl bg-primary-color relative'
       onClick={handleTheme}
     >
       <span
-        className={`bg-white h-8 w-8 block border-2 border-blue-600 rounded-2xl absolute top-0 left-0 transition-transform ${
+        className={`bg-white h-8 w-8 block border-2 border-primary-color rounded-2xl absolute top-0 left-0 transition-transform ${
           theme === 'dark' ? 'translate-x-8' : 'translate-x-0'
         }`}
       ></span>
