@@ -20,7 +20,7 @@ interface SpeakerFormTypes {
 }
 
 function Speakers() {
-  const [speakerForm, setSpeakerForm] = React.useState<SpeakerFormTypes>({
+  const [formData, setFormData] = React.useState<SpeakerFormTypes>({
     name: '',
     jobTitle: '',
     email: '',
@@ -34,10 +34,11 @@ function Speakers() {
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSpeakerForm((prev) => ({
-      ...prev,
-      [e.target.name]:
-        e.target.type === 'checkbox' ? e.target.checked : e.target.value
+    const { name, value, type, checked } = e.target;
+
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -48,141 +49,163 @@ function Speakers() {
 
   return (
     <section className={styles.container} id="speakers">
-      <div className={styles.top}>
-        <h2>Speakers</h2>
-        <p>Interested in speaking at our next event?</p>
-        <p>Please fill out the form below</p>
-      </div>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.inputs}>
-          <div className={styles.inputBlock}>
+      <h2>Speakers</h2>
+      <h3>Interested in speaking at our next event? Please fill out the form below</h3>
+
+      <form className={styles['speaker-form']} onSubmit={handleSubmit}>
+        <ul className={styles['list-info']}>
+          <li className={styles['list-info-item']}>
             <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
-              placeholder="Name"
               name="name"
+              placeholder="name"
               onChange={handleChange}
+              value={formData.name}
             />
-          </div>
-          <div className={styles.inputBlock}>
-            <label htmlFor="jobTitle">Job Title</label>
+          </li>
+          <li className={styles['list-info-item']}>
+            <label htmlFor="job-title">Job Title</label>
             <input
               type="text"
-              placeholder="Job Title"
-              id="jobTitle"
-              name="jobTitle"
+              id="job-title"
+              name="job-title"
+              placeholder="software engineer"
               onChange={handleChange}
+              value={formData.jobTitle}
             />
-          </div>
-          <div className={styles.inputBlock}>
+          </li>
+          <li className={styles['list-info-item']}>
             <label htmlFor="email">Email</label>
             <input
-              type="email"
-              placeholder="Email"
+              type="text"
               id="email"
               name="email"
+              placeholder="example@acme.com"
               onChange={handleChange}
+              value={formData.email}
             />
-          </div>
-          <div className={styles.inputBlock}>
+          </li>
+          <li className={styles['list-info-item']}>
             <label htmlFor="company">Company</label>
             <input
               type="text"
-              placeholder="Company"
               id="company"
               name="company"
+              placeholder="Acme Corp."
               onChange={handleChange}
+              value={formData.company}
             />
-          </div>
-          <div className={styles.inputBlock}>
+          </li>
+          <li className={styles['list-info-item']}>
             <label htmlFor="topic">Topic</label>
             <input
               type="text"
-              placeholder="Topic"
               id="topic"
               name="topic"
+              placeholder="Intro to React"
               onChange={handleChange}
+              value={formData.topic}
             />
+          </li>
+        </ul>
+
+        <p className={styles['topic-presentation']}>How Would you like to present your topic?</p>
+
+        <div className={styles.hint}>
+          <div>
+            <Icons name='circle-exclamation' />
           </div>
+          <p>You can choose only one of the options</p>
         </div>
-        <h3>How Would you like to present your topic?</h3>
-        <small>You can choose only one of the options</small>
-        <div className={styles.checks}>
-          <div className={styles.checkBlock}>
-            <input
-              type="checkbox"
-              name="showcase"
-              id="showcase"
-              onChange={handleChange}
-            />
-            <label htmlFor="showcase">Showcase</label>
+
+        <ul className={styles.checks}>
+          <li className={styles.checkBlock}>
+            <div>
+              <input
+                type="checkbox"
+                name="showcase"
+                id="showcase"
+                onChange={handleChange}
+              />
+              <label htmlFor="showcase">Showcase</label>
+            </div>
             <p>
               Information on current projects or tools and must include photos
               of code or do some live coding.
             </p>
-          </div>
-          <div className={styles.checkBlock}>
-            <input
-              type="checkbox"
-              name="instructional"
-              id="instructional"
-              onChange={handleChange}
-            />
-            <label htmlFor="instructional">Instructional</label>
+          </li>
+          <li className={styles.checkBlock}>
+            <div>
+              <input
+                type="checkbox"
+                name="instructional"
+                id="instructional"
+                onChange={handleChange}
+              />
+              <label htmlFor="instructional">Instructional</label>
+            </div>
             <p>
               Step by step instructions with credible references that link back
               to best practices, using some live code or photos of your code to
               give context.
             </p>
-          </div>
-          <div className={styles.checkBlock}>
-            <input
-              type="checkbox"
-              name="interactive"
-              id="interactive"
-              onChange={handleChange}
-            />
-            <label htmlFor="interactive">Interactive</label>
+          </li>
+          <li className={styles.checkBlock}>
+            <div>
+              <input
+                type="checkbox"
+                name="interactive"
+                id="interactive"
+                onChange={handleChange}
+              />
+              <label htmlFor="interactive">Interactive</label>
+            </div>
             <p>
               Information on current projects or tools and must include photos
               of code or do some live coding.
             </p>
-          </div>
-          <div className={styles.checkBlock}>
-            <input
-              type="checkbox"
-              name="developerPanel"
-              id="developerPanel"
-              onChange={handleChange}
-            />
-            <label htmlFor="developerPanel">Developer Panel</label>
+          </li>
+          <li className={styles.checkBlock}>
+            <div>
+              <input
+                type="checkbox"
+                name="developerPanel"
+                id="developerPanel"
+                onChange={handleChange}
+              />
+              <label htmlFor="developerPanel">Developer Panel</label>
+            </div>
             <p>
               Information on current projects or tools and must include photos
               of code or do some live coding.
             </p>
-          </div>
-          <div className={styles.checkBlock}>
-            <input
-              type="checkbox"
-              name="lightningTalk"
-              id="lightningTalk"
-              onChange={handleChange}
-            />
-            <label htmlFor="lightningTalk">Lightning Talk</label>
+          </li>
+          <li className={styles.checkBlock}>
+            <div>
+              <input
+                type="checkbox"
+                name="lightningTalk"
+                id="lightningTalk"
+                onChange={handleChange}
+              />
+              <label htmlFor="lightningTalk">Lightning Talk</label>
+            </div>
             <p>
               Information on current projects or tools and must include photos
               of code or do some live coding.
             </p>
-          </div>
-          <button type="submit" className={styles.btn}>
-            <div className={styles.btnInnerBox}>
-              <span className={styles.btnText}>
-                Submit <Icons name='arrow-right' className={styles.arrow} />
+          </li>
+          <button type="submit">
+            <div className={styles['text-box']}>
+              <span>
+                Submit
+                <Icons name='circle-arrow-right' />
               </span>
             </div>
           </button>
-        </div>
+        </ul>
       </form>
     </section>
   );

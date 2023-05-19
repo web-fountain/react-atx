@@ -3,9 +3,9 @@ import styles from './styles.module.css';
 
 function Community() {
   return (
-    <section className={styles.container}>
+    <section id='community' className={styles.container}>
       <div className={styles.intro}>
-        <h2>About our Community</h2>
+        <h3>About our Community</h3>
         <p>
           React ATX is a Community-Driven frontend development group that
           converges on the ReactJS ecosystem.

@@ -1,5 +1,5 @@
 'use client';
-
+import './styles.module.css';
 import { useState } from 'react';
 
 import Icons from '@Icons';
@@ -35,6 +35,7 @@ function Partnerships() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: type === 'checkbox' ? checked : value
@@ -48,12 +49,13 @@ function Partnerships() {
   };
 
   return (
-    <section className={styles.container} id="partnership">
+    <section id="partnership" className={styles.container}>
       <h2>Partnership</h2>
       <h3>Interested in sponsoring?</h3>
-      <form onSubmit={handleSubmit}>
-        <ul className={styles.inputs}>
-          <li className={styles.inputBlock}>
+
+      <form className={styles['partnership-form']} onSubmit={handleSubmit}>
+        <ul className={styles['list-info']}>
+          <li className={styles['list-info-item']}>
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -64,7 +66,7 @@ function Partnerships() {
               value={formData.name}
             />
           </li>
-          <li className={styles.inputBlock}>
+          <li className={styles['list-info-item']}>
             <label htmlFor="job-title">Job Title</label>
             <input
               type="text"
@@ -75,32 +77,33 @@ function Partnerships() {
               value={formData.jobTitle}
             />
           </li>
-          <li className={styles.inputBlock}>
+          <li className={styles['list-info-item']}>
             <label htmlFor="email">Email</label>
             <input
               type="text"
               id="email"
               name="email"
-              placeholder="example@mail.com"
+              placeholder="example@acme.com"
               onChange={handleChange}
               value={formData.email}
             />
           </li>
-          <li className={styles.inputBlock}>
+          <li className={styles['list-info-item']}>
             <label htmlFor="company">Company</label>
             <input
               type="text"
               id="company"
               name="company"
-              placeholder="company"
+              placeholder="Acme Corp."
               onChange={handleChange}
               value={formData.company}
             />
           </li>
         </ul>
-        <p className={styles.question}>How would you like to partner up?</p>
-        <ul className={styles.checkboxes}>
-          <li className={styles.checkboxWrapper}>
+
+        <p className={styles['partner-up']}>How would you like to partner up?</p>
+        <ul className={styles['list-options']}>
+          <li className={styles['list-option-item']}>
             <input
               type="checkbox"
               id="venue"
@@ -108,12 +111,12 @@ function Partnerships() {
               onChange={handleChange}
               checked={formData.venue}
             />
-            <label htmlFor="venue" className={styles.checkboxLabel}>
-              {/* <Venue /> */}
+            <label htmlFor="venue">
+              <Icons name='venue' />
               Venue
             </label>
           </li>
-          <li className={styles.checkboxWrapper}>
+          <li className={styles['list-option-item']}>
             <input
               type="checkbox"
               id="food"
@@ -121,12 +124,12 @@ function Partnerships() {
               onChange={handleChange}
               checked={formData.food}
             />
-            <label htmlFor="food" className={styles.checkboxLabel}>
-              {/* <Food /> */}
+            <label htmlFor="food">
+              <Icons name='food' />
               Food
             </label>
           </li>
-          <li className={styles.checkboxWrapper}>
+          <li className={styles['list-option-item']}>
             <input
               type="checkbox"
               id="drinks"
@@ -134,12 +137,12 @@ function Partnerships() {
               onChange={handleChange}
               checked={formData.drinks}
             />
-            <label htmlFor="drinks" className={styles.checkboxLabel}>
-              {/* <Drinks /> */}
+            <label htmlFor="drinks">
+              <Icons name='drinks' />
               Drinks
             </label>
           </li>
-          <li className={styles.checkboxWrapper}>
+          <li className={styles['list-option-item']}>
             <input
               type="checkbox"
               id="speakers"
@@ -147,12 +150,12 @@ function Partnerships() {
               onChange={handleChange}
               checked={formData.speakers}
             />
-            <label htmlFor="speakers" className={styles.checkboxLabel}>
-              {/* <Speakers /> */}
+            <label htmlFor="speakers">
+              <Icons name='speakers' />
               Speakers
             </label>
           </li>
-          <li className={styles.checkboxWrapper}>
+          <li className={styles['list-option-item']}>
             <input
               type="checkbox"
               id="workshops"
@@ -160,12 +163,12 @@ function Partnerships() {
               onChange={handleChange}
               checked={formData.workshops}
             />
-            <label htmlFor="workshops" className={styles.checkboxLabel}>
-              {/* <Workshops /> */}
+            <label htmlFor="workshops">
+              <Icons name='workshops' />
               Workshops
             </label>
           </li>
-          <li className={styles.checkboxWrapper}>
+          <li className={styles['list-option-item']}>
             <input
               type="checkbox"
               id="other"
@@ -173,17 +176,18 @@ function Partnerships() {
               onChange={handleChange}
               checked={formData.other}
             />
-            <label htmlFor="other" className={styles.checkboxLabel}>
-              {/* <Other /> */}
+            <label htmlFor="other">
+              <Icons name='other' />
               Other
             </label>
           </li>
         </ul>
-        <button type="submit" className={styles.submitBtn}>
-          <div className={styles.submitBtnInnerBox}>
-            <span className={styles.submitBtnText}>
+
+        <button type="submit">
+          <div className={styles['text-box']}>
+            <span>
               Submit
-              <Icons name='arrow-right' className={styles.arrow} />
+              <Icons name='circle-arrow-right' />
             </span>
           </div>
         </button>

@@ -5,9 +5,6 @@ import ThemeToggle from './ThemeToggle';
 import styles from './styles.module.css';
 
 
-console.log(styles['nav-list'])
-
-
 function Header() {
   return (
     <header className={styles.header}>

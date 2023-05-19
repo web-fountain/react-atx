@@ -1,3 +1,18 @@
+.layout {
+  margin-bottom: 132px;
+
+  & > h4 {
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  & > h3 {
+    font-family: 'Poppins Medium';
+    line-height: 45px;
+    margin-bottom: 24px;
+  }
+}
+
 .container {
   height: 64px;
   max-width: 260px;
@@ -11,31 +26,34 @@
   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
   transition: clip-path 0.3s;
 }
+.container:hover {
+  clip-path: polygon(20px 0%, 100% 0, 100% 0, 100% 44px, 240px 100%, 0 100%, 0 100%, 0% 20px);
+}
+
 .text-box {
-  width: 252px;
-  height: 56px;
+  width: 256px;
+  height: 60px;
 
   display: flex;
   justify-content: center;
   background-color: transparent;
 
-  clip-path: polygon(18px 0%, 100% 0, 100% 0, 100% 38px, 234px 100%, 0 100%, 0 100%, 0% 18px);
+  clip-path: polygon(7.4% 0%, 100% 0px, 100% 0px, 100.00% 68.4%, 92.6% 100%, 0px 100%, 0px 100%, 0% 31.6%);
   transition: background-color 0.3s;
 }
+.text-box:hover {
+  background-color: var(--bg-color);
+}
+
 .text {
   display: flex;
   align-items: center;
+
+  color: var(--text-white);
   font-family: 'Poppins Medium';
   font-size: var(--24px);
   line-height: 30px;
   text-decoration: none;
-  color: var(--text-white);
-  transition: color 0.3s;
-}
 
-.container:hover {
-  clip-path: polygon(20px 0%, 100% 0, 100% 0, 100% 44px, 240px 100%, 0 100%, 0 100%, 0% 20px);
-}
-.text-box:hover {
-  background-color: var(--bg-color);
+  transition: color 0.3s;
 }

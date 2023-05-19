@@ -1,26 +1,30 @@
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  min-height: 100vh;
-}
+  padding-bottom: 52px;
 
-.intro > p {
-  font-family: "Poppins Regular";
-  font-size: var(--24px);
-  line-height: 36px;
-  margin-bottom: 2rem;
-}
+  & > h2 {
+    margin-bottom: 16px;
+    font-size: var(--32px);
+    line-height: 38px;
+  }
 
-.hostList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 0.5rem;
-}
+  & p {
+    margin-bottom: 48px;
+  }
 
-.hostList li {
-  border-top: 3px solid var(--primary-color);
-  padding: 0.5rem 0;
+  & .hostList {
+    display: flex;
+    flex-flow: column nowrap;
+
+    & li {
+      border-top: 3px solid var(--primary-color);
+      padding: 0.5rem 0;
+
+      & p {
+        margin-top: 16px;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .imgWrapper > img {

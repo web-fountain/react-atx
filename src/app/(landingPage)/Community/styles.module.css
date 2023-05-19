@@ -1,11 +1,12 @@
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 4rem auto;
+  margin-bottom: 104px;
 }
 
-.intro h2 {
+.intro h3 {
+  font-family: 'Poppins Medium';
   text-align: center;
+  line-height: 48px;
+  margin-bottom: 24px;
 }
 
 .intro > p {

@@ -1,3 +1,10 @@
-.main-layout {
-  padding: 150px 24px 52px;
-}
+/* @layer layout { */
+  .main-layout {
+    padding: 0 24px 63px;
+
+    background-image: var(--body-bg-image);
+    background-repeat: no-repeat;
+    background-position: 50% 6.8%;
+    background-size: auto 10%;
+  }
+/* } */

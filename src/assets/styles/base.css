@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind utilities;
+
 @layer base {
   *,
   *::after,
@@ -44,8 +47,6 @@
     line-height: 72px;
   }
   h3 {
-    margin-top: 15px;
-    margin-bottom: 24px;
     font-size: var(--32px);
     line-height: 42px;
   }
@@ -63,7 +64,6 @@
   }
 
   p {
-    margin-top: 8px;
     font-weight: var(--regular);
   }
 }

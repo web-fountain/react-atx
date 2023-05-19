@@ -1,4 +1,4 @@
-function ArrowRight({ className='', color='', size='32' }) {
+function ArrowUpRight({ className='', color='', size='32' }) {
   const inlineFill = color.length > 0
     ? { fill: color }
     : { fill: 'var(--text-white)' };
@@ -22,4 +22,4 @@ function ArrowRight({ className='', color='', size='32' }) {
   );
 }
 
-export default ArrowRight;
+export default ArrowUpRight;
