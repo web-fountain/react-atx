@@ -1,37 +1,54 @@
-'use client';
-
 import Link from 'next/link';
-import BurgerBtn from './BurgerBtn';
-import { useState } from 'react';
 
-export default function Nav() {
-  const [show, setShow] = useState(false);
-
+export default function Nav({ show }: { show: boolean }) {
   return (
-    <nav className='flex'>
-      <ul className={`lg:flex ${show ? 'flex' : 'hidden'}`}>
+    <nav className={`${show ? 'w-full' : 'w-auto'}`}>
+      <ul
+        className={`lg:flex ${
+          show ? 'w-full flex flex-col items-center' : 'hidden'
+        }`}
+      >
         <li>
-          <Link href='/events' className='text-xl leading-[30px] mx-9'>
+          <Link
+            href='/events'
+            className={`text-xl leading-[30px] mx-9 ${
+              show && 'inline-block py-4'
+            }`}
+          >
             Events
           </Link>
         </li>
         <li>
-          <Link href='/projects' className='text-xl leading-[30px] mx-9'>
+          <Link
+            href='/projects'
+            className={`text-xl leading-[30px] mx-9 ${
+              show && 'inline-block py-4'
+            }`}
+          >
             Projects
           </Link>
         </li>
         <li>
-          <Link href='/news' className='text-xl leading-[30px] mx-9'>
+          <Link
+            href='/news'
+            className={`text-xl leading-[30px] mx-9 ${
+              show && 'inline-block py-4'
+            }`}
+          >
             News
           </Link>
         </li>
         <li>
-          <Link href='/jobs' className='text-xl leading-[30px] mx-9'>
+          <Link
+            href='/jobs'
+            className={`text-xl leading-[30px] mx-9 ${
+              show && 'inline-block py-4'
+            }`}
+          >
             Jobs
           </Link>
         </li>
       </ul>
-      <BurgerBtn show={show} setShow={setShow} />
     </nav>
   );
 }

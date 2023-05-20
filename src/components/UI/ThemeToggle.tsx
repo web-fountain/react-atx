@@ -33,7 +33,7 @@ export default function ThemeToggle() {
   return (
     <button
       type='button'
-      className='hidden lg:block h-8 w-16 rounded-2xl bg-primary-color relative'
+      className='block h-8 w-16 rounded-2xl bg-primary-color relative'
       onClick={handleTheme}
     >
       <span
