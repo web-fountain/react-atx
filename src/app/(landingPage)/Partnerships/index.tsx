@@ -1,5 +1,5 @@
 'use client';
-import './styles.module.css';
+
 import { useState } from 'react';
 
 import Icons from '@Icons';

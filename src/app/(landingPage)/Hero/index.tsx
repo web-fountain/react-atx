@@ -11,7 +11,8 @@ function Hero() {
 
       <a className={styles.container} href="#join">
         <div className={styles['text-box']}>
-          <span className={styles.text}>Join now
+          <span>
+            Join now
             <Icons name="arrow-up-right" />
           </span>
         </div>

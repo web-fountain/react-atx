@@ -32,7 +32,8 @@ function Join() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <button type="submit">
-              Subscribe <Icons name='arrow-right' />
+              Subscribe
+              <Icons name='arrow-right' />
             </button>
           </form>
         </div>

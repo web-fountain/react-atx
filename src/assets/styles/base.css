@@ -63,7 +63,7 @@
     line-height: 36px;
   }
 
-  p {
-    font-weight: var(--regular);
+  small {
+    font-size: var(--8px);
   }
 }

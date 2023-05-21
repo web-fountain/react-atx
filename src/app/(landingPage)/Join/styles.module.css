@@ -17,10 +17,12 @@
   background-color: var(--primary-color);
 }
 
+.main > div h2,
+.main > div p {
+  color: var(--text-white);
+}
 .main > div h2 {
   margin-bottom: 24px;
-
-  color: var(--text-white);
   font-family: 'Poppins Medium';
   font-size: var(--32px);
   line-height: 38px;
@@ -40,7 +42,7 @@
     background-color: var(--primary-color);
   }
   & > input::placeholder {
-    color: var(--text-secondary);
+    color: var(--text-light-blue);
   }
 
   & > button {
@@ -58,6 +60,10 @@
 
     background-color: var(--text-white);
     cursor: pointer;
+
+    & svg > path {
+      stroke: var(--primary-color);
+    }
   }
 }
 

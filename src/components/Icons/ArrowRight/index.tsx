@@ -13,7 +13,7 @@ function ArrowRight({ className='', color='', size='32' }) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        style={inlineFill}
+        // style={inlineFill}
         strokeWidth="2.66667"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -22,5 +22,6 @@ function ArrowRight({ className='', color='', size='32' }) {
     </svg>
   );
 }
+
 
 export default ArrowRight;
