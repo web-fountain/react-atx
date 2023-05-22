@@ -13,8 +13,11 @@ export default function Header() {
   const [show, setShow] = useState(false);
   return (
     <header className='bg-background-color h-[101px] w-full fixed top-0 left-0 border-b'>
+      <div
+        className='bg-header-image h-[274px] w-[1440px] bg-no-repeat absolute'
+        style={{ backgroundPosition: 'center 0px' }}
+      ></div>
       <div className='h-full w-full max-w-[1440px] mx-auto flex items-center px-4 relative'>
-        <div className='bg-header-image h-[274px] w-[4000px] bg-no-repeat absolute'></div>
         <div className='h-[60px] w-[60px] mr-auto'>
           <Link href='/'>
             <ReactSmallLogo />

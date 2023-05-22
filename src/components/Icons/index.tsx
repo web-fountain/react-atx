@@ -20,7 +20,7 @@ function Icons({ name, ...props }: Props): JSX.Element {
     'discord-white': <DiscordWhite {...props} />,
     moon: <Moon {...props} />,
     'react-logo': <ReactLogo {...props} />,
-    sun: <Sun {...props} />,
+    sun: <Sun {...props} />
   };
 
   return icons[name];

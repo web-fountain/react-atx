@@ -1,8 +1,8 @@
-import Header from '@/components/UI/Header';
+import Header from '@/components/Header';
 import './globals.css';
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
