@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
 
     // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx,mdx}'
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -24,26 +24,21 @@ module.exports = {
         'text-light': 'var(--text-light)',
         'text-dark': 'var(--text-dark)',
         'text-muted': 'var(--text-muted',
-        'text-white': 'var(--text-white)'
+        'text-white': 'var(--text-white)',
       },
       backgroundImage: {
-        'header-gradient': {
-          light: {
-            'linear-gradient':
-              '(0deg, rgba(245,251,255,0.1) 0%, rgb(255, 255, 255) 100%)'
-          },
-          dark: ''
-        }
+        'header-gradient': 'var(--header-bg-linear-gradient)',
+        'header-image': 'var(--header-bg-image)',
       },
       screens: {
         mobile: '375px',
         tablet: '960px',
-        desktop: '1248px'
+        desktop: '1248px',
       },
       fontFamily: {
-        poppins: ['Poppins, sans-serif']
-      }
-    }
+        poppins: ['Poppins, sans-serif'],
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };

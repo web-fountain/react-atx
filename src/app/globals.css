@@ -24,7 +24,7 @@
       rgb(255, 255, 255) 100%
     );
     --header-height: 101px;
-    /* --header-bg-image: url(~@Images/header-net-light.png); */
+    --header-bg-image: url(~@Images/header-net-light.png);
     --2px: 0.125rem;
     --4px: 0.25rem;
     --8px: 0.5rem;
@@ -63,7 +63,7 @@
       rgba(15, 15, 15, 0.1) 0%,
       rgb(0, 0, 0) 100%
     );
-    /* --header-bg-image: url(~@Images/header-net-dark.png); */
+    --header-bg-image: url(~@Images/header-net-dark.png);
   }
 
   @font-face {
