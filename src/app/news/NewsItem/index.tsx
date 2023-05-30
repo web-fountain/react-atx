@@ -14,7 +14,7 @@ type Item = {
     lang?: string;
 }
 
-function NewsItem({ item }): JSX.Element {
+function NewsItem(props: { item: Item }): JSX.Element {
     return (
         <li className={styles.item}>
             <div className={styles.icon}>
@@ -22,21 +22,25 @@ function NewsItem({ item }): JSX.Element {
             </div>
             <div className={styles.info}>
                 <div>
-                    <p className={styles.heading}>{item.heading}</p>
-                    <a href={item.link} target='_blank'>{item.link}</a>
+                    <p className={styles.heading}>{props.item.heading}</p>
+                    <a href={props.item.link} target='_blank'>{props.item.link}</a>
                 </div>
                 <div>
                     <div className={styles.date}>
                         <Icons name='circle-exclamation' />
-                        <p>{Math.floor((Date.now() - item.date) / 60000)} minutes ago</p>
+                        <p>{props.item.date
+                            ? Math.floor((Date.now() - props.item.date) / 60000)
+                            : 0
+                            } minutes ago
+                        </p>
                     </div>
                     <p className={styles.author}>
-                        by {item.author}
+                        by {props.item.author}
                     </p>
                 </div>
             </div>
-            <div className={item.atx ? styles.atx : ''}>
-                <p>{item.atx ? 'ATX' : ''}</p>
+            <div className={props.item.atx ? styles.atx : ''}>
+                <p>{props.item.atx ? 'ATX' : ''}</p>
             </div>
         </li>
     );

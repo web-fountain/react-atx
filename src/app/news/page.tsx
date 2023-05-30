@@ -5,8 +5,6 @@ import { useState } from 'react';
 import Filters from './Filters';
 import NewsList from './NewsList';
 
-import styles from './styles.module.css';
-
 
 export const metadata = {
   title: 'React ATX | News'
