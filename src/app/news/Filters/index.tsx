@@ -9,17 +9,17 @@ const filters = [
     'JavaScript',
 ];
 
-function Filters({ setFilter, filter }) {
+function Filters(props: { setFilter: Function, filter: String }) {
     
     return (
         <ul className={styles['filters-container']}>
             {filters.map(element =>
                 <li
                     key={element}
-                    className={element.toLowerCase() === filter
+                    className={element.toLowerCase() === props.filter
                                 ? `${styles.filter} ${styles.active}` 
                                 : `${styles.filter}`}
-                    onClick={() => setFilter(element.toLowerCase())}
+                    onClick={() => props.setFilter(element.toLowerCase())}
                 >
                     {element}
                 </li>
