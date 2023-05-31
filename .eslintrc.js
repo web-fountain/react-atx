@@ -77,8 +77,9 @@ module.exports = {
     }],
     'import/exports-last': ERROR,
     'import/group-exports': ERROR,
-    'import/no-relative-packages': ERROR
+    'import/no-relative-packages': ERROR,
+
+    // react
+    'react/no-unescaped-entities': 0
   },
-  // react
-  'react/no-unescaped-entities': 0
 }
