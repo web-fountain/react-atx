@@ -4,9 +4,7 @@ import NewsList from './NewsList';
 import styles from './styles.module.css';
 
 
-export const metadata = {
-  title: 'React ATX | News'
-};
+
 
 function News() {
   return (
@@ -16,5 +14,9 @@ function News() {
     </main>
   );
 }
+
+export const metadata = {
+  title: 'React ATX | News'
+};
 
 export default News;
