@@ -14,7 +14,7 @@ type Item = {
     lang?: string;
 }
 
-function NewsItem(props: { item: Item }): JSX.Element {
+function NewsItem(props: { item: Item }) {
     return (
         <li className={styles.item}>
             <div className={styles.icon}>

@@ -5,6 +5,7 @@
     height: 152px;
     background: var(--item-bg);
     box-shadow: 0px 5px 12px 0px #D9E6FFBF;
+    cursor: default;
 }
 
 [data-theme="dark"] .item {
