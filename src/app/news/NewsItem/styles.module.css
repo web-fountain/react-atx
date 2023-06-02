@@ -43,6 +43,7 @@
 }
 
 .date {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -75,4 +76,36 @@
     color: var(--text-white);
     text-align: center;
     font-size: var(--12px);
+}
+
+@media (min-width: 640px) {
+    .item {
+        height: 85px;
+    }
+    .icon {
+        width: 72px;
+        padding: var(--24px);
+    }
+    .heading-block,
+    .credentials-block {
+        display: flex;
+        align-items: center;
+        gap: var(--8px);
+    }
+    .credentials-block {
+        gap: var(--32px);
+    }
+    .info a,
+    .author {
+        font-size: var(--14px);
+    }
+    .date::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: var(--20px);
+        border-radius: var(--8px);
+        background: var(--text-primary);
+        right: -1.1rem;
+    }
 }
