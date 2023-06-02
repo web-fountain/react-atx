@@ -21,11 +21,11 @@ function NewsItem(props: { item: Item }) {
         <Icons name='react-logo' />
       </div>
       <div className={styles.info}>
-        <div>
+        <div className={styles['heading-block']}>
           <p className={styles.heading}>{props.item.heading}</p>
           <a href={props.item.link} target='_blank'>{props.item.link}</a>
         </div>
-        <div>
+        <div className={styles['credentials-block']}>
           <div className={styles.date}>
             <Icons name='circle-exclamation' />
             <p>{props.item.date
