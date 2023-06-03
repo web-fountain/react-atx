@@ -27,6 +27,7 @@
     content: '';
     bottom: calc(var(--8px)*-1 - 2px);
     width: calc(100% + var(--16px));
+    max-width: 527px;
     height: 2px;
     background: var(--filters-underline-bg);
 }
@@ -49,6 +50,16 @@
     bottom: calc(var(--8px)*-1);
     left: 0;
     background: var(--filter-active-bg);
+}
+
+.filters-container li:nth-child(2) .filter.active::after {
+    width: calc(100% + var(--32px));
+    left: calc(var(--16px)*-1);
+}
+
+.filters-container li:last-child .filter.active::after {
+    width: calc(100% + var(--16px));
+    left: calc(var(--16px)*-1);
 }
 
 
