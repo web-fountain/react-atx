@@ -4,7 +4,7 @@
     --filter-fw: var(--regular);
     --filter-fw-active: var(--semi-bold);
     --filters-start-point: rgba(0, 122, 255, 0);
-    --filters-underline-bg: linear-gradient(270deg, var(--filters-start-point) 0.66%, var(--primary-color) 100%);
+    --filters-underline-bg: linear-gradient(270deg, var(--filters-start-point) 0.66%, var(--primary-color) 32%);
     --filter-active-bg: var(--primary-color);
     
     display: flex;
@@ -26,7 +26,7 @@
     position: absolute;
     content: '';
     bottom: calc(var(--8px)*-1 - 2px);
-    width: calc(100% + var(--16px));
+    width: 100%;
     max-width: 527px;
     height: 2px;
     background: var(--filters-underline-bg);
@@ -48,6 +48,7 @@
 .filter.active::after {
     height: 3px;
     bottom: calc(var(--8px)*-1);
+    width: calc(100% + var(--16px));
     left: 0;
     background: var(--filter-active-bg);
 }
@@ -58,8 +59,13 @@
 }
 
 .filters-container li:last-child .filter.active::after {
-    width: calc(100% + var(--16px));
     left: calc(var(--16px)*-1);
+}
+
+@media (min-width: 600px) {
+    .filters-container {
+        --filters-underline-bg: linear-gradient(270deg, var(--filters-start-point) 0.66%, var(--primary-color) 60%);
+    }
 }
 
 
