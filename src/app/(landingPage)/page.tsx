@@ -7,6 +7,8 @@ import Speakers from './Speakers';
 import Partnerships from './Partnerships';
 import AboutUs from './AboutUs';
 
+import styles from './styles.module.css';
+
 
 const metadata = {
   title: 'React ATX | Home'
@@ -14,7 +16,7 @@ const metadata = {
 
 function Home() {
   return (
-    <main className="main-layout">
+    <main className={`main-layout ${styles['page-layout']}`}>
       <Hero />
       <Community />
       <Join />

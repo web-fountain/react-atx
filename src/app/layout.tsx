@@ -18,7 +18,7 @@ function RootLayout({ children }: { children: ReactNode }) {
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="favicon/manifest.webmanifest" />
 
-        <style>@layer fonts, resets, base, layout, theme, page;</style>
+        <style>@layer fonts, resets, base, layout, theme;</style>
       </head>
       <body>
         <Header />
