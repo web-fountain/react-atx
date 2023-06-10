@@ -63,4 +63,9 @@
   small {
     font-size: var(--8px);
   }
+
+  button {
+    border-style: none;
+    background-color: transparent;
+  }
 }
