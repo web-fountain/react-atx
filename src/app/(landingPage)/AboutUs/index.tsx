@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 function AboutUs() {
   return (
     <section id='aboutus' className={styles.container}>
-        <h2>About Us</h2>
+        <h1>About Us</h1>
         <p>
           There are some React meetups but don&apos;t seem to be consistently
           active. We plan on doing montly presentations, hacking, and every once

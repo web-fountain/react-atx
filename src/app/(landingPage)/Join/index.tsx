@@ -21,7 +21,7 @@ function Join() {
         <div className={styles.top} />
         <div className={styles.main}>
           <div>
-            <h2>Join the Community</h2>
+            <h1>Join the Community</h1>
             <p>Subscribe to our newsletter and get notified of upcoming events</p>
           </div>
           <form className={styles['join-form']} onSubmit={handleSubmit}>

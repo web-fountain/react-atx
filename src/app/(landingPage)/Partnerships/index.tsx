@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 
 interface FormDataTypes {
   name: string
-  jobTitle: string
+  'job-title': string
   email: string
   company: string
   venue: boolean
@@ -22,7 +22,7 @@ interface FormDataTypes {
 function Partnerships() {
   const [formData, setFormData] = useState<FormDataTypes>({
     name: '',
-    jobTitle: '',
+    'job-title': '',
     email: '',
     company: '',
     venue: false,
@@ -50,8 +50,8 @@ function Partnerships() {
 
   return (
     <section id="partnership" className={styles.container}>
-      <h2>Partnership</h2>
-      <h3>Interested in sponsoring?</h3>
+      <h1>Partnership</h1>
+      <h4>Interested in sponsoring?</h4>
 
       <form className={styles['partnership-form']} onSubmit={handleSubmit}>
         <ul className={styles['list-info']}>
@@ -74,7 +74,7 @@ function Partnerships() {
               name="job-title"
               placeholder="software engineer"
               onChange={handleChange}
-              value={formData.jobTitle}
+              value={formData['job-title']}
             />
           </li>
           <li className={styles['list-info-item']}>
@@ -101,7 +101,7 @@ function Partnerships() {
           </li>
         </ul>
 
-        <p className={styles['partner-up']}>How would you like to partner up?</p>
+        <h4 className={styles['partner-up']}>How would you like to partner up?</h4>
         <ul className={styles['list-options']}>
           <li className={styles['list-option-item']}>
             <input

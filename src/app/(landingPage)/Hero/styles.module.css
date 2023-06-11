@@ -1,14 +1,13 @@
 .layout {
   margin-bottom: 132px;
 
-  & > h4 {
-    line-height: 24px;
+  & > span {
+    display: inline-block;
     margin-bottom: 15px;
+    font-weight: 700;
   }
 
-  & > h3 {
-    font-family: 'Poppins Medium';
-    line-height: 45px;
+  & > h1 {
     margin-bottom: 24px;
   }
 }
@@ -33,6 +32,7 @@
 .text-box {
   width: 256px;
   height: 60px;
+  padding: 17px 64px;
 
   display: flex;
   justify-content: center;
@@ -42,25 +42,29 @@
   transition: background-color 0.3s;
 
   & span {
+    width: 100%;
+
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    font-family: 'Poppins Medium';
-    font-size: var(--24px);
+    font-weight: 500;
+    font-size: var(--20px);
     line-height: 30px;
+
     text-decoration: none;
     color: var(--text-white);
     transition: color 0.3s;
 
     & svg {
-      margin-left: 17px;
+      /* margin-left: 15px; */
 
       & > path {
-        fill: #FFFFFF;
+        /* fill: #FFFFFF; */
       }
     }
     & svg path {
-      fill: var(--text-white);
+      /* fill: var(--text-white); */
       transition: fill 0.3s;
     }
   }

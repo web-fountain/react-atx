@@ -17,15 +17,12 @@
   background-color: var(--primary-color);
 }
 
-.main > div h2,
+.main > div h1,
 .main > div p {
   color: var(--text-white);
 }
-.main > div h2 {
+.main > div h1 {
   margin-bottom: 24px;
-  font-family: 'Poppins Medium';
-  font-size: var(--32px);
-  line-height: 38px;
 }
 
 .join-form {
@@ -53,11 +50,11 @@
     padding: 18px 32px;
     gap: 16px;
 
-    color: var(--primary-color);
-    font-family: 'Poppins Medium';
-    font-size: var(--24px);
-    line-height: 36px;
+    font-weight: 500;
+    font-size: var(--20px);
+    line-height: 30px;
 
+    color: var(--primary-color);
     background-color: var(--text-white);
     cursor: pointer;
 

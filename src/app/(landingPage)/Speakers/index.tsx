@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 
 interface SpeakerFormTypes {
   name: string
-  jobTitle: string
+  'job-title': string
   email: string
   company: string
   topic: string
@@ -22,7 +22,7 @@ interface SpeakerFormTypes {
 function Speakers() {
   const [formData, setFormData] = React.useState<SpeakerFormTypes>({
     name: '',
-    jobTitle: '',
+    'job-title': '',
     email: '',
     company: '',
     topic: '',
@@ -49,8 +49,8 @@ function Speakers() {
 
   return (
     <section className={styles.container} id="speakers">
-      <h2>Speakers</h2>
-      <h3>Interested in speaking at our next event? Please fill out the form below</h3>
+      <h1>Speakers</h1>
+      <h4>Interested in speaking at our next event? Please fill out the form below</h4>
 
       <form className={styles['speaker-form']} onSubmit={handleSubmit}>
         <ul className={styles['list-info']}>
@@ -73,7 +73,7 @@ function Speakers() {
               name="job-title"
               placeholder="software engineer"
               onChange={handleChange}
-              value={formData.jobTitle}
+              value={formData['job-title']}
             />
           </li>
           <li className={styles['list-info-item']}>
@@ -111,7 +111,7 @@ function Speakers() {
           </li>
         </ul>
 
-        <p className={styles['topic-presentation']}>How Would you like to present your topic?</p>
+        <h4 className={styles['topic-presentation']}>How Would you like to present your topic?</h4>
 
         <div className={styles.hint}>
           <div>
@@ -129,7 +129,7 @@ function Speakers() {
                 id="showcase"
                 onChange={handleChange}
               />
-              <label htmlFor="showcase">Showcase</label>
+              <h4><label htmlFor="showcase">Showcase</label></h4>
             </div>
             <p>
               Information on current projects or tools and must include photos
@@ -144,7 +144,7 @@ function Speakers() {
                 id="instructional"
                 onChange={handleChange}
               />
-              <label htmlFor="instructional">Instructional</label>
+              <h4><label htmlFor="instructional">Instructional</label></h4>
             </div>
             <p>
               Step by step instructions with credible references that link back
@@ -160,7 +160,7 @@ function Speakers() {
                 id="interactive"
                 onChange={handleChange}
               />
-              <label htmlFor="interactive">Interactive</label>
+              <h4><label htmlFor="interactive">Interactive</label></h4>
             </div>
             <p>
               Information on current projects or tools and must include photos
@@ -175,7 +175,7 @@ function Speakers() {
                 id="developerPanel"
                 onChange={handleChange}
               />
-              <label htmlFor="developerPanel">Developer Panel</label>
+              <h4><label htmlFor="developerPanel">Developer Panel</label></h4>
             </div>
             <p>
               Information on current projects or tools and must include photos
@@ -190,7 +190,7 @@ function Speakers() {
                 id="lightningTalk"
                 onChange={handleChange}
               />
-              <label htmlFor="lightningTalk">Lightning Talk</label>
+              <h4><label htmlFor="lightningTalk">Lightning Talk</label></h4>
             </div>
             <p>
               Information on current projects or tools and must include photos

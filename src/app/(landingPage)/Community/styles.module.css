@@ -2,11 +2,9 @@
   margin-bottom: 104px;
 }
 
-.intro h3 {
-  font-family: 'Poppins Medium';
-  text-align: center;
-  line-height: 48px;
+.intro h1 {
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .intro > p {
