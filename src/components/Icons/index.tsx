@@ -2,6 +2,8 @@ import ArrowRight from './ArrowRight';
 import ArrowUpRight from './ArrowUpRight';
 import CircleArrowRight from './CircleArrowRight';
 import CircleExclamation from './CircleExclamation';
+import Clock from './Clock';
+import Comment from './Comment';
 import DiscordWhite from './DiscordWhite';
 import Drinks from './Drinks';
 import Food from './Food';
@@ -32,6 +34,8 @@ function Icons({ name, ...props }: Props): JSX.Element {
     'arrow-up-right':       <ArrowUpRight {...props} />,
     'circle-arrow-right':   <CircleArrowRight {...props} />,
     'circle-exclamation':   <CircleExclamation {...props} />,
+    'clock':                <Clock {...props} />,
+    'comment':              <Comment {...props} />,
     'discord-white':        <DiscordWhite {...props} />,
     'drinks':               <Drinks {...props} />,
     'food':                 <Food {...props} />,
