@@ -1,0 +1,54 @@
+.page-layout {
+  background-image: none;
+  margin-top: -60px;
+
+  & > h1 {
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  & header {
+    margin-bottom: 24px;
+  }
+}
+
+.topic-list {
+  height: 50px;
+  padding-bottom: 2px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+  background-size:100% 2px ;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+
+  &.left-linear {
+    background-image: linear-gradient(to left, #007BFF00 -10%, #007BFF 100%);
+  }
+  &.right-linear {
+    background-image: linear-gradient(to right, #007BFF00 -10%, #007BFF 100%);
+  }
+  &.radial {
+    background-image: radial-gradient(at center, #007BFF 0%, #007BFF00 90%);
+  }
+}
+
+.topic {
+  &.active {
+    border-bottom: 3px solid var(--primary-color);
+
+    & a {
+      color: var(--text-primary);
+    }
+  }
+
+  & a {
+    font-size: var(--20px);
+    line-height: var(--40px);
+    font-weight: var(--medium);
+    color: var(--text-inactive);
+  }
+}
