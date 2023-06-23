@@ -11,10 +11,10 @@ type Item = {
   date?: number;
   author?: string;
   atx?: boolean;
-  lang?: string;
+  topic?: string;
 }
 
-function NewsItem(props: { item: Item }) {
+function TopicItem(props: { item: Item }) {
   return (
     <li className={styles.item}>
       <div className={styles.icon}>
@@ -46,4 +46,4 @@ function NewsItem(props: { item: Item }) {
   );
 };
 
-export default NewsItem;
+export default TopicItem;

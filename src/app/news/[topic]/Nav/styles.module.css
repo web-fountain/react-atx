@@ -1,4 +1,4 @@
-.filters-container {
+.container {
     --filter: var(--text-primary); 
     --filter-active: var(--text-primary);
     --filter-fw: var(--regular);
@@ -13,7 +13,7 @@
     gap: var(--32px);
 }
 
-[data-theme="dark"] .filters-container {
+[data-theme="dark"] .container {
     --filter: #a5a5a5; 
     --filter-active: var(--text-white);
     --filter-fw: var(--medium);
@@ -21,31 +21,31 @@
     --filters-start-point: rgba(38, 88, 203, 0);
 }
 
-.filters-container::after,
-.filter.active::after {
+.container::after,
+.topic.active::after {
     position: absolute;
     content: '';
-    bottom: calc(var(--8px)*-1 - 2px);
+    bottom: calc(0.125rem*-1 - 2px);
     width: 100%;
     max-width: 527px;
     height: 2px;
     background: var(--filters-underline-bg);
 }
 
-.filter {
+.topic {
     font-size: var(--20px);
     line-height: var(--40px);
     font-weight: var(--filter-fw);
     color: var(--filter);
 }
 
-.filter.active {
+.topic.active {
     position: relative;
     color: var(--filter-active);
     font-weight: var(--filter-fw-active);
 }
 
-.filter.active::after {
+.topic.active::after {
     height: 3px;
     bottom: calc(var(--8px)*-1);
     width: calc(100% + var(--16px));
@@ -53,17 +53,17 @@
     background: var(--filter-active-bg);
 }
 
-.filters-container li:nth-child(2) .filter.active::after {
+.container li:nth-child(2) .topic.active::after {
     width: calc(100% + var(--32px));
     left: calc(var(--16px)*-1);
 }
 
-.filters-container li:last-child .filter.active::after {
+.container li:last-child .topic.active::after {
     left: calc(var(--16px)*-1);
 }
 
 @media (min-width: 600px) {
-    .filters-container {
+    .container {
         --filters-underline-bg: linear-gradient(270deg, var(--filters-start-point) 0.66%, var(--primary-color) 60%);
     }
 }
