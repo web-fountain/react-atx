@@ -1,0 +1,72 @@
+.container {
+    --filter: var(--text-primary); 
+    --filter-active: var(--text-primary);
+    --filter-fw: var(--regular);
+    --filter-fw-active: var(--semi-bold);
+    --filters-start-point: rgba(0, 122, 255, 0);
+    --filters-underline-bg: linear-gradient(270deg, var(--filters-start-point) 0.66%, var(--primary-color) 32%);
+    --filter-active-bg: var(--primary-color);
+    
+    display: flex;
+    position: relative;
+    margin-top: var(--40px);
+    gap: var(--32px);
+}
+
+[data-theme="dark"] .container {
+    --filter: #a5a5a5; 
+    --filter-active: var(--text-white);
+    --filter-fw: var(--medium);
+    --filter-fw-active: var(--medium);
+    --filters-start-point: rgba(38, 88, 203, 0);
+}
+
+.container::after,
+.topic.active::after {
+    position: absolute;
+    content: '';
+    bottom: calc(0.125rem*-1 - 2px);
+    width: 100%;
+    max-width: 527px;
+    height: 2px;
+    background: var(--filters-underline-bg);
+}
+
+.topic {
+    font-size: var(--20px);
+    line-height: var(--40px);
+    font-weight: var(--filter-fw);
+    color: var(--filter);
+}
+
+.topic.active {
+    position: relative;
+    color: var(--filter-active);
+    font-weight: var(--filter-fw-active);
+}
+
+.topic.active::after {
+    height: 3px;
+    bottom: calc(var(--8px)*-1);
+    width: calc(100% + var(--16px));
+    left: 0;
+    background: var(--filter-active-bg);
+}
+
+.container li:nth-child(2) .topic.active::after {
+    width: calc(100% + var(--32px));
+    left: calc(var(--16px)*-1);
+}
+
+.container li:last-child .topic.active::after {
+    left: calc(var(--16px)*-1);
+}
+
+@media (min-width: 600px) {
+    .container {
+        --filters-underline-bg: linear-gradient(270deg, var(--filters-start-point) 0.66%, var(--primary-color) 60%);
+    }
+}
+
+
+

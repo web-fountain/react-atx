@@ -1,6 +1,6 @@
 import Icons from '@Icons';
 import styles from './styles.module.css';
-
+import ButtonLink from '@/components/ButtonLink';
 
 function Hero() {
   return (
@@ -20,6 +20,5 @@ function Hero() {
     </section>
   );
 }
-
 
 export default Hero;

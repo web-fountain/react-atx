@@ -1,0 +1,12 @@
+.topic {
+    background-image: none;
+    max-width: 1292px;
+    margin: 0 auto;
+}
+
+.list {
+    margin-top: var(--32px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--16px);
+}
