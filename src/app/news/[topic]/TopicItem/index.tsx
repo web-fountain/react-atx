@@ -14,7 +14,7 @@ type Item = {
   author?: string;
   atx?: boolean;
   topic?: string;
-}
+};
 
 function TopicItem(props: { item: Item }) {
   return (
