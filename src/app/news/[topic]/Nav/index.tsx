@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -17,7 +19,7 @@ function Nav(props: { topic: String }) {
         {topics.map(element =>
           <li key={element}>
             <Link
-              href={`news/${element.toLowerCase()}`}
+              href={`/news/${element.toLowerCase()}`}
               className={element.toLowerCase() === props.topic
                 ? `${styles.topic} ${styles.active}` 
                 : `${styles.topic}`}
