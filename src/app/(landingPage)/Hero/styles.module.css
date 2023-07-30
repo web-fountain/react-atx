@@ -1,84 +1,32 @@
-.layout {
-  margin-bottom: 132px;
-
-  & > span {
-    display: inline-block;
-    margin-bottom: 15px;
-    font-weight: 700;
-  }
-
-  & > h1 {
-    margin-bottom: 24px;
-  }
-}
-
-.container {
-  height: 64px;
-  max-width: 260px;
-  margin-top: 46px;
-
+.hero {
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
-
-  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
-  transition: clip-path 0.3s;
-}
-.container:hover {
-  clip-path: polygon(20px 0%, 100% 0, 100% 0, 100% 44px, 240px 100%, 0 100%, 0 100%, 0% 20px);
+  height: calc(100vh - 165px);
+  width: 100%;
+  max-width: 1292px;
 }
 
-.text-box {
-  width: 256px;
-  height: 60px;
-  padding: 17px 64px;
+.intro {
+  width: 100%;
 
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-
-  clip-path: polygon(7.4% 0%, 100% 0px, 100% 0px, 100.00% 68.4%, 92.6% 100%, 0px 100%, 0px 100%, 0% 31.6%);
-  transition: background-color 0.3s;
-
-  & span {
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    font-weight: 500;
-    font-size: var(--20px);
-    line-height: 30px;
-
-    text-decoration: none;
-    color: var(--text-white);
-    transition: color 0.3s;
-
-    & svg {
-      /* margin-left: 15px; */
-
-      & > path {
-        /* fill: #FFFFFF; */
-      }
-    }
-    & svg path {
-      /* fill: var(--text-white); */
-      transition: fill 0.3s;
-    }
+  & > h4 {
+    font-family: 'Poppins Regular';
+    font-size: var(--32px);
+    font-weight: var(--bold);
+    line-height: normal;
   }
-}
-.text-box:hover {
-  background-color: var(--bg-color);
-  transition: background-color 0.3s;
 
-  & > span {
-    color: var(--text-primary);
-    transition: color 0.3s;
+  & > h3 {
+    font-family: 'Poppins Medium';
+    font-size: var(--56px);
+    line-height: 60px;
   }
-  & > span > svg > path {
-    fill: var(--text-primary);
-    transition: fill 0.3s;
+
+  & > p {
+    font-size: 28px;
+    margin-bottom: 24px;
+    line-height: 36px;
   }
 }

@@ -1,12 +1,9 @@
-import Image from 'next/image';
-
-import { hostImg } from '@Images';
 import styles from './styles.module.css';
 
 
 function AboutUs() {
   return (
-    <section id='aboutus' className={styles.container}>
+    <section id='about-us' className={styles.container}>
         <h1>About Us</h1>
         <p>
           There are some React meetups but don&apos;t seem to be consistently
@@ -30,8 +27,31 @@ function AboutUs() {
 
       <ul className={styles.hostList}>
         <li>
-          <div className={styles.imgWrapper}>
-            {/* <Image src={hostImg} alt="host" /> */}
+          <div className={styles['background-image']}>
+          </div>
+          <h4 className={styles.position}>
+            Position: <span>HOST</span>
+          </h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+            distinctio in sit culpa consequatur ratione, rem veritatis debitis
+            saepe sunt.
+          </p>
+        </li>
+        <li>
+          <div className={styles['background-image']}>
+          </div>
+          <h4 className={styles.position}>
+            Position: <span>HOST</span>
+          </h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+            distinctio in sit culpa consequatur ratione, rem veritatis debitis
+            saepe sunt.
+          </p>
+        </li>
+        <li>
+          <div className={styles['background-image']}>
           </div>
           <h4 className={styles.position}>
             Position: <span>HOST</span>

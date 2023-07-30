@@ -2,27 +2,28 @@
 
 import { useState } from 'react';
 
-import Icons from '@Icons';
 import styles from './styles.module.css';
+import ButtonLink from '@/components/ButtonLink';
+import PartnershipInput from '@/components/PartnershipInput';
 
 
 interface FormDataTypes {
-  name: string
-  'job-title': string
-  email: string
-  company: string
-  venue: boolean
-  food: boolean
-  drinks: boolean
-  speakers: boolean
-  workshops: boolean
-  other: boolean
+  name: string;
+  jobTitle: string;
+  email: string;
+  company: string;
+  venue: boolean;
+  food: boolean;
+  drinks: boolean;
+  speakers: boolean;
+  workshops: boolean;
+  other: boolean;
 }
 
 function Partnerships() {
   const [formData, setFormData] = useState<FormDataTypes>({
     name: '',
-    'job-title': '',
+    jobTitle: '',
     email: '',
     company: '',
     venue: false,
@@ -49,152 +50,123 @@ function Partnerships() {
   };
 
   return (
-    <section id="partnership" className={styles.container}>
-      <h1>Partnership</h1>
-      <h4>Interested in sponsoring?</h4>
+
+    <section id='partnership' className={styles.container}>
+      <h2>Partnership</h2>
+      <h3>Interested in sponsoring?</h3>
 
       <form className={styles['partnership-form']} onSubmit={handleSubmit}>
         <ul className={styles['list-info']}>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="name"
-              onChange={handleChange}
-              value={formData.name}
-            />
-          </li>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="job-title">Job Title</label>
-            <input
-              type="text"
-              id="job-title"
-              name="job-title"
-              placeholder="software engineer"
-              onChange={handleChange}
-              value={formData['job-title']}
-            />
-          </li>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="example@acme.com"
-              onChange={handleChange}
-              value={formData.email}
-            />
-          </li>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="company">Company</label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              placeholder="Acme Corp."
-              onChange={handleChange}
-              value={formData.company}
-            />
-          </li>
+          <PartnershipInput
+            type='text'
+            label='Name'
+            name='name'
+            id='name'
+            placeholder='name...'
+            onChange={handleChange}
+            value={formData.name}
+          />
+          <PartnershipInput
+            type='text'
+            label='Job Title'
+            name='jobTitle'
+            id='jobTitle'
+            placeholder='job title'
+            onChange={handleChange}
+            value={formData.jobTitle}
+          />
+          <PartnershipInput
+            type='text'
+            label='Email'
+            name='email'
+            id='email'
+            placeholder='email'
+            onChange={handleChange}
+            value={formData.email}
+          />
+          <PartnershipInput
+            type='text'
+            label='Company'
+            name='company'
+            id='company'
+            placeholder='company'
+            onChange={handleChange}
+            value={formData.company}
+          />
         </ul>
 
-        <h4 className={styles['partner-up']}>How would you like to partner up?</h4>
+        <p className={styles['partner-up']}>
+          How would you like to partner up?
+        </p>
+
         <ul className={styles['list-options']}>
-          <li className={styles['list-option-item']}>
-            <input
-              type="checkbox"
-              id="venue"
-              name="venue"
-              onChange={handleChange}
-              checked={formData.venue}
-            />
-            <label htmlFor="venue">
-              <Icons name='venue' />
-              Venue
-            </label>
-          </li>
-          <li className={styles['list-option-item']}>
-            <input
-              type="checkbox"
-              id="food"
-              name="food"
-              onChange={handleChange}
-              checked={formData.food}
-            />
-            <label htmlFor="food">
-              <Icons name='food' />
-              Food
-            </label>
-          </li>
-          <li className={styles['list-option-item']}>
-            <input
-              type="checkbox"
-              id="drinks"
-              name="drinks"
-              onChange={handleChange}
-              checked={formData.drinks}
-            />
-            <label htmlFor="drinks">
-              <Icons name='drinks' />
-              Drinks
-            </label>
-          </li>
-          <li className={styles['list-option-item']}>
-            <input
-              type="checkbox"
-              id="speakers"
-              name="speakers"
-              onChange={handleChange}
-              checked={formData.speakers}
-            />
-            <label htmlFor="speakers">
-              <Icons name='speakers' />
-              Speakers
-            </label>
-          </li>
-          <li className={styles['list-option-item']}>
-            <input
-              type="checkbox"
-              id="workshops"
-              name="workshops"
-              onChange={handleChange}
-              checked={formData.workshops}
-            />
-            <label htmlFor="workshops">
-              <Icons name='workshops' />
-              Workshops
-            </label>
-          </li>
-          <li className={styles['list-option-item']}>
-            <input
-              type="checkbox"
-              id="other"
-              name="other"
-              onChange={handleChange}
-              checked={formData.other}
-            />
-            <label htmlFor="other">
-              <Icons name='other' />
-              Other
-            </label>
-          </li>
+          <PartnershipInput
+            type='checkbox'
+            id='venue'
+            name='venue'
+            onChange={handleChange}
+            checked={formData.venue}
+            label='Venue'
+            icon='venue'
+          />
+          <PartnershipInput
+            type='checkbox'
+            id='food'
+            name='food'
+            onChange={handleChange}
+            checked={formData.food}
+            label='Food'
+            icon='food'
+          />
+          <PartnershipInput
+            type='checkbox'
+            id='drinks'
+            name='drinks'
+            onChange={handleChange}
+            checked={formData.drinks}
+            label='Drinks'
+            icon='drinks'
+          />
+          <PartnershipInput
+            type='checkbox'
+            id='speakers'
+            name='speakers'
+            onChange={handleChange}
+            checked={formData.speakers}
+            label='Speakers'
+            icon='speakers'
+          />
+          <PartnershipInput
+            type='checkbox'
+            id='workshops'
+            name='workshops'
+            onChange={handleChange}
+            checked={formData.workshops}
+            label='Workshops'
+            icon='workshops'
+          />
+          <PartnershipInput
+            type='checkbox'
+            id='other'
+            name='other'
+            onChange={handleChange}
+            checked={formData.other}
+            label='Other'
+            icon='other'
+          />
         </ul>
 
-        <button type="submit">
-          <div className={styles['text-box']}>
-            <span>
-              Submit
-              <Icons name='circle-arrow-right' />
-            </span>
-          </div>
-        </button>
+        <ButtonLink
+          element='button'
+          type='submit'
+          text='Submit'
+          icon='circle-arrow-right'
+          height={64}
+          width={321}
+        />
       </form>
     </section>
   );
 }
-
 
 export default Partnerships;

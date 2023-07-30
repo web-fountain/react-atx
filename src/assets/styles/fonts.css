@@ -28,7 +28,7 @@
 
 @layer fonts {
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Regular';
     font-style: normal;
     font-weight: 400;
     src: local('Poppins Regular'),
@@ -36,7 +36,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Italic';
     font-style: italic;
     font-weight: 400;
     src: local('Poppins Italic'),
@@ -44,7 +44,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Thin';
     font-style: normal;
     font-weight: 100;
     src: local('Poppins Thin'),
@@ -52,7 +52,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Thin Italic';
     font-style: italic;
     font-weight: 100;
     src: local('Poppins Thin Italic'),
@@ -60,7 +60,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins ExtraLight';
     font-style: normal;
     font-weight: 200;
     src: local('Poppins ExtraLight'),
@@ -68,7 +68,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins ExtraLight Italic';
     font-style: italic;
     font-weight: 200;
     src: local('Poppins ExtraLight Italic'),
@@ -76,7 +76,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Light';
     font-style: normal;
     font-weight: 300;
     src: local('Poppins Light'),
@@ -84,7 +84,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Light Italic';
     font-style: italic;
     font-weight: 300;
     src: local('Poppins Light Italic'),
@@ -92,7 +92,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Medium';
     font-style: normal;
     font-weight: 500;
     src: local('Poppins Medium'),
@@ -100,7 +100,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Medium Italic';
     font-style: italic;
     font-weight: 500;
     src: local('Poppins Medium Italic'),
@@ -108,7 +108,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins SemiBold';
     font-style: normal;
     font-weight: 600;
     src: local('Poppins SemiBold'),
@@ -116,7 +116,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins SemiBold Italic';
     font-style: italic;
     font-weight: 600;
     src: local('Poppins SemiBold Italic'),
@@ -124,7 +124,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Bold';
     font-style: normal;
     font-weight: 700;
     src: local('Poppins Bold'),
@@ -132,7 +132,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Bold Italic';
     font-style: italic;
     font-weight: 700;
     src: local('Poppins Bold Italic'),
@@ -140,7 +140,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins ExtraBold';
     font-style: normal;
     font-weight: 800;
     src: local('Poppins ExtraBold'),
@@ -148,7 +148,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins ExtraBold Italic';
     font-style: italic;
     font-weight: 800;
     src: local('Poppins ExtraBold Italic'),
@@ -156,7 +156,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Black';
     font-style: normal;
     font-weight: 900;
     src: local('Poppins Black'),
@@ -164,7 +164,7 @@
   }
 
   @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Black Italic';
     font-style: italic;
     font-weight: 900;
     src: local('Poppins Black Italic'),

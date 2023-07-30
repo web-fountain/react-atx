@@ -4,25 +4,27 @@ import React from 'react';
 
 import Icons from '@Icons';
 import styles from './styles.module.css';
+import ButtonLink from '@/components/ButtonLink';
+import SpeakerInput from '@/components/SpeakerInput';
 
 
 interface SpeakerFormTypes {
-  name: string
-  'job-title': string
-  email: string
-  company: string
-  topic: string
-  showcase: boolean
-  instructional: boolean
-  interactive: boolean
-  developerPanel: boolean
-  lightningTalk: boolean
+  name: string;
+  jobTitle: string;
+  email: string;
+  company: string;
+  topic: string;
+  showcase: boolean;
+  instructional: boolean;
+  interactive: boolean;
+  developerPanel: boolean;
+  lightningTalk: boolean;
 }
 
 function Speakers() {
   const [formData, setFormData] = React.useState<SpeakerFormTypes>({
     name: '',
-    'job-title': '',
+    jobTitle: '',
     email: '',
     company: '',
     topic: '',
@@ -44,172 +46,135 @@ function Speakers() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e);
+    console.log(formData);
   };
 
   return (
-    <section className={styles.container} id="speakers">
+    <section className={styles.container} id='speakers'>
       <h1>Speakers</h1>
-      <h4>Interested in speaking at our next event? Please fill out the form below</h4>
+      <h4>
+        Interested in speaking at our next event? Please fill out the form below
+      </h4>
 
       <form className={styles['speaker-form']} onSubmit={handleSubmit}>
         <ul className={styles['list-info']}>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="name"
-              onChange={handleChange}
-              value={formData.name}
-            />
-          </li>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="job-title">Job Title</label>
-            <input
-              type="text"
-              id="job-title"
-              name="job-title"
-              placeholder="software engineer"
-              onChange={handleChange}
-              value={formData['job-title']}
-            />
-          </li>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="example@acme.com"
-              onChange={handleChange}
-              value={formData.email}
-            />
-          </li>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="company">Company</label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              placeholder="Acme Corp."
-              onChange={handleChange}
-              value={formData.company}
-            />
-          </li>
-          <li className={styles['list-info-item']}>
-            <label htmlFor="topic">Topic</label>
-            <input
-              type="text"
-              id="topic"
-              name="topic"
-              placeholder="Intro to React"
-              onChange={handleChange}
-              value={formData.topic}
-            />
-          </li>
+          <SpeakerInput
+            label='Name'
+            id='name'
+            type='text'
+            name='name'
+            placeholder='name'
+            onChange={handleChange}
+            value={formData.name}
+          />
+          <SpeakerInput
+            label='Job Title'
+            id='jobTitle'
+            type='text'
+            name='jobTitle'
+            placeholder='job title'
+            onChange={handleChange}
+            value={formData.jobTitle}
+          />
+          <SpeakerInput
+            label='Email'
+            id='email'
+            type='text'
+            name='email'
+            placeholder='email'
+            onChange={handleChange}
+            value={formData.email}
+          />
+          <SpeakerInput
+            label='Company'
+            id='company'
+            type='text'
+            name='company'
+            placeholder='company'
+            onChange={handleChange}
+            value={formData.company}
+          />
+          <SpeakerInput
+            label='Topic'
+            id='topic'
+            type='text'
+            name='topic'
+            placeholder='topic'
+            onChange={handleChange}
+            value={formData.topic}
+          />
         </ul>
 
-        <h4 className={styles['topic-presentation']}>How Would you like to present your topic?</h4>
+        <h4 className={styles['topic-presentation']}>
+          How Would you like to present your topic?
+        </h4>
 
         <div className={styles.hint}>
-          <div>
-            <Icons name='circle-exclamation' />
-          </div>
+          <Icons name='circle-exclamation' />
           <p>You can choose only one of the options</p>
         </div>
 
-        <ul className={styles.checks}>
-          <li className={styles.checkBlock}>
-            <div>
-              <input
-                type="checkbox"
-                name="showcase"
-                id="showcase"
-                onChange={handleChange}
-              />
-              <h4><label htmlFor="showcase">Showcase</label></h4>
-            </div>
-            <p>
-              Information on current projects or tools and must include photos
-              of code or do some live coding.
-            </p>
-          </li>
-          <li className={styles.checkBlock}>
-            <div>
-              <input
-                type="checkbox"
-                name="instructional"
-                id="instructional"
-                onChange={handleChange}
-              />
-              <h4><label htmlFor="instructional">Instructional</label></h4>
-            </div>
-            <p>
-              Step by step instructions with credible references that link back
-              to best practices, using some live code or photos of your code to
-              give context.
-            </p>
-          </li>
-          <li className={styles.checkBlock}>
-            <div>
-              <input
-                type="checkbox"
-                name="interactive"
-                id="interactive"
-                onChange={handleChange}
-              />
-              <h4><label htmlFor="interactive">Interactive</label></h4>
-            </div>
-            <p>
-              Information on current projects or tools and must include photos
-              of code or do some live coding.
-            </p>
-          </li>
-          <li className={styles.checkBlock}>
-            <div>
-              <input
-                type="checkbox"
-                name="developerPanel"
-                id="developerPanel"
-                onChange={handleChange}
-              />
-              <h4><label htmlFor="developerPanel">Developer Panel</label></h4>
-            </div>
-            <p>
-              Information on current projects or tools and must include photos
-              of code or do some live coding.
-            </p>
-          </li>
-          <li className={styles.checkBlock}>
-            <div>
-              <input
-                type="checkbox"
-                name="lightningTalk"
-                id="lightningTalk"
-                onChange={handleChange}
-              />
-              <h4><label htmlFor="lightningTalk">Lightning Talk</label></h4>
-            </div>
-            <p>
-              Information on current projects or tools and must include photos
-              of code or do some live coding.
-            </p>
-          </li>
-          <button type="submit">
-            <div className={styles['text-box']}>
-              <span>
-                Submit
-                <Icons name='circle-arrow-right' />
-              </span>
-            </div>
-          </button>
+        <ul className={styles['list-checks']}>
+          <SpeakerInput
+            label='Showcase'
+            id='showcase'
+            type='checkbox'
+            name='showcase'
+            onChange={handleChange}
+            descr='Information on current projects or tools and must include photos
+              of code or do some live coding.'
+            checked={formData.showcase}
+          />
+          <SpeakerInput
+            label='Instructional'
+            id='instructional'
+            type='checkbox'
+            name='instructional'
+            onChange={handleChange}
+            descr='Step by step instructions with credible references that link back
+            to best practices, using some live code or photos of your code to
+            give context.'
+            checked={formData.instructional}
+          />
+          <SpeakerInput
+            label='Interactive'
+            id='interactive'
+            type='checkbox'
+            name='interactive'
+            onChange={handleChange}
+            descr='Hands on live coding with audience participation: Giving audience a problem to solve in 15 or so minutes and then providing a solution, etc.'
+            checked={formData.interactive}
+          />
+          <SpeakerInput
+            label='Developer Panel'
+            id='developerPanel'
+            type='checkbox'
+            name='developerPanel'
+            onChange={handleChange}
+            descr='Friendly debate or showdown on a topic. How long do you want to present for?'
+            checked={formData.developerPanel}
+          />
+          <SpeakerInput
+            label='Lightning Talk'
+            id='lightningTalk'
+            type='checkbox'
+            name='lightningTalk'
+            onChange={handleChange}
+            descr='If you want to practice your presentaion skills.'
+            checked={formData.lightningTalk}
+          />
         </ul>
+        <ButtonLink
+          element='button'
+          type='submit'
+          text='Submit'
+          icon='circle-arrow-right'
+          height={64}
+          width={321}
+        />
       </form>
     </section>
   );
 }
-
 
 export default Speakers;

@@ -1,8 +1,13 @@
 .page-layout {
-  margin-top: -20px;
-
+  width: 100%;
   background-image: var(--body-bg-image);
   background-repeat: no-repeat;
-  background-position: 50% 6.8%;
-  background-size: auto 10%;
+  background-position: center 15%;
+  background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .page-layout {
+    background-position: center 12%;
+  }
 }

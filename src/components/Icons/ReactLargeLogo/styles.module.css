@@ -1,9 +1,9 @@
 .wrapper {
   width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
 }
 
 .outer {
@@ -14,7 +14,7 @@
   position: absolute;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .wrapper {
     display: none;
   }
