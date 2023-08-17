@@ -1,9 +1,10 @@
 .hero {
   margin: 0 auto;
+  padding: 0 0 64px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 165px);
+  min-height: calc(100vh - 165px);
   width: 100%;
   max-width: 1292px;
 }
