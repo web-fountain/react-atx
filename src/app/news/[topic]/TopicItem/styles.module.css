@@ -1,3 +1,7 @@
+.item p {
+    margin: 0;
+}
+
 .item {
     --item-bg: #fff;
     display: flex;
@@ -66,8 +70,8 @@
 
 .atx {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 29px;
     background: var(--primary-color);
 }
