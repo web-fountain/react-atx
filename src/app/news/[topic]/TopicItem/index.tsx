@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import Icons from '@Icons';
@@ -12,7 +14,7 @@ type Item = {
   author?: string;
   atx?: boolean;
   topic?: string;
-}
+};
 
 function TopicItem(props: { item: Item }) {
   return (

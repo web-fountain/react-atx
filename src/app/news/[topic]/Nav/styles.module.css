@@ -47,7 +47,7 @@
 
 .topic.active::after {
     height: 3px;
-    bottom: calc(var(--8px)*-1);
+    bottom: calc(var(--8px)*-1 - var(--4px));
     width: calc(100% + var(--16px));
     left: 0;
     background: var(--filter-active-bg);
