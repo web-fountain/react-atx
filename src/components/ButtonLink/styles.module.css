@@ -1,3 +1,7 @@
+button.container {
+  border: none;
+}
+
 .container {
   background-color: var(--primary-color);
   display: flex;
@@ -6,6 +10,7 @@
   margin-top: 2px;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
   transition: clip-path 0.3s;
+  width: 100%;
 }
 
 .text-box {

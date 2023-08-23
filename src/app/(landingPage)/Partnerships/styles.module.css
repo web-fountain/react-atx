@@ -1,210 +1,49 @@
 .container {
-  padding: 40px 24px 53px;
-  margin: 0 -24px 64px;
+  width: 100%;
+  max-width: 1296px;
+  padding: 24px 16px;
+  margin: 32px auto;
   border: 3px solid var(--primary-color);
 
   & > h1 {
     margin-bottom: 16px;
   }
 
-  & > h4 {
+  & > h3 {
     margin-bottom: 35px;
-    font-weight: 400;
+    font-size: var(--24px);
+    line-height: 36px;
   }
 }
 
 .partnership-form {
+  width: 100%;
+
   & .list-info {
-    display: flex;
-    flex-flow: column nowrap;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 35px 0;
 
-    margin-bottom: 35px;
-  }
-
-
-  & .list-info-item {
-    margin-bottom: 24px;
-
-    display: flex;
-    flex-flow: column nowrap;
-
-    & label {
-      margin-bottom: 8px;
-      color: var(--text-secondary);
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
-
-    & input {
-      height: 64px;
-      padding: 0 16px;
-      border: none;
-      color: var(--text-secondary);
-      background-color: var(--bg-color-secondary);
-    }
-    & input::placeholder {
-      color: var(--text-secondary-light);
-    }
-  }
-  & .list-info-item:last-child {
-    margin-bottom: 0;
-  }
-
-  & .partner-up {
-    margin-bottom: 20px;
-    text-align: center;
   }
 
   & .list-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4px;
-
-    list-style-type: none;
-
-    & .list-option-item {
-      position: relative;
-      height: 104px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      cursor: pointer;
-
-      & > input,
-      & > label {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-      }
-
-      & > input {
-        appearance: none;
-        background-color: var(--bg-color-secondary);
-
-        clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
-        transition: clip-path 0.3s;
-      }
-
-      & > label {
-        padding: 16px 26px;
-
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-between;
-
-        background-color: transparent;
-        clip-path: polygon(19% 0%, 100% 0px, 100% 0px, 100% 79%, 81.00% 100.00%, 0px 100%, 0px 100%, 0% 21%);
-        transition: background-color 0.3s;
-        cursor: pointer;
-      }
-
-      & > input:hover,
-      & > input:checked {
-        background-color: var(--primary-color);
-        clip-path: polygon(19% 0%, 100% 0px, 100% 0px, 100% 79%, 81.00% 100.00%, 0px 100%, 0px 100%, 0% 21%);
-      }
-      & > input:hover + label,
-      & > input:checked + label {
-        background-color: transparent;
-      }
-    }
+    margin: 35px 0;
   }
 
-  & button {
-    height: 64px;
-    width: 321px;
-
-    margin-top: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--primary-color);
-    color: var(--text-white);
-
-    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
-    transition: clip-path 0.3s;
-    cursor: pointer;
-  }
-  & button:hover {
-    clip-path: polygon(5.6% 0%, 100% 0px, 100% 0px, 100% 67%, 94.4% 100%, 0px 100%, 0px 100%, 0% 33%);
+  & > p {
+    margin-bottom: 8px;
+    text-align: center;
   }
 
-  & .text-box {
-    width: 317px;
-    height: 60px;
-    padding: 17px 106px;
-
-    display: flex;
-    justify-content: center;
-    flex-flow: row nowrap;
-
-    background-color: transparent;
-    clip-path: polygon(5.4% 0%, 100% 0px, 100% 0px, 100% 66.7%, 94.6% 100%, 0px 100%, 0px 100%, 0% 33.3%);
-    transition: background-color 0.3s;
-
-    & span {
-      display: flex;
-      align-items: center;
-
-      font-weight: 500;
-      font-size: var(--20px);
-      line-height: 30px;
-
-      text-decoration: none;
-      color: var(--text-white);
-      transition: color 0.3s;
-
-      & svg {
-        margin-left: 17px;
-
-        & > path {
-          fill: #FFFFFF;
-        }
-      }
-      & svg path {
-        fill: var(--text-white);
-        transition: fill 0.3s;
-      }
-    }
-  }
-  & .text-box:hover {
-    background-color: var(--bg-color);
-    transition: background-color 0.3s;
-
-    & > span {
-      color: var(--text-primary);
-      transition: color 0.3s;
-    }
-
-    & > span > svg > path {
-      fill: var(--text-primary);
-      transition: fill 0.3s;
-    }
-  }
-}
-
-
-
-@media screen and (max-width: 768px) {
-  .inputs {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .checkboxWrapper {
-    height: 6rem;
-  }
-  .checkboxLabel {
-    height: calc(100% - 0.25rem);
-    width: calc(100% - 0.25rem);
-    clip-path: polygon(20% 0%, 100% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 100%, 0% 20%);
-  }
-  .checkboxWrapper > input:hover,
-  .checkboxWrapper > input:checked {
-    clip-path: polygon(20% 0%, 100% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 100%, 0% 20%);
+  & > button {
+    margin: 0 auto;
   }
 }

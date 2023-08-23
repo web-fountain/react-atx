@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Icons from '@Icons';
 import styles from './styles.module.css';
 
+
 interface Props {
   element: 'next-link' | 'anchor' | 'button';
   text: string;

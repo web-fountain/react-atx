@@ -11,6 +11,7 @@ import LinkedIn from './LinkedIn';
 import Moon from './Moon';
 import Other from './Other';
 import ReactLogo from './ReactLogo';
+import ReactLargeLogo from './ReactLargeLogo';
 import Speakers from './Speakers';
 import Sun from './Sun';
 import Twitter from './Twitter';
@@ -28,28 +29,28 @@ type Props = {
 
 function Icons({ name, ...props }: Props): JSX.Element {
   const icons: Record<Props['name'], any> = {
-    'arrow-right':          <ArrowRight {...props} />,
-    'arrow-up-right':       <ArrowUpRight {...props} />,
-    'circle-arrow-right':   <CircleArrowRight {...props} />,
-    'circle-exclamation':   <CircleExclamation {...props} />,
-    'discord-white':        <DiscordWhite {...props} />,
-    'drinks':               <Drinks {...props} />,
-    'food':                 <Food {...props} />,
-    'github':               <GitHub {...props} />,
-    'lightbulb':            <Lightbulb {...props} />,
-    'linkedIn':             <LinkedIn {...props} />,
-    'moon':                 <Moon {...props} />,
-    'other':                <Other {...props} />,
-    'react-logo':           <ReactLogo {...props} />,
-    'speakers':             <Speakers {...props} />,
-    'sun':                  <Sun {...props} />,
-    'twitter':              <Twitter {...props} />,
-    'venue':                <Venue {...props} />,
-    'workshops':            <Workshops {...props} />
+    'arrow-right': <ArrowRight {...props} />,
+    'arrow-up-right': <ArrowUpRight {...props} />,
+    'circle-arrow-right': <CircleArrowRight {...props} />,
+    'circle-exclamation': <CircleExclamation {...props} />,
+    'discord-white': <DiscordWhite {...props} />,
+    drinks: <Drinks {...props} />,
+    food: <Food {...props} />,
+    github: <GitHub {...props} />,
+    lightbulb: <Lightbulb {...props} />,
+    linkedIn: <LinkedIn {...props} />,
+    moon: <Moon {...props} />,
+    other: <Other {...props} />,
+    'react-logo': <ReactLogo {...props} />,
+    'react-logo-large': <ReactLargeLogo {...props} />,
+    speakers: <Speakers {...props} />,
+    sun: <Sun {...props} />,
+    twitter: <Twitter {...props} />,
+    venue: <Venue {...props} />,
+    workshops: <Workshops {...props} />
   };
 
   return icons[name];
 }
-
 
 export default Icons;

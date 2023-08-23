@@ -1,6 +1,8 @@
 .container {
-  padding: 40px 24px 53px;
-  margin: 0 -24px 64px;
+  padding: 24px 16px;
+  width: 100%;
+  max-width: 1292px;
+  margin: 32px auto;
   border: 3px solid var(--primary-color);
 
   & > h1 {
@@ -15,157 +17,45 @@
 
 .speaker-form {
   & .list-info {
-    display: flex;
-    flex-flow: column nowrap;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
     margin-bottom: 35px;
-  }
 
-  & .list-info-item {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-bottom: 24px;
-
-    & label {
-      margin-bottom: 8px;
-      color: var(--text-secondary);
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
     }
-
-    & input {
-      height: 64px;
-      padding: 0 16px;
-      border: none;
-      color: var(--text-secondary);
-      background-color: var(--bg-color-secondary);
-    }
-    & input::placeholder {
-      color: var(--text-secondary-light);
-    }
-  }
-  & .list-info-item:last-child {
-    margin-bottom: 0;
   }
 
   & .topic-presentation {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+    font-size: var(--24px);
   }
 
   & .hint {
     display: flex;
+    align-items: center;
+    gap: 8px;
     flex-flow: row nowrap;
     margin-bottom: 40px;
 
-    & > div {
-      margin-right: 8px;
-      padding: 3px;
-    }
-
     & p {
-      font-size: var(--16px)
+      font-size: var(--16px);
     }
   }
 
-  & .checks {
-    display: flex;
-    flex-flow: column nowrap;
+  & .list-checks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 35px;
 
-    & .checkBlock {
-    margin-bottom: 48px;
-    & div {
-      display: flex;
-      flex-flow: row nowrap;
-
-      & input {
-        margin-right: 20px;
-      }
-    }
-
-    & p {
-      padding-left: 35px;
-      font-size: var(--20px);
-      line-height: 30px;
-      color: var(--text-secondary);
-    }
-    }
-    & > li:last-of-type {
-      margin-bottom: 32px;
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
     }
   }
 
-  & button {
-    height: 64px;
-    width: 321px;
-
-    margin-top: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--primary-color);
-    color: var(--text-white);
-
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 0,
-      100% 100%,
-      100% 100%,
-      0 100%,
-      0 100%,
-      0 0
-    );
-    transition: clip-path 0.3s;
-    cursor: pointer;
-  }
-  & button:hover {
-    clip-path: polygon(5.6% 0%, 100% 0px, 100% 0px, 100% 67%, 94.4% 100%, 0px 100%, 0px 100%, 0% 33%);
-  }
-
-  & .text-box {
-    width: 317px;
-    height: 60px;
-
-    display: flex;
-    justify-content: center;
-    flex-flow: row nowrap;
-
-    background-color: transparent;
-    clip-path: polygon(5.4% 0%, 100% 0px, 100% 0px, 100% 66.7%, 94.6% 100%, 0px 100%, 0px 100%, 0% 33.3%);
-    transition: background-color 0.3s;
-
-    & span {
-      display: flex;
-      align-items: center;
-
-      font-weight: 500;
-      font-size: var(--20px);
-      line-height: 30px;
-
-      text-decoration: none;
-      color: var(--text-white);
-      transition: color 0.3s;
-
-      & svg {
-        margin-left: 17px;
-      }
-      & svg path {
-        fill: var(--text-white);
-        transition: fill 0.3s;
-      }
-    }
-  }
-  & .text-box:hover {
-    background-color: var(--bg-color);
-    transition: background-color 0.3s;
-
-    & > span {
-      color: var(--text-primary);
-      transition: color 0.3s;
-    }
-
-    & > span > svg > path {
-      fill: var(--text-primary);
-      transition: fill 0.3s;
-    }
+  & > button[type='submit'] {
+    margin-inline: auto;
   }
 }

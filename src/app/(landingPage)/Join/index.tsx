@@ -12,7 +12,7 @@ function Join() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log({ email });
+    console.log({email});
   };
 
   return (
@@ -20,18 +20,16 @@ function Join() {
       <div>
         <div className={styles.top} />
         <div className={styles.main}>
-          <div>
-            <h1>Join the Community</h1>
-            <p>Subscribe to our newsletter and get notified of upcoming events</p>
-          </div>
+          <h1>Join the<br />Community</h1>
+          <p>Subscribe to our newsletter and get notified of upcoming events</p>
           <form className={styles['join-form']} onSubmit={handleSubmit}>
             <input
-              type="text"
-              placeholder="example@mail.com"
+              type='text'
+              placeholder='Example@mail.com'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit">
+            <button type='submit'>
               Subscribe
               <Icons name='arrow-right' />
             </button>
@@ -41,6 +39,5 @@ function Join() {
     </section>
   );
 }
-
 
 export default Join;
