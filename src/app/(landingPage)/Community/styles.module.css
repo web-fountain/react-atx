@@ -1,21 +1,8 @@
-.container {
-  width: 100%;
-  max-width: 1292px;
-  margin: 0 auto 104px auto;
-}
-
-.intro > h1 {
-  margin-bottom: 24px;
-  text-align: center;
-
-  @media screen and (max-width: 768px) {
-    font-size: var(--56px);
+.content {
+  & > h1, & > p {
+    text-align: center;
   }
-}
-
-.intro > p {
-  text-align: center;
-  width: 100%;
-  max-width: 929px;
-  margin: 0 auto;
+  & > h1 {
+    width: 355px;
+  }
 }

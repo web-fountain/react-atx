@@ -1,32 +1,20 @@
-.hero {
-  margin: 0 auto;
+.container {
   display: flex;
+  display: k;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 165px);
   width: 100%;
   max-width: 1292px;
 }
 
-.intro {
+.content {
   width: 100%;
 
-  & > h4 {
-    font-family: 'Poppins Regular';
-    font-size: var(--32px);
+  & > span {
     font-weight: var(--bold);
-    line-height: normal;
-  }
-
-  & > h3 {
-    font-family: 'Poppins Medium';
-    font-size: var(--56px);
-    line-height: 60px;
   }
 
   & > p {
-    font-size: 28px;
-    margin-bottom: 24px;
-    line-height: 36px;
+    margin-bottom: 3rem;
   }
 }

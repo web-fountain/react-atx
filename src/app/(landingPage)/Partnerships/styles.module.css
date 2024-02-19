@@ -1,8 +1,8 @@
 .container {
-  width: 100%;
-  max-width: 1296px;
   padding: 24px 16px;
-  margin: 32px auto;
+  margin-right: -24px;
+  margin-left: -24px;
+
   border: 3px solid var(--primary-color);
 
   & > h1 {

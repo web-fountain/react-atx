@@ -1,36 +1,37 @@
-button.container {
-  border: none;
-}
-
 .container {
-  background-color: var(--primary-color);
+  width: 260px;
+  height: 64px;
+
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  margin-top: 2px;
+
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
   transition: clip-path 0.3s;
-  width: 100%;
+
+  background-color: var(--primary-color);
 }
 
 .text-box {
   height: calc(100% - 4px);
   width: calc(100% - 4px);
-  background-color: transparent;
+
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+
   clip-path: polygon(7.5% 0%, 100% 0%, 100% 69%, 92.5% 100%, 0% 100%, 0% 31%);
   transition: background-color 0.3s;
+
+  background-color: transparent;
 }
 
 .text-box > span {
+  font-size: var(--20px);
+  font-weight: var(--medium);
   color: var(--text-white);
-  font-family: 'Poppins Medium';
-  font-size: var(--24px);
-  line-height: 30px;
-  display: flex;
-  align-items: center;
 }
 
 .text-box > span > svg {

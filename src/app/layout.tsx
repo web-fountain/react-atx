@@ -2,13 +2,22 @@ import '@Styles/fonts.css';
 import '@Styles/resets.css';
 import '@Styles/base.css';
 import '@Styles/layout.css';
-import '@Styles/themes.css';
+import '@Styles/theme.css';
 
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+
+import Provider from '../context/client-provider';
+// import { auth } from '../../auth.Config';
+
 import { Footer, Header } from '@Components';
 
 
-function RootLayout({ children }: { children: ReactNode }) {
+// console.log('auth', auth);
+
+async function RootLayout({ children }: { children: ReactNode }) {
+//   const session = await auth();
+//   console.log('root session', session);
+
   return (
     <html data-theme="dark" lang="en-US">
       <head>
@@ -21,9 +30,11 @@ function RootLayout({ children }: { children: ReactNode }) {
         <style>@layer fonts, resets, base, layout, theme;</style>
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        {/* <Provider session={session}> */}
+          <Header />
+          {children}
+          <Footer />
+        {/* </Provider> */}
       </body>
     </html>
   );

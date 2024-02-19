@@ -10,8 +10,8 @@
   width: 100%;
   background-image: var(--header-bg-image);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: 42%;
+  background-size: 385%;
 }
 
 .container {

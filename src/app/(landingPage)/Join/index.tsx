@@ -1,43 +1,22 @@
 'use client';
 
-import React from 'react';
-
-import Icons from '@Icons';
+import JoinForm from './form';
 import styles from './styles.module.css';
 
 
 function Join() {
-  const [email, setEmail] = React.useState<string>('');
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    console.log({email});
-  };
-
   return (
-    <section id='join' className={styles.container}>
-      <div>
-        <div className={styles.top} />
-        <div className={styles.main}>
-          <h1>Join the<br />Community</h1>
-          <p>Subscribe to our newsletter and get notified of upcoming events</p>
-          <form className={styles['join-form']} onSubmit={handleSubmit}>
-            <input
-              type='text'
-              placeholder='Example@mail.com'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button type='submit'>
-              Subscribe
-              <Icons name='arrow-right' />
-            </button>
-          </form>
-        </div>
+    <section id='join' className={styles['section']}>
+      <div className={styles['top-lid']}></div>
+      <div className={styles['content']}>
+        <h1>Join the<br />Community</h1>
+
+        <JoinForm />
+
       </div>
     </section>
   );
 }
+
 
 export default Join;

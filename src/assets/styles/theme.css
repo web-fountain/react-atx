@@ -1,0 +1,61 @@
+:root {
+  --primary-color: #007AFF;
+  --secondary-color: #C6E6E6;
+  --bg-color: #F5FBFF;
+  --bg-color-secondary: #C6E6FF;
+  --bg-color-tertiary: #FFFFFF;
+  --bg-color-white: #FFFFFF;
+  --text-primary: #14273A;
+  --text-secondary: #638CB6;
+  --text-secondary-light: #638CB6;
+  --text-success: ;
+  --text-error: #FF5F5F;
+  --text-danger: #E76E6E;
+  --text-warning: #E76E6E;
+  --text-info: ;
+  --text-light: #B5B7B9;
+  --text-dark: ;
+  --text-muted: ;
+  --text-inactive: #A5A5A5;
+
+
+  --text-white: #FFFFFF;
+  --text-light-blue: #ACDDFF;
+
+  --header-bg-linear-gradient: linear-gradient(0deg, rgba(245,251,255,0.1) 0%, rgb(255, 255, 255) 100%);
+  --header-bg-image: url(~@Images/header-net-light.png);
+  --body-bg-image: url(~@Images/body-net-light.png);
+  --footer-bg-image: url(~@Images/footer-net-light.png);
+
+  --white: #FFFFFF;
+}
+
+[data-theme="dark"] {
+  --primary-color: #2658cb;
+  --secondary-color: #2A363F;
+  --bg-color: #0F0F0F;
+  --bg-color-secondary: #2A363F;
+  --bg-color-tertiary: #182229;
+  --bg-color-white: #FFFFFF;
+  --text-primary: #FFFFFF;
+  --text-secondary: #ACDDFF;
+  --text-secondary-light: #ACDDFF80;
+  --text-success: ;
+  --text-danger: #E76E6E;
+  --text-warning: #E76E6E;
+  --text-info: ;
+  --text-light: #B5B7B9;
+  --text-dark: ;
+  --text-muted: ;
+  --text-inactive: #A5A5A5;
+
+  --text-white: #FFFFFF;
+  --text-light-blue: #ACDDFF;
+
+  --header-bg-linear-gradient: linear-gradient(0deg, rgba(15, 15, 15, 0.1) 0%, rgb(0, 0, 0) 100%);
+  --header-bg-image: url(~@Images/header-net-dark.png);
+  --body-bg-image: url(~@Images/body-net-dark.png);
+  --footer-bg-image: url(~@Images/footer-net-dark.png);
+
+  --white: #FFFFFF;
+}

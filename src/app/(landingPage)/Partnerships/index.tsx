@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useFormStatus } from 'react-dom';
 
 import styles from './styles.module.css';
-import ButtonLink from '@/components/ButtonLink';
-import PartnershipInput from '@/components/PartnershipInput';
+import Button from '@/components/SubmitButton';
+import PartnershipInput from '@Components/PartnershipInput';
 
 
 interface FormDataTypes {
@@ -21,6 +22,7 @@ interface FormDataTypes {
 }
 
 function Partnerships() {
+  const { pending } = useFormStatus();
   const [formData, setFormData] = useState<FormDataTypes>({
     name: '',
     jobTitle: '',
@@ -46,7 +48,7 @@ function Partnerships() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log(formData);
+    console.log('formdata', formData);
   };
 
   return (
@@ -156,14 +158,10 @@ function Partnerships() {
           />
         </ul>
 
-        <ButtonLink
-          element='button'
-          type='submit'
-          text='Submit'
-          icon='circle-arrow-right'
-          height={64}
-          width={321}
-        />
+        <Button formStatus={pending}>
+          Submit
+        </Button>
+          {/* icon='circle-arrow-right' */}
       </form>
     </section>
   );

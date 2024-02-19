@@ -58,7 +58,7 @@ module.exports = {
         'JSXSpreadChild'
       ]
     }],
-    quotes: [ERROR, 'single', { allowTemplateLiterals: false }],
+    quotes: [ERROR, 'single', { allowTemplateLiterals: true }],
     semi: [ERROR, 'always'],
 
     // imports
@@ -81,5 +81,5 @@ module.exports = {
 
     // react
     'react/no-unescaped-entities': 0
-  },
+  }
 }

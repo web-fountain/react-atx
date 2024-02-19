@@ -1,13 +1,18 @@
 .page-layout {
-  width: 100%;
+  padding: 0 24px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 132px;
+
   background-image: var(--body-bg-image);
   background-repeat: no-repeat;
-  background-position: center 15%;
-  background-size: contain;
+  background-position: 45% 5.35%;
+  background-size: 345%;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .page-layout {
     background-position: center 12%;
   }
-}
+} */

@@ -1,11 +1,12 @@
 'use client';
 
-import React from 'react';
+import { useState } from 'react';
+import { useFormStatus } from 'react-dom';
 
 import Icons from '@Icons';
 import styles from './styles.module.css';
-import ButtonLink from '@/components/ButtonLink';
-import SpeakerInput from '@/components/SpeakerInput';
+import Button from '@/components/SubmitButton';
+import SpeakerInput from '@Components/SpeakerInput';
 
 
 interface SpeakerFormTypes {
@@ -22,7 +23,8 @@ interface SpeakerFormTypes {
 }
 
 function Speakers() {
-  const [formData, setFormData] = React.useState<SpeakerFormTypes>({
+  const { pending } = useFormStatus();
+  const [formData, setFormData] = useState<SpeakerFormTypes>({
     name: '',
     jobTitle: '',
     email: '',
@@ -46,7 +48,7 @@ function Speakers() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+    console.log('formdata', formData);
   };
 
   return (
@@ -164,14 +166,10 @@ function Speakers() {
             checked={formData.lightningTalk}
           />
         </ul>
-        <ButtonLink
-          element='button'
-          type='submit'
-          text='Submit'
-          icon='circle-arrow-right'
-          height={64}
-          width={321}
-        />
+        <Button formStatus={pending}>
+          Submit
+        </Button>
+          {/* icon='circle-arrow-right' */}
       </form>
     </section>
   );

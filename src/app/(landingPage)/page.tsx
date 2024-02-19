@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Hero from './Hero';
 import Community from './Community';
 import Join from './Join';
@@ -9,9 +7,15 @@ import AboutUs from './AboutUs';
 
 import './styles.css';
 
+import getServerSession from 'next-auth';
+// import { authOptions } from '../../app/api/auth/[...nextauth]/route';
+
 
 const metadata = {title: 'React ATX | Home'};
-function Home() {
+async function Home() {
+//   const session = await getServerSession(authOptions);
+
+//   console.log('home', session);
   return (
     <main className="main-layout page-layout">
       <Hero />

@@ -33,7 +33,9 @@
       "@Images/*": ["./src/assets/images/*"],
       "@Images": ["./src/assets/images"],
       "@Styles/*": ["./src/assets/styles/*"],
-      "@Styles": ["./src/assets/styles"]
+      "@Styles": ["./src/assets/styles"],
+      "@Utils/*": ["./src/app/utils/*"],
+      "@Utils": ["./src/app/utils"]
     }
   },
   "include": [
