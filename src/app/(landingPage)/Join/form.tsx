@@ -2,7 +2,6 @@
 
 import { useEffect, useId } from 'react';
 import { useFormState } from 'react-dom';
-import { ErrorBoundary } from 'react-error-boundary';
 
 
 import Ajv from 'ajv';
@@ -65,7 +64,10 @@ function JoinForm() {
   useEffect(() => {
     if (!server.success) {
       server.errors.forEach(err => {
+        console.log('err', err);
         const { instancePath, message } = err;
+        if (!instancePath) return;
+
         setError(instancePath.replace('/', ''), {
           message
         });
@@ -75,28 +77,30 @@ function JoinForm() {
   }, [server]);
 
   return (
-    <ErrorBoundary
-      fallback={<p>There was an error while submitting the form</p>}
-    >
+    <>
       {server.success
         ? <AlmostDone email={getValues('email')} />
-        : <form name="JoinForm" className={styles['form']} action={handleAction}>
-            <p id={inputId}>Subscribe to our newsletter and get notified of upcoming events</p>
-
-            <div className={styles['error-message']}>
-              {errors.email?.message || server.errors.email?.message}
+        : server.errors && server.errors[0]?.server
+          ? <div className={styles['error-message']}>
+              <p>Something went wrong!<br/>Please try again laters.</p>
             </div>
-            <input
-              type="text"
-              {...register('email')}
-              placeholder="example@mail.com"
-              aria-describedby={inputId}
-            />
+          : <form name="JoinForm" className={styles['form']} action={handleAction}>
+              <p id={inputId}>Subscribe to our newsletter and get notified of upcoming events</p>
 
-            <SubmitButton label="Submit" />
-          </form>
+              <div className={styles['error-message']}>
+                {errors.email?.message || server.errors.email?.message}
+              </div>
+              <input
+                type="text"
+                {...register('email')}
+                placeholder="example@mail.com"
+                aria-describedby={inputId}
+              />
+
+              <SubmitButton label="Submit" />
+            </form>
       }
-    </ErrorBoundary>
+    </>
   );
 }
 

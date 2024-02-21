@@ -9,7 +9,7 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <span className={styles.rights}>
-          React ATX &copy; 2023 / All Rights Reserved
+          React ATX &copy; 2024 / All Rights Reserved
         </span>
 
         <div className={styles.socialMedia}>

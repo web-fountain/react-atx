@@ -1,3 +1,7 @@
+'use server';
+
+import type { Metadata } from 'next';
+
 import Hero from './Hero';
 import Community from './Community';
 import Join from './Join';
@@ -7,15 +11,14 @@ import AboutUs from './AboutUs';
 
 import './styles.css';
 
-import getServerSession from 'next-auth';
-// import { authOptions } from '../../app/api/auth/[...nextauth]/route';
 
+async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'React ATX | Home'
+  };
+}
 
-const metadata = {title: 'React ATX | Home'};
-async function Home() {
-//   const session = await getServerSession(authOptions);
-
-//   console.log('home', session);
+async function Page() {
   return (
     <main className="main-layout page-layout">
       <Hero />
@@ -29,5 +32,5 @@ async function Home() {
 }
 
 
-export { metadata };
-export default Home;
+export { generateMetadata };
+export default Page;
