@@ -25,7 +25,7 @@ const sql = postgres({
   max: 20,
   idle_timeout: 30,
   connect_timeout: 30,
-//   ssl: true
+  //   ssl: true
   debug: (connection, query, params, type) => {
     console.log('connection', { connection });
     console.log('query', { query });
