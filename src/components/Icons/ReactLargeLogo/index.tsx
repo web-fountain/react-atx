@@ -1,24 +1,16 @@
-import styles from './styles.module.css';
-
-
 export default function ReactLargeLogo({ className = '' }) {
   return (
-    <div className={styles.wrapper}>
-      {/* Inner svg */}
+    <>
+      {/* Center Ball */}
       <svg
         width='97'
         height='97'
         viewBox='0 0 97 97'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
-        className={styles.outer}
+        className={className}
       >
-        <circle
-          cx='48.5'
-          cy='48.5'
-          r='48.5'
-          fill='url(#paint0_radial_876_68973)'
-        />
+        <circle cx='48.5' cy='48.5' r='48.5' fill='url(#paint0_radial_876_68973)' />
         <g filter='url(#filter0_f_876_68973)'>
           <circle cx='65.446' cy='35.0602' r='14.0241' fill='white' />
         </g>
@@ -33,16 +25,8 @@ export default function ReactLargeLogo({ className = '' }) {
             colorInterpolationFilters='sRGB'
           >
             <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feBlend
-              mode='normal'
-              in='SourceGraphic'
-              in2='BackgroundImageFix'
-              result='shape'
-            />
-            <feGaussianBlur
-              stdDeviation='7'
-              result='effect1_foregroundBlur_876_68973'
-            />
+            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
+            <feGaussianBlur stdDeviation='7' result='effect1_foregroundBlur_876_68973' />
           </filter>
           <radialGradient
             id='paint0_radial_876_68973'
@@ -59,28 +43,19 @@ export default function ReactLargeLogo({ className = '' }) {
           </radialGradient>
         </defs>
       </svg>
-      {/* Outer svg */}
+      {/* Atom */}
       <svg
         width='474'
         height='604'
         viewBox='0 0 474 604'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
-        // xmlns:xlink="http://www.w3.org/1999/xlink"
-        className={styles.inner}
+        className={className}
       >
         <rect width='474' height='604' fill='url(#pattern0)' />
         <defs>
-          <pattern
-            id='pattern0'
-            patternContentUnits='objectBoundingBox'
-            width='1'
-            height='1'
-          >
-            <use
-              xlinkHref='#image0_876_68972'
-              transform='matrix(0.000763946 0 0 0.00059952 -0.000384503 0)'
-            />
+          <pattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'>
+            <use xlinkHref='#image0_876_68972' transform='matrix(0.000763946 0 0 0.00059952 -0.000384503 0)' />
           </pattern>
           <image
             id='image0_876_68972'
@@ -90,6 +65,6 @@ export default function ReactLargeLogo({ className = '' }) {
           />
         </defs>
       </svg>
-    </div>
+    </>
   );
 }

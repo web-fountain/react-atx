@@ -18,3 +18,14 @@
     margin-bottom: 3rem;
   }
 }
+
+.hero-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-icon > svg {
+  position: absolute;
+}
