@@ -8,8 +8,7 @@ import Partnerships from './Partnerships';
 import AboutUs from './AboutUs';
 import './styles.css';
 
-
-export default async function Page() {
+async function Page() {
   return (
     <div className='page-layout'>
       <Hero />
@@ -21,3 +20,5 @@ export default async function Page() {
     </div>
   );
 }
+
+export default Page;

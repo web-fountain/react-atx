@@ -1,20 +1,29 @@
 .container {
   display: flex;
-  display: k;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1292px;
+  min-height: 700px;
 }
 
 .content {
-  width: 100%;
+  width: 50%;
 
   & > span {
     font-weight: var(--bold);
+    font-size: var(--32px);
+    line-height: var(--48px);
+  }
+
+  & > h1 {
+    font-weight: var(--medium);
+    font-size: var(--64px);
+    line-height: var(--leading-13);
   }
 
   & > p {
+    font-weight: var(--medium);
+    font-size: var(--28px);
+    line-height: var(--leading-11);
     margin-bottom: 3rem;
   }
 }
@@ -24,6 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
 }
 
 .hero-icon > svg {
