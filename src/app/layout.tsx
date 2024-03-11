@@ -16,20 +16,20 @@ async function RootLayout({ children }: { children: ReactNode }) {
   //   console.log('root session', session);
 
   return (
-    <html data-theme='dark' lang='en-US'>
+    <html data-theme="dark" lang="en-US">
       <head>
         {/* #Favicon.1 */}
-        <link rel='icon' sizes='any' href='/favicon.ico' />
-        <link rel='icon' type='image/svg+xml' href='/favicon/icon.svg' />
-        <link rel='apple-touch-icon' href='/favicon/apple-touch-icon.png' />
-        <link rel='manifest' href='favicon/manifest.webmanifest' />
+        <link rel="icon" sizes="any" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/icon.svg" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/manifest.webmanifest" />
 
         <style>@layer fonts, resets, base, layout, theme;</style>
       </head>
       <body>
         {/* <Provider session={session}> */}
         <Header />
-        <main className='main-layout'>{children}</main>
+        <main className="main-layout">{children}</main>
         <Footer />
         {/* </Provider> */}
       </body>
