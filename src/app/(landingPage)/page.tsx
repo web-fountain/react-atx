@@ -8,6 +8,7 @@ import Partnerships from './Partnerships';
 import AboutUs from './AboutUs';
 import './styles.css';
 
+
 async function Page() {
   return (
     <div className='page-layout'>

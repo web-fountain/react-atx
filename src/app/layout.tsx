@@ -1,11 +1,11 @@
-import type { ReactNode } from 'react';
-import type { Metadata } from 'next';
-import { Footer, Header } from '@Components';
 import '@Styles/fonts.css';
 import '@Styles/resets.css';
 import '@Styles/base.css';
 import '@Styles/layout.css';
 import '@Styles/theme.css';
+import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
+import { Footer, Header } from '@Components';
 
 // import Provider from '../context/client-provider';
 // import { auth } from '../../auth.Config';
