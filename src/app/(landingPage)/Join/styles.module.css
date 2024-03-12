@@ -1,6 +1,7 @@
-.section {
+.container {
   width: 100%;
-  max-width: 960px;
+  max-width: 1440px;
+  margin: 5rem auto;
 }
 
 .top-lid {
@@ -28,13 +29,18 @@
 
   & > h1 {
     color: var(--text-white);
+    font-size: var(--64px);
+    line-height: 4.75rem;
   }
 }
 
 .form {
+  width: 100%;
+
   p {
-    margin-bottom: 28px;
     color: var(--text-white);
+    font-size: var(--24px);
+    line-height: var(--leading-9);
   }
 
   div:empty {

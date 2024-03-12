@@ -1,17 +1,20 @@
 .container {
-  padding: 24px 16px;
   width: 100%;
-  max-width: 1292px;
-  margin: 32px auto;
+  max-width: 1440px;
+  margin: 5rem auto;
+  padding: 24px 16px;
   border: 3px solid var(--primary-color);
 
-  & > h1 {
-    margin-bottom: 16px;
+  & > h2 {
+    font-weight: var(--medium);
+    font-size: var(--64px);
+    line-height: var(--96px);
   }
 
-  & > h4 {
-    margin-bottom: 35px;
-    font-weight: 400;
+  & > p {
+    font-size: var(--28px);
+    line-height: var(--leading-11);
+    margin-bottom: 3rem;
   }
 }
 

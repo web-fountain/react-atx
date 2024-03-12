@@ -7,7 +7,6 @@ import styles from './styles.module.css';
 import Button from '@/components/SubmitButton';
 import PartnershipInput from '@Components/PartnershipInput';
 
-
 interface FormDataTypes {
   name: string;
   jobTitle: string;
@@ -52,116 +51,111 @@ function Partnerships() {
   };
 
   return (
-
-    <section id='partnership' className={styles.container}>
+    <section id="partnership" className={styles['container']}>
       <h2>Partnership</h2>
-      <h3>Interested in sponsoring?</h3>
+      <p>Interested in sponsoring?</p>
 
       <form className={styles['partnership-form']} onSubmit={handleSubmit}>
         <ul className={styles['list-info']}>
           <PartnershipInput
-            type='text'
-            label='Name'
-            name='name'
-            id='name'
-            placeholder='name...'
+            type="text"
+            label="Name"
+            name="name"
+            id="name"
+            placeholder="name..."
             onChange={handleChange}
             value={formData.name}
           />
           <PartnershipInput
-            type='text'
-            label='Job Title'
-            name='jobTitle'
-            id='jobTitle'
-            placeholder='job title'
+            type="text"
+            label="Job Title"
+            name="jobTitle"
+            id="jobTitle"
+            placeholder="job title"
             onChange={handleChange}
             value={formData.jobTitle}
           />
           <PartnershipInput
-            type='text'
-            label='Email'
-            name='email'
-            id='email'
-            placeholder='email'
+            type="text"
+            label="Email"
+            name="email"
+            id="email"
+            placeholder="email"
             onChange={handleChange}
             value={formData.email}
           />
           <PartnershipInput
-            type='text'
-            label='Company'
-            name='company'
-            id='company'
-            placeholder='company'
+            type="text"
+            label="Company"
+            name="company"
+            id="company"
+            placeholder="company"
             onChange={handleChange}
             value={formData.company}
           />
         </ul>
 
-        <p className={styles['partner-up']}>
-          How would you like to partner up?
-        </p>
+        <p className={styles['partner-up']}>How would you like to partner up?</p>
 
         <ul className={styles['list-options']}>
           <PartnershipInput
-            type='checkbox'
-            id='venue'
-            name='venue'
+            type="checkbox"
+            id="venue"
+            name="venue"
             onChange={handleChange}
             checked={formData.venue}
-            label='Venue'
-            icon='venue'
+            label="Venue"
+            icon="venue"
           />
           <PartnershipInput
-            type='checkbox'
-            id='food'
-            name='food'
+            type="checkbox"
+            id="food"
+            name="food"
             onChange={handleChange}
             checked={formData.food}
-            label='Food'
-            icon='food'
+            label="Food"
+            icon="food"
           />
           <PartnershipInput
-            type='checkbox'
-            id='drinks'
-            name='drinks'
+            type="checkbox"
+            id="drinks"
+            name="drinks"
             onChange={handleChange}
             checked={formData.drinks}
-            label='Drinks'
-            icon='drinks'
+            label="Drinks"
+            icon="drinks"
           />
           <PartnershipInput
-            type='checkbox'
-            id='speakers'
-            name='speakers'
+            type="checkbox"
+            id="speakers"
+            name="speakers"
             onChange={handleChange}
             checked={formData.speakers}
-            label='Speakers'
-            icon='speakers'
+            label="Speakers"
+            icon="speakers"
           />
           <PartnershipInput
-            type='checkbox'
-            id='workshops'
-            name='workshops'
+            type="checkbox"
+            id="workshops"
+            name="workshops"
             onChange={handleChange}
             checked={formData.workshops}
-            label='Workshops'
-            icon='workshops'
+            label="Workshops"
+            icon="workshops"
           />
           <PartnershipInput
-            type='checkbox'
-            id='other'
-            name='other'
+            type="checkbox"
+            id="other"
+            name="other"
             onChange={handleChange}
             checked={formData.other}
-            label='Other'
-            icon='other'
+            label="Other"
+            icon="other"
           />
         </ul>
 
-        <Button formStatus={pending}>
-          Submit
-        </Button>
-          {/* icon='circle-arrow-right' */}
+        <Button formStatus={pending}>Submit</Button>
+        {/* icon='circle-arrow-right' */}
       </form>
     </section>
   );
