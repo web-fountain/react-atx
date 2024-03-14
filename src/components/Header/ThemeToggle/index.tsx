@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import Icons from '@Icons';
 import styles from './styles.module.css';
 
+
 function ThemeToggle() {
   useEffect(() => {
     const rootTag = document.documentElement;
