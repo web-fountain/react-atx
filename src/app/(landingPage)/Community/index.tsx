@@ -5,7 +5,7 @@ function Community() {
   return (
     <section id="community">
       <div className={styles['content']}>
-        <h1>About our Community</h1>
+        <h2>About our Community</h2>
         <p>
           React ATX is a Community-Driven frontend development group that converges on the ReactJS ecosystem. We meet
           once a month to discuss topics that range from state management, CSS tooling, serverless, TypeScript,

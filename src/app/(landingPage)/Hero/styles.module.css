@@ -14,7 +14,7 @@
     line-height: var(--48px);
   }
 
-  & > h1 {
+  & > h2 {
     font-weight: var(--medium);
     font-size: var(--64px);
     line-height: var(--leading-13);
@@ -38,4 +38,18 @@
 
 .hero-icon > svg {
   position: absolute;
+}
+
+@media screen and (max-width: 975px) {
+  .content > h2 {
+    font-size: var(--56px);
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .hero-icon {
+    display: none;
+  }
 }

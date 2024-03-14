@@ -17,7 +17,7 @@
 }
 
 .content {
-  padding: 40px 24px;
+  padding: 24px;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -27,7 +27,7 @@
   background-position: top right;
   background-color: var(--primary-color);
 
-  & > h1 {
+  & > h2 {
     color: var(--text-white);
     font-size: var(--64px);
     line-height: 4.75rem;
@@ -90,10 +90,8 @@
   overflow-wrap: break-word;
 }
 
-/* @media screen and (max-width: 768px) {
-  .content {
-    & > h1 {
-      font-size: var(--48px);
-    }
+@media screen and (max-width: 768px) {
+  .content > h2 {
+    font-size: var(--48px);
   }
-} */
+}

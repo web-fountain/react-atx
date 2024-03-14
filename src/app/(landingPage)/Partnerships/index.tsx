@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
 
 import styles from './styles.module.css';
-import Button from '@/components/SubmitButton';
+import SubmitButton from '@/components/SubmitButton';
 import PartnershipInput from '@Components/PartnershipInput';
+
 
 interface FormDataTypes {
   name: string;
@@ -154,8 +155,7 @@ function Partnerships() {
           />
         </ul>
 
-        <Button formStatus={pending}>Submit</Button>
-        {/* icon='circle-arrow-right' */}
+        <SubmitButton btn="primary" />
       </form>
     </section>
   );

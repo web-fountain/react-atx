@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useFormStatus } from 'react-dom';
+// import { useFormStatus } from 'react-dom';
 
 import Icons from '@Icons';
 import styles from './styles.module.css';
-import Button from '@/components/SubmitButton';
+import SubmitButton from '@/components/SubmitButton';
 import SpeakerInput from '@Components/SpeakerInput';
+
 
 interface SpeakerFormTypes {
   name: string;
@@ -22,7 +23,7 @@ interface SpeakerFormTypes {
 }
 
 function Speakers() {
-  const { pending } = useFormStatus();
+  // const { pending } = useFormStatus();
   const [formData, setFormData] = useState<SpeakerFormTypes>({
     name: '',
     jobTitle: '',
@@ -103,14 +104,11 @@ function Speakers() {
             value={formData.topic}
           />
         </ul>
-
         <h4 className={styles['topic-presentation']}>How Would you like to present your topic?</h4>
-
         <div className={styles.hint}>
           <Icons name="circle-exclamation" />
           <p>You can choose only one of the options</p>
         </div>
-
         <ul className={styles['list-checks']}>
           <SpeakerInput
             label="Showcase"
@@ -161,8 +159,7 @@ function Speakers() {
             checked={formData.lightningTalk}
           />
         </ul>
-        <Button formStatus={pending}>Submit</Button>
-        {/* icon='circle-arrow-right' */}
+        <SubmitButton btn="primary" />
       </form>
     </section>
   );

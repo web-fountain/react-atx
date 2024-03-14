@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './styles.module.css';
 
+
 function AboutUs() {
   return (
     <div id="about-us" className={styles['container']}>
@@ -25,32 +26,32 @@ function AboutUs() {
       </section>
       <section>
         <ul className={styles['host-list']}>
-          <li>
+          <li className={styles['host']}>
             <Image alt="host" src="" className={styles['host-image']} />
             <h4 className={styles['position']}>
               Position: <span>Software Engineer</span>
             </h4>
-            <p>
+            <p className={styles['host-intro']}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero distinctio in sit culpa consequatur
               ratione, rem veritatis debitis saepe sunt.
             </p>
           </li>
-          <li>
+          <li className={styles['host']}>
             <Image alt="host" src="" className={styles['host-image']} />
             <h4 className={styles['position']}>
               Position: <span>Software Engineer</span>
             </h4>
-            <p>
+            <p className={styles['host-intro']}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero distinctio in sit culpa consequatur
               ratione, rem veritatis debitis saepe sunt.
             </p>
           </li>
-          <li>
+          <li className={styles['host']}>
             <Image alt="host" src="" className={styles['host-image']} />
             <h4 className={styles['position']}>
               Position: <span>Software Engineer</span>
             </h4>
-            <p>
+            <p className={styles['host-intro']}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero distinctio in sit culpa consequatur
               ratione, rem veritatis debitis saepe sunt.
             </p>

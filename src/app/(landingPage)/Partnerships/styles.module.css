@@ -50,3 +50,9 @@
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .container > h2 {
+    font-size: var(--48px);
+  }
+}

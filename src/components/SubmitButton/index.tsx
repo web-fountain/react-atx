@@ -2,26 +2,17 @@
 
 import { useFormStatus } from 'react-dom';
 import styles from './styles.module.css';
+import Icons from '@Icons';
 
 
-interface Props {
-  label: string;
-  className?: string;
-}
-
-function SubmitButton({ label='submit', className='' }) {
+function SubmitButton({ btn }: { btn: string }) {
   const { pending } = useFormStatus();
 
   return (
-    <button
-      className={`${styles['button']} ${className}`}
-      type='submit'
-      aria-disabled={pending}
-    >
-      {label}
+    <button className={styles[`${btn}`]} type="submit" aria-disabled={pending}>
+      Submit <Icons name="arrow-right" color={btn} />
     </button>
   );
 }
-
 
 export default SubmitButton;

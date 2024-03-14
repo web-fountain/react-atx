@@ -3,7 +3,7 @@
   max-width: 1440px;
   margin: 5rem auto;
 
-  & > h1 {
+  & > h2 {
     font-size: var(--64px);
     font-weight: var(--medium);
     line-height: var(--leading-14);
@@ -15,5 +15,12 @@
     max-width: 926px;
     margin: 0 auto;
     line-height: var(--leading-7);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content > h2 {
+    font-size: var(--56px);
+    text-align: center;
   }
 }

@@ -33,7 +33,9 @@
     border-width: 0;
   }
 
-  ul, ol, dd {
+  ul,
+  ol,
+  dd {
     list-style: none;
   }
 

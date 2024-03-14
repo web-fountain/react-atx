@@ -1,8 +1,4 @@
-function ArrowRight({ className='', color='', size='32' }) {
-  const inlineFill = color.length > 0
-    ? { stroke: color }
-    : { stroke: 'var(--text-white)' };
-
+function ArrowRight({ className = '', color = '', size = '32' }) {
   return (
     <svg
       className={className}
@@ -17,11 +13,11 @@ function ArrowRight({ className='', color='', size='32' }) {
         strokeWidth="2.66667"
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M2.16602 8.71818H20.8327M20.8327 8.71818L13.8327 2.05151M20.8327 8.71818L13.8327 15.3848" stroke="#2658CB"
+        d="M2.16602 8.71818H20.8327M20.8327 8.71818L13.8327 2.05151M20.8327 8.71818L13.8327 15.3848"
+        stroke={color === 'primary' ? 'var(--text-white)' : 'var(--primary-color)'}
       />
     </svg>
   );
 }
-
 
 export default ArrowRight;
