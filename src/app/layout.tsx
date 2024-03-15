@@ -4,20 +4,10 @@ import '@Styles/base.css';
 import '@Styles/layout.css';
 import '@Styles/theme.css';
 
-import type { ReactNode } from 'react';
-
-import Provider from '../context/client-provider';
-// import { auth } from '../../auth.Config';
-
 import { Footer, Header } from '@Components';
 
 
-// console.log('auth', auth);
-
-async function RootLayout({ children }: { children: ReactNode }) {
-//   const session = await auth();
-//   console.log('root session', session);
-
+async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html data-theme="dark" lang="en-US">
       <head>
@@ -30,11 +20,9 @@ async function RootLayout({ children }: { children: ReactNode }) {
         <style>@layer fonts, resets, base, layout, theme;</style>
       </head>
       <body>
-        {/* <Provider session={session}> */}
-          <Header />
+        <Header />
           {children}
-          <Footer />
-        {/* </Provider> */}
+        <Footer />
       </body>
     </html>
   );

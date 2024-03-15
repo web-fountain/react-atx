@@ -1,6 +1,7 @@
 'use server';
 
 import { cache, Suspense } from 'react';
+import { redirect } from 'next/navigation';
 
 import Loading from './loading';
 import './styles.css';
@@ -64,6 +65,8 @@ const ConfirmMembership = async ({ token }) => {
 
   const { isValid } = await getValidation(token);
   console.info('ConfirmMembership:isValid', { isValid });
+
+  redirect('/membership-confirmation');
 
   if (!isValid) return <Invalid />;
 
