@@ -19,7 +19,7 @@
     height: 100%;
     width: 100%;
 
-    background-image: var(--header-net-dark);
+    background-image: var(--header-bg-image);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: 40% -10%;
