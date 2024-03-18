@@ -1,56 +1,34 @@
-import ArrowRight from './ArrowRight';
-import ArrowUpRight from './ArrowUpRight';
-import CircleArrowRight from './CircleArrowRight';
-import CircleExclamation from './CircleExclamation';
-import DiscordWhite from './DiscordWhite';
-import Drinks from './Drinks';
-import Food from './Food';
-import GitHub from './GitHub';
-import Lightbulb from './Lightbulb';
-import LinkedIn from './LinkedIn';
-import Moon from './Moon';
-import Other from './Other';
-import ReactLogo from './ReactLogo';
-import ReactLargeLogo from './ReactLargeLogo';
-import Speakers from './Speakers';
-import Sun from './Sun';
-import Twitter from './Twitter';
-import Venue from './Venue';
-import Workshops from './Workshops';
+import type { SVGProps } from 'react';
+import './styles.css';
 
 
-type Props = {
-  color?: string;
-  className?: string;
-  inlineFill?: string;
-  inlineStroke?: string;
-  name: string;
-};
-
-function Icons({ name, ...props }: Props): JSX.Element {
-  const icons: Record<Props['name'], any> = {
-    'arrow-right': <ArrowRight {...props} />,
-    'arrow-up-right': <ArrowUpRight {...props} />,
-    'circle-arrow-right': <CircleArrowRight {...props} />,
-    'circle-exclamation': <CircleExclamation {...props} />,
-    'discord-white': <DiscordWhite {...props} />,
-    drinks: <Drinks {...props} />,
-    food: <Food {...props} />,
-    github: <GitHub {...props} />,
-    lightbulb: <Lightbulb {...props} />,
-    linkedIn: <LinkedIn {...props} />,
-    moon: <Moon {...props} />,
-    other: <Other {...props} />,
-    'react-logo': <ReactLogo {...props} />,
-    'react-logo-large': <ReactLargeLogo {...props} />,
-    speakers: <Speakers {...props} />,
-    sun: <Sun {...props} />,
-    twitter: <Twitter {...props} />,
-    venue: <Venue {...props} />,
-    workshops: <Workshops {...props} />
-  };
-
-  return icons[name];
+function Icon({ name, className='', ...props }: SVGProps<SVGSVGElement> & { name: string }) {
+  return (
+    <svg className={`icon-${name} ${className}`} {...props}>
+      <use href={`#icon-${name}`} />
+    </svg>
+  );
 }
 
-export default Icons;
+
+
+// export { default as ArrowRight } from './ArrowRight';
+export { default as ArrowUpRight } from './ArrowUpRight';
+// export { default as CircleArrowRight } from './CircleArrowRight';
+// export { default as CircleExclamation } from './CircleExclamation';
+// export { default as DiscordWhite } from './DiscordWhite';
+// export { default as Drinks } from './Drinks';
+// export { default as Food } from './Food';
+export { default as GitHub } from './GitHub';
+// export { default as Lightbulb } from './Lightbulb';
+// export { default as LinkedIn } from './LinkedIn';
+// export { default as Moon } from './Moon';
+// export { default as Other } from './Other';
+export { default as ReactLogo } from './ReactLogo';
+// export { default as ReactLargeLogo } from './ReactLargeLogo';
+// export { default as Speakers } from './Speakers';
+// export { default as Sun } from './Sun';
+export { default as Twitter } from './Twitter';
+// export { default as Venue } from './Venue';
+// export { default as Workshops } from './Workshops';
+export default Icon;

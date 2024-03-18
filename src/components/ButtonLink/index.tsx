@@ -1,16 +1,10 @@
-import type { ReactNode } from 'react';
 import Link from 'next/link';
 
-import Icons from '@Icons';
+import Icon from '@Icons';
 import styles from './styles.module.css';
 
 
-interface Props {
-  children: ReactNode;
-  href: string;
-}
-
-function ButtonLink({ children, href }: Props) {
+function ButtonLink({ text, href, icon }) {
   return (
     <Link
       href={`${href}`}
@@ -18,8 +12,8 @@ function ButtonLink({ children, href }: Props) {
     >
       <div className={styles['text-box']}>
         <span>
-          {children}
-          <Icons name='arrow-up-right' />
+          {text}
+          {icon && <Icon name={icon} />}
         </span>
       </div>
     </Link>

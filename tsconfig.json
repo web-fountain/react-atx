@@ -24,10 +24,12 @@
       "@Icons": ["./src/components/Icons"],
       "@Images/*": ["./src/assets/images/*"],
       "@Images": ["./src/assets/images"],
+      "@Sprites/*": ["./src/sprites/*"],
+      "@Sprites": ["./src/sprites"],
       "@Styles/*": ["./src/assets/styles/*"],
       "@Styles": ["./src/assets/styles"],
-      "@Utils/*": ["./src/app/utils/*"],
-      "@Utils": ["./src/app/utils"]
+      "@Utils/*": ["./src/utils/*"],
+      "@Utils": ["./src/utils"]
     }
   },
   "include": [

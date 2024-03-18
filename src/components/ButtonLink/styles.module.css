@@ -29,13 +29,12 @@
 }
 
 .text-box > span {
+  display: flex;
+  column-gap: var(--12px);
+
   font-size: var(--20px);
   font-weight: var(--medium);
   color: var(--text-white);
-}
-
-.text-box > span > svg {
-  margin-left: 17px;
 }
 
 .text-box > span > svg > path {
@@ -48,12 +47,4 @@
 
 .text-box:hover {
   background-color: var(--bg-color);
-}
-
-.text-box:hover > span {
-  color: var(--text-primary);
-}
-
-.text-box:hover > span > svg > path {
-  fill: var(--text-primary);
 }

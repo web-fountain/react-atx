@@ -1,0 +1,54 @@
+@import url('@Styles/mediaQueries.css');
+
+
+@layer layouts {
+  body {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: var(--64px) auto;
+    grid-template-columns: minmax(375px, 0.9fr);
+    grid-template-areas:
+      "header"
+      "main"
+    ;
+  }
+
+  .top-background-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-image: var(--header-net-dark);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 40% -10%;
+
+    z-index: -1;
+  }
+
+  .main-layout {
+    grid-area: main;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  @media (--desktop) {
+    body {
+      grid-template-rows: 100px auto;
+      justify-content: center;
+    }
+
+    .top-background-image {
+      background-position: center top -10%;
+    }
+  }
+
+  @media(--wide) {
+    body {
+      grid-template-columns: 1fr;
+    }
+  }
+}

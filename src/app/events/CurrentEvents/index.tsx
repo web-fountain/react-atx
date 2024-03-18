@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { balloons } from '@Images';
-import Icons from '@Icons';
+import Icon from '@Icons';
 import styles from './styles.module.css';
 
 

@@ -1,0 +1,113 @@
+@import url('@Styles/mediaQueries.css');
+
+
+:root {
+  /* font-weight */
+  --thin:         100;
+  --extra-light:  200;
+  --light:        300;
+  --regular:      400;
+  --medium:       500;
+  --semi-bold:    600;
+  --bold:         700;
+  --extra-bold:   800;
+  --black:        900;
+
+  /* line-height */
+  --leading-none:     1    ;
+  --leading-packed:   1.25 ;
+  --leading-tight:    1.375;
+  --leading-snug:     1.45 ;
+  --leading-normal:   1.5  ;
+  --leading-relaxed:  1.625;
+  --leading-loose:    2    ;
+
+  /* letter-spacing */
+  --tracking-tighter: -0.05em ;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:  0em     ;
+  --tracking-wide:    0.025em ;
+  --tracking-wider:   0.05em  ;
+  --tracking-widest:  0.1em   ;
+
+  --font-family: Poppins, sans-serif;
+  font-family: var(--font-family);
+}
+
+@layer typography {
+  body {
+    font-family: 'Poppins';
+    font-weight: var(--regular);
+    font-size: var(--16px);
+    line-height: var(--leading-normal);
+    color: var(--text-primary);
+
+    background-color: var(--bg-color);
+  }
+
+  h1 {
+    font-size: var(--32px);
+    font-weight: var(--medium);
+    line-height: var(--leading-packed);
+    margin-block: var(--24px);
+  }
+  h2 {
+    font-size: var(--24px);
+    font-weight: var(--regular);
+    line-height: var(--leading-normal);
+    margin-block: var(--20px)
+  }
+  h3 {
+    font-size: var(--20px);
+    font-weight: var(--regular);
+    line-height: var(--leading-normal);
+    margin-block: var(--16px);
+  }
+
+
+  @media (--desktop) {
+    h1 {
+      font-size: var(--64px);
+    }
+    h2 {
+      font-size: var(--32px);
+    }
+  }
+}
+
+@layer fonts {
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      local('Poppins Regular'),
+      url('../fonts/Poppins-Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src:
+      local('Poppins Medium'),
+      url('../fonts/Poppins-Medium.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src:
+      local('Poppins Bold'),
+      url('../fonts/Poppins-Bold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    src:
+      local('Poppins Bold Italic'),
+      url('../fonts/Poppins-BoldItalic.woff') format('woff');
+  }
+}

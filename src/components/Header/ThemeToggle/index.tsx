@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-import Icons from '@Icons';
+import Icon from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -36,8 +36,8 @@ function ThemeToggle() {
     <div className={styles['theme-toggle']}>
       <input type="checkbox" id="theme-toggle" />
       <label htmlFor="theme-toggle">
-        <Icons name="sun" className='sun'/>
-        <Icons name="moon" className='moon'/>
+        <Icon name="sun" className='sun'/>
+        <Icon name="moon" className='moon'/>
       </label>
     </div>
   );

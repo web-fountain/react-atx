@@ -1,20 +1,53 @@
-.container {
+@import url('@Styles/mediaQueries.css');
+
+
+.hero-layout {
+  width: 100%;
+  max-width: 1440px;
+  padding-block-start: 96px;
+  padding-inline: 24px;
+
   display: flex;
-  display: k;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1292px;
 }
 
 .content {
   width: 100%;
 
-  & > span {
-    font-weight: var(--bold);
+  .intro {
+    margin-block-end: var(--48px);
+
+    > span {
+      display: inline-block;
+      font-weight: var(--bold);
+    }
+
+    > p {
+      max-width: 37.875rem; /* 606px */
+    }
+  }
+}
+
+.hero-image {
+  display: none;
+}
+
+
+@media (--desktop) {
+  .hero-layout {
+    /* padding-inline: 72px; */
   }
 
-  & > p {
-    margin-bottom: 3rem;
+  .content .intro {
+    > span {
+      font-size: var(--32px);
+    }
+    > p {
+      font-size: var(--28px);
+      font-weight: var(--medium);
+    }
+
   }
 }

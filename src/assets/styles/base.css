@@ -1,26 +1,44 @@
+:root {
+  --icon-width: 32px;
+  --icon-height: 32px;
+}
+
 @layer base {
   *,
-  *::after,
-  *::before {
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
   }
 
   body {
-    box-sizing: border-box;
-
-    font-family: 'Poppins';
-    font-weight: var(--regular);
-    font-size: var(--16px);
-    line-height: normal;
-    color: var(--text-primary);
-
-    background-color: var(--bg-color);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
 
-  a {
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  svg[class^="icon-"] {
+    width: var(--icon-width);
+    height: var(--icon-height);
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  a,
+  a:active,
+  a:visited {
     text-decoration: none;
+    color: white;  /* TODO: use variable */
   }
 
   button {
@@ -32,21 +50,16 @@
     border: none;
     border-width: 0;
   }
+  legend {
+    padding: 0;
+  }
 
   ul, ol, dd {
     list-style: none;
   }
 
-  h1 {
-    font-size: var(--32px);
-    font-weight: var(--medium);
-    line-height: var(--leading-11);
-    margin: 1rem 0 2rem;
-  }
-  h2 {
-    font-size: var(--24px);
-    font-weight: var(--regular);
-    line-height: normal;
-    margin: 0.75rem 0 1.5rem;
+  /* TODO: modify this */
+  #root, #__next {
+    isolation: isolate;
   }
 }

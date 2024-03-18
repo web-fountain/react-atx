@@ -20,14 +20,14 @@ async function generateMetadata(): Promise<Metadata> {
 
 async function Page() {
   return (
-    <main className="main-layout page-layout">
+    <>
       <Hero />
-      <Community />
+      {/* <Community />
       <Join />
       <Partnerships />
       <Speakers />
-      <AboutUs />
-    </main>
+      <AboutUs /> */}
+    </>
   );
 }
 

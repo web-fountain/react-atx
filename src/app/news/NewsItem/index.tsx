@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icons from '@Icons';
+import Icon from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -18,7 +18,7 @@ function NewsItem(props: { item: Item }) {
   return (
     <li className={styles.item}>
       <div className={styles.icon}>
-        <Icons name='react-logo' />
+        <Icon name='react-logo' />
       </div>
       <div className={styles.info}>
         <div className={styles['heading-block']}>
@@ -27,7 +27,7 @@ function NewsItem(props: { item: Item }) {
         </div>
         <div className={styles['credentials-block']}>
           <div className={styles.date}>
-            <Icons name='circle-exclamation' />
+            <Icon name='circle-exclamation' />
             <p>{props.item.date
               ? Math.floor((Date.now() - props.item.date) / 60000)
               : 0

@@ -1,4 +1,4 @@
-import Icons from '@Icons';
+import Icon from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -51,7 +51,7 @@ function PartnershipInput({
         />
         <label htmlFor={id}>
           <span>
-            <Icons name={`${icon}`} />
+            <Icon name={`${icon}`} />
             {label}
           </span>
         </label>

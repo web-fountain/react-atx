@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
 
-import Icons from '@Icons';
+import Icon from '@Icons';
 import styles from './styles.module.css';
 import Button from '@/components/SubmitButton';
 import SpeakerInput from '@Components/SpeakerInput';
@@ -112,7 +112,7 @@ function Speakers() {
         </h4>
 
         <div className={styles.hint}>
-          <Icons name='circle-exclamation' />
+          <Icon name='circle-exclamation' />
           <p>You can choose only one of the options</p>
         </div>
 

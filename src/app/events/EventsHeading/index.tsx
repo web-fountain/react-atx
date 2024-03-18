@@ -1,5 +1,5 @@
 import styles from './eventsHeading.module.css';
-import Icons from '@Icons';
+import Icon from '@Icons';
 import React from 'react';
 
 

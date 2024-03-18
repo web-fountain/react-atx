@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Icons from '@Icons';
+import Icon from '@Icons';
 import styles from './styles.module.css';
 
 
@@ -13,15 +13,14 @@ function Footer() {
         </span>
 
         <div className={styles.socialMedia}>
-          <Icons name='twitter' />
-          <Icons name='linkedIn' />
-          <Icons name='github' />
+          <Icon name="twitter" />
+          <Icon name="github" />
         </div>
 
         <div className={styles.policy}>
-          <Link href='/'>Privacy Notice</Link>
-          <Link href='/'>Terms of Service</Link>
-          <Link href='/'>Cookie Policy</Link>
+          <Link href="/">Privacy Notice</Link>
+          <Link href="/">Terms of Service</Link>
+          <Link href="/">Cookie Policy</Link>
         </div>
       </div>
     </footer>
