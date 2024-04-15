@@ -11,7 +11,7 @@
     "del-cli": "5.1.0",
     "eslint": "9.0.0",
     "eslint-config-next": "14.2.1",
-    "next": "14.2.1",
+    "next": "14.2.1-canary.6",
     "postcss": "8.4.38",
     "postcss-custom-media": "10.0.4",
     "postcss-import": "16.1.0",
@@ -40,6 +40,6 @@
     "build": "next build",
     "build:start": "next start",
     "lint": "next lint",
-    "repack": "del node_modules pnpm-lock.yaml && pnpm install"
+    "repack": "del .next node_modules pnpm-lock.yaml && pnpm install"
   }
 }
