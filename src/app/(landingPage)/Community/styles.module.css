@@ -27,7 +27,7 @@
   .content {
     & > h1,
     & > p {
-      max-width: 56%;
+      max-width: 724px;
     }
 
     & > p:first-of-type {

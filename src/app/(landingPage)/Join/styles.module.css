@@ -1,9 +1,14 @@
-.section {
+@import url('@Styles/mediaQueries.css');
+
+
+.layout {
   width: 100%;
-  max-width: 960px;
+  max-width: 1440px;
+  padding-block: 66px;
+  padding-inline: 24px;
 }
 
-.top-lid {
+.box-lid {
   background-image: linear-gradient(
     180deg,
     rgba(0, 122, 255, 0) -28.54%,
@@ -29,39 +34,48 @@
   & > h1 {
     color: var(--text-white);
   }
+
+  & > p {
+    margin-bottom: var(--20px);
+    color: var(--text-white);
+  }
 }
 
 .form {
-  p {
-    margin-bottom: 28px;
-    color: var(--text-white);
-  }
-
-  div:empty {
-    display: inline-block;
-    width: 100%;
-  }
-
-  input {
-    width: 100%;
-    height: 63px;
-    padding: 20px 0px 19px 16px;
-    margin-bottom: 16px;
-
-    color: var(--text-white);
-    border: 3px solid var(--white);
-    background-color: var(--primary-color);
-
-    &::placeholder {
-      color: var(--text-light-blue);
-    }
-  }
+  width: 100%;
 
   .error-message {
     color: var(--text-error);
     font-weight: var(--medium);
     line-height: normal;
+
+    &:empty {
+      display: inline-block;
+      width: 100%;
+    }
   }
+
+  .actions {
+    display: flex;
+    flex-flow: column nowrap;
+
+    input {
+      width: 100%;
+      height: 64px;
+      padding: 20px 0px 19px 16px;
+      margin-bottom: var(--16px);
+
+      color: var(--text-white);
+      border: 3px solid var(--white);
+      background-color: var(--primary-color);
+
+      &::placeholder {
+        color: var(--text-light-blue);
+      }
+    }
+  }
+
+
 }
 
 .almost-done {
@@ -84,10 +98,46 @@
   overflow-wrap: break-word;
 }
 
-/* @media screen and (max-width: 768px) {
+@media (--tablet) {
   .content {
-    & > h1 {
+    h1 {
       font-size: var(--48px);
     }
   }
-} */
+}
+
+@media (--desktop), (--wide) {
+  .layout {
+    padding-inline: 72px;
+  }
+
+  .form .actions {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    input {
+      margin-bottom: 0;
+      border-inline-end: 0;
+    }
+
+    .button-wrapper {
+      width: 25%;
+      padding-inline-end: 4px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-block: 3px solid var(--white);
+      border-inline-end: 3px solid var(--white);
+
+      .button {
+        width: 100%;
+        height: 50px;
+
+      }
+    }
+
+  }
+}

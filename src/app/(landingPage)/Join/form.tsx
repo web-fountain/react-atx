@@ -78,7 +78,24 @@ function JoinForm() {
 
   return (
     <>
-      {server.success
+      <form name="JoinForm" className={styles['form']} action={handleAction}>
+        <div className={styles['error-message']}>
+          {errors.email?.message || server.errors.email?.message}
+        </div>
+
+        <div className={styles['actions']}>
+          <input
+            type="text"
+            {...register('email')}
+            placeholder="example@mail.com"
+          />
+
+          <div className={styles['button-wrapper']}>
+            <SubmitButton className={styles['button']} label="Submit" />
+          </div>
+        </div>
+      </form>
+      {/* {server.success
         ? <AlmostDone email={getValues('email')} />
         : server.errors && server.errors[0]?.server
           ? <div className={styles['error-message']}>
@@ -99,7 +116,7 @@ function JoinForm() {
 
               <SubmitButton label="Submit" />
             </form>
-      }
+      } */}
     </>
   );
 }

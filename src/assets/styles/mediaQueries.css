@@ -1,3 +1,4 @@
-@custom-media --mobile  (width <= 30rem);
-@custom-media --desktop (30rem <  width); /* 480px < */
-@custom-media --wide    (90rem <  width); /* 1440px < */
+@custom-media --mobile  (width <= 30rem);                 /* x      < 480px       */
+@custom-media --tablet  (30.0625rem <  width <= 48rem);   /* 481px  < x < 768px   */
+@custom-media --desktop (48.0625rem <  width <= 90rem);   /* 768px  < x < 1440px  */
+@custom-media --wide    (90rem <  width);                 /* 1441px <             */
