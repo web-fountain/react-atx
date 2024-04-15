@@ -1,10 +1,10 @@
 @import url('@Styles/mediaQueries.css');
 
 
-.hero-layout {
+.layout {
   width: 100%;
   max-width: 1440px;
-  padding-block-start: 96px;
+  padding-block: 96px 66px;
   padding-inline: 24px;
 
   display: flex;
@@ -36,7 +36,7 @@
 
 
 @media (--desktop) {
-  .hero-layout {
+  .layout {
     padding-block-start: 143px;
     padding-inline: 72px;
   }

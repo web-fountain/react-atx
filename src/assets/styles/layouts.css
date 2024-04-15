@@ -42,7 +42,13 @@
     }
 
     .top-background-image {
-      background-position: left top -10%;
+      background-position: left top;
+    }
+  }
+
+  @media (--wide) {
+    .top-background-image {
+      background-size: contain;
     }
   }
 }

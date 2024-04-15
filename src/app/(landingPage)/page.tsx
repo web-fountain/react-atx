@@ -9,7 +9,7 @@ import Speakers from './Speakers';
 import Partnerships from './Partnerships';
 import AboutUs from './AboutUs';
 
-import './styles.css';
+import styles from './styles.module.css';
 
 
 async function generateMetadata(): Promise<Metadata> {
@@ -22,11 +22,13 @@ async function Page() {
   return (
     <>
       <Hero />
-      {/* <Community />
-      <Join />
-      <Partnerships />
-      <Speakers />
-      <AboutUs /> */}
+
+      <Community />
+
+      {/* <Join /> */}
+      {/* <Partnerships /> */}
+      {/* <Speakers /> */}
+      {/* <AboutUs /> */}
     </>
   );
 }

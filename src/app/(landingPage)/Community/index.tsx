@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 
 function Community() {
   return (
-    <section id='community'>
+    <section id='community' className={styles['layout']}>
       <div className={styles['content']}>
         <h1>About our Community</h1>
         <p>

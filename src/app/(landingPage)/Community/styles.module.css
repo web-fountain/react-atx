@@ -1,8 +1,37 @@
+@import url('@Styles/mediaQueries.css');
+
+
+.layout {
+  padding-block: 66px;
+  padding-inline: 24px;
+}
+
 .content {
-  & > h1, & > p {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  & > h1,
+  & > p {
     text-align: center;
+    max-width: 100%;
   }
-  & > h1 {
-    width: 355px;
+}
+
+
+@media (--desktop) {
+  .layout{
+    padding-inline: 72px;
+  }
+  .content {
+    & > h1,
+    & > p {
+      max-width: 56%;
+    }
+
+    & > p:first-of-type {
+      margin-block-start: var(--32px);
+    }
   }
 }

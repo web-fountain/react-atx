@@ -85,13 +85,14 @@
 
   --header-bg-linear-gradient: linear-gradient(0deg, rgba(15, 15, 15, 0.1) 0%, rgb(0, 0, 0) 100%);
   --header-bg-image: url(~@Images/header-net-dark_1440x274.png);
-  --body-bg-image: url(~@Images/body-net-dark.png);
+  --body-bg-image: url(~@Images/body-net-dark_1440x814.png);
   --footer-bg-image: url(~@Images/footer-net-dark.png);
 
   --white: #FFFFFF;
 
   @media (--wide) {
     --header-bg-image: url(~@Images/header-net-dark_1920x362.png);
+    --body-bg-image: url(~@Images/body-net-dark_1920x1086.png);
   }
 }
 

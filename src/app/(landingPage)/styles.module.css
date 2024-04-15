@@ -1,0 +1,36 @@
+@import url('@Styles/mediaQueries.css');
+
+
+.middle-background-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  background-image: var(--body-bg-image);
+  background-repeat: no-repeat;
+  background-size: auto 492px;
+  background-position: left 45% top 510px;
+
+  z-index: -1;
+}
+
+
+@media (--desktop) {
+  .middle-background-image {
+    background-position-y: 725px;
+    background-size: auto;
+  }
+}
+
+@media (75rem <= width) {
+  .middle-background-image {
+    background-position-y: 865px;
+  }
+}
+
+@media (--wide) {
+  .middle-background-image {
+    background-position-y: 830px;
+    background-size: contain;
+  }
+}

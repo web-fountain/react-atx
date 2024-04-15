@@ -25,7 +25,7 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
       <body>
         <Sprites />
 
-        <div className="top-background-image"></div>
+        <div className="top-background-image" />
         <Header />
 
         <main className="main-layout">

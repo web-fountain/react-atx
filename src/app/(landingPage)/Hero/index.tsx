@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 function Hero() {
   return (
-    <section id='hero' className={styles['hero-layout']}>
+    <section id='hero' className={styles['layout']}>
       <div className={styles['content']}>
 
         <div className={styles['intro']}>
