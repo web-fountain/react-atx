@@ -46,6 +46,10 @@
 }
 
 @media (--desktop) {
+  .container {
+    padding-inline: 72px;
+  }
+
   .logo {
     width: var(--64px);
     height: var(--64px);

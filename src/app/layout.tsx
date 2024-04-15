@@ -19,7 +19,7 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="favicon/manifest.webmanifest" />
 
-        <style>@layer fonts, base, typography, layouts, themes, utilities;</style>
+        <style>@layer fonts, typography, base, layouts, themes, utilities;</style>
       </head>
 
       <body>

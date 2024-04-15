@@ -6,8 +6,8 @@
     position: relative;
 
     display: grid;
+    grid-template-columns: minmax(375px, 1fr);
     grid-template-rows: var(--64px) auto;
-    grid-template-columns: minmax(375px, 0.9fr);
     grid-template-areas:
       "header"
       "main"
@@ -22,7 +22,7 @@
     background-image: var(--header-bg-image);
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 40% -10%;
+    background-position: 40% 0%;
 
     z-index: -1;
   }
@@ -42,13 +42,7 @@
     }
 
     .top-background-image {
-      background-position: center top -10%;
-    }
-  }
-
-  @media(--wide) {
-    body {
-      grid-template-columns: 1fr;
+      background-position: left top -10%;
     }
   }
 }

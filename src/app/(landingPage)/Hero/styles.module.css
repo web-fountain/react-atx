@@ -37,7 +37,8 @@
 
 @media (--desktop) {
   .hero-layout {
-    /* padding-inline: 72px; */
+    padding-block-start: 143px;
+    padding-inline: 72px;
   }
 
   .content .intro {
@@ -49,5 +50,11 @@
       font-weight: var(--medium);
     }
 
+  }
+}
+
+@media (75rem <= width) {
+  .hero-image {
+    display: block;
   }
 }

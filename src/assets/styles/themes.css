@@ -1,3 +1,6 @@
+@import url('@Styles/mediaQueries.css');
+
+
 :root {
   /* PM to REM */
   --2px: 0.125rem;
@@ -81,11 +84,15 @@
   --text-light-blue: #ACDDFF;
 
   --header-bg-linear-gradient: linear-gradient(0deg, rgba(15, 15, 15, 0.1) 0%, rgb(0, 0, 0) 100%);
-  --header-bg-image: url(~@Images/header-net-dark.png);
+  --header-bg-image: url(~@Images/header-net-dark_1440x274.png);
   --body-bg-image: url(~@Images/body-net-dark.png);
   --footer-bg-image: url(~@Images/footer-net-dark.png);
 
   --white: #FFFFFF;
+
+  @media (--wide) {
+    --header-bg-image: url(~@Images/header-net-dark_1920x362.png);
+  }
 }
 
 @layer themes {
