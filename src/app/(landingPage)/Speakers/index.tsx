@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
 
 import Icon from '@Icons';
+import TextInput from '@Components/TextInput';
+import Button from '@Components/SubmitButton';
+
 import styles from './styles.module.css';
-import Button from '@/components/SubmitButton';
-import SpeakerInput from '@Components/SpeakerInput';
 
 
 interface SpeakerFormTypes {
@@ -15,11 +16,7 @@ interface SpeakerFormTypes {
   email: string;
   company: string;
   topic: string;
-  showcase: boolean;
-  instructional: boolean;
-  interactive: boolean;
-  developerPanel: boolean;
-  lightningTalk: boolean;
+  summary: string;
 }
 
 function Speakers() {
@@ -52,125 +49,74 @@ function Speakers() {
   };
 
   return (
-    <section className={styles.container} id='speakers'>
-      <h1>Speakers</h1>
-      <h4>
-        Interested in speaking at our next event? Please fill out the form below
-      </h4>
+    <section id="speakers" className={styles['layout']}>
+      <div>
+        <h2>Speakers</h2>
+        <h3>Interested in speaking at our next event? Please fill out the form below</h3>
 
-      <form className={styles['speaker-form']} onSubmit={handleSubmit}>
-        <ul className={styles['list-info']}>
-          <SpeakerInput
-            label='Name'
-            id='name'
-            type='text'
-            name='name'
-            placeholder='name'
-            onChange={handleChange}
-            value={formData.name}
-          />
-          <SpeakerInput
-            label='Job Title'
-            id='jobTitle'
-            type='text'
-            name='jobTitle'
-            placeholder='job title'
-            onChange={handleChange}
-            value={formData.jobTitle}
-          />
-          <SpeakerInput
-            label='Email'
-            id='email'
-            type='text'
-            name='email'
-            placeholder='email'
-            onChange={handleChange}
-            value={formData.email}
-          />
-          <SpeakerInput
-            label='Company'
-            id='company'
-            type='text'
-            name='company'
-            placeholder='company'
-            onChange={handleChange}
-            value={formData.company}
-          />
-          <SpeakerInput
-            label='Topic'
-            id='topic'
-            type='text'
-            name='topic'
-            placeholder='topic'
-            onChange={handleChange}
-            value={formData.topic}
-          />
-        </ul>
+        <form className={styles['form']} onSubmit={handleSubmit}>
+          <ul className={styles['text-input-list']}>
+            <TextInput
+              id="name"
+              name="name"
+              label="Name *"
+              placeholder="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <TextInput
+              id="email"
+              name="email"
+              label="Email *"
+              placeholder="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <TextInput
+              id="jobTitle"
+              name="jobTitle"
+              label="Job Title"
+              placeholder="job title"
+              value={formData.jobTitle}
+              onChange={handleChange}
+            />
+            <TextInput
+              id="company"
+              name="company"
+              label="Company"
+              placeholder="company"
+              value={formData.company}
+              onChange={handleChange}
+            />
 
-        <h4 className={styles['topic-presentation']}>
-          How Would you like to present your topic?
-        </h4>
+            <div className={styles['topic-summary']}>
+              <TextInput
+                id="topic"
+                name="topic"
+                label="Topic"
+                placeholder="topic"
+                value={formData.topic}
+                onChange={handleChange}
+            />
 
-        <div className={styles.hint}>
-          <Icon name='circle-exclamation' />
-          <p>You can choose only one of the options</p>
-        </div>
+              <li className={styles['summary']}>
+                <label htmlFor="summary">Summary</label>
+                <textarea
+                  id="summary"
+                  name="Summary"
+                  value={formData.summary}
+                  placeholder="Summary of your talk..."
+                  rows={10}
+                />
+              </li>
+            </div>
+          </ul>
 
-        <ul className={styles['list-checks']}>
-          <SpeakerInput
-            label='Showcase'
-            id='showcase'
-            type='checkbox'
-            name='showcase'
-            onChange={handleChange}
-            descr='Information on current projects or tools and must include photos
-              of code or do some live coding.'
-            checked={formData.showcase}
-          />
-          <SpeakerInput
-            label='Instructional'
-            id='instructional'
-            type='checkbox'
-            name='instructional'
-            onChange={handleChange}
-            descr='Step by step instructions with credible references that link back
-            to best practices, using some live code or photos of your code to
-            give context.'
-            checked={formData.instructional}
-          />
-          <SpeakerInput
-            label='Interactive'
-            id='interactive'
-            type='checkbox'
-            name='interactive'
-            onChange={handleChange}
-            descr='Hands on live coding with audience participation: Giving audience a problem to solve in 15 or so minutes and then providing a solution, etc.'
-            checked={formData.interactive}
-          />
-          <SpeakerInput
-            label='Developer Panel'
-            id='developerPanel'
-            type='checkbox'
-            name='developerPanel'
-            onChange={handleChange}
-            descr='Friendly debate or showdown on a topic. How long do you want to present for?'
-            checked={formData.developerPanel}
-          />
-          <SpeakerInput
-            label='Lightning Talk'
-            id='lightningTalk'
-            type='checkbox'
-            name='lightningTalk'
-            onChange={handleChange}
-            descr='If you want to practice your presentaion skills.'
-            checked={formData.lightningTalk}
-          />
-        </ul>
-        <Button formStatus={pending}>
-          Submit
-        </Button>
-          {/* icon='circle-arrow-right' */}
-      </form>
+          <Button formStatus={pending}>
+            Submit
+          </Button>
+        </form>
+      </div>
     </section>
   );
 }

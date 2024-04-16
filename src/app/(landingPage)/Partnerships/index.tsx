@@ -63,35 +63,35 @@ function Partnerships() {
           <ul className={styles['text-input-list']}>
             <TextInput
               id="name"
-              label="Name *"
               name="name"
+              label="Name *"
               placeholder="name..."
-              onChange={handleChange}
               value={formData.name}
+              onChange={handleChange}
             />
             <TextInput
-              label="Email *"
-              name="email"
               id="email"
+              name="email"
+              label="Email *"
               placeholder="email"
-              onChange={handleChange}
               value={formData.email}
+              onChange={handleChange}
             />
             <TextInput
-              label="Job Title"
-              name="jobTitle"
               id="jobTitle"
+              name="jobTitle"
+              label="Job Title"
               placeholder="job title"
-              onChange={handleChange}
               value={formData.jobTitle}
+              onChange={handleChange}
             />
             <TextInput
-              label="Company"
-              name="company"
               id="company"
+              name="company"
+              label="Company"
               placeholder="company"
-              onChange={handleChange}
               value={formData.company}
+              onChange={handleChange}
             />
           </ul>
 

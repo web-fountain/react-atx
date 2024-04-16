@@ -28,7 +28,7 @@ async function Page() {
       <Join />
 
       <Partnerships />
-      {/* <Speakers /> */}
+      <Speakers />
       {/* <AboutUs /> */}
     </>
   );

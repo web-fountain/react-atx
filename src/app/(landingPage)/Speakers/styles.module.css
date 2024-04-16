@@ -1,61 +1,99 @@
-.container {
-  padding: 24px 16px;
+@import url('@Styles/mediaQueries.css');
+
+
+.layout {
   width: 100%;
-  max-width: 1292px;
-  margin: 32px auto;
-  border: 3px solid var(--primary-color);
+  max-width: 1440px;
+  padding-block: 66px;
 
-  & > h1 {
-    margin-bottom: 16px;
-  }
+  > div {
+    padding-block: 20px 40px;
+    padding-inline: 24px;
+    border: 3px solid var(--primary-color);
 
-  & > h4 {
-    margin-bottom: 35px;
-    font-weight: 400;
+    h2 {
+      font-size: var(--32px);
+    }
+
+    h3 {
+      font-size: var(--24px);
+      line-height: 36px;
+    }
   }
 }
 
-.speaker-form {
-  & .list-info {
+.form {
+  width: 100%;
+
+  .text-input-list {
+    width: 100%;
+    padding-block: 16px 32px;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-bottom: 35px;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
 
-    @media screen and (max-width: 800px) {
-      grid-template-columns: 1fr;
+    .topic-summary {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+
+      .summary {
+        width: 100%;
+        margin-block-end: var(--24px);
+
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--8px);
+
+        label {
+          color: var(--text-light-blue);
+        }
+
+        textarea {
+          width: 100%;
+          padding-block: 20px;
+          padding-inline: 16px;
+
+          color: var(--text-light-blue);
+          background-color: var(--bg-color-secondary);
+          border: none;
+
+          &::placeholder {
+            font-weight: var(--medium);
+          }
+        }
+      }
     }
   }
+}
 
-  & .topic-presentation {
-    margin-bottom: 8px;
-    font-size: var(--24px);
+@media (--tablet), (--laptop), (--desktop), (--wide) {
+  .layout {
+    padding-inline: 72px;
   }
 
-  & .hint {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-flow: row nowrap;
-    margin-bottom: 40px;
+  .form {
+    .text-input-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
 
-    & p {
-      font-size: var(--16px);
+    h3 {
+      width: 100%;
+    }
+
+    .topic-summary {
+      grid-column: 1 / 3;
     }
   }
+}
 
-  & .list-checks {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-bottom: 35px;
-
-    @media screen and (max-width: 800px) {
-      grid-template-columns: 1fr;
+@media (--desktop), (--wide) {
+  .layout {
+    > div {
+      padding-inline: 64px;
     }
-  }
-
-  & > button[type='submit'] {
-    margin-inline: auto;
   }
 }
