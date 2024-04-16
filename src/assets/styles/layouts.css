@@ -35,7 +35,7 @@
     align-items: center;
   }
 
-  @media (--desktop) {
+  @media (--laptop), (--desktop) {
     body {
       grid-template-rows: 100px auto;
       justify-content: center;

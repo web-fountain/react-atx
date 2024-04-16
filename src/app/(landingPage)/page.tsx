@@ -26,7 +26,8 @@ async function Page() {
       <Community />
 
       <Join />
-      {/* <Partnerships /> */}
+
+      <Partnerships />
       {/* <Speakers /> */}
       {/* <AboutUs /> */}
     </>

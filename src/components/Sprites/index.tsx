@@ -1,5 +1,5 @@
 import {
-  ArrowUpRight, GitHub, ReactLogo, Twitter
+  ArrowUpRight, Drinks, Food, GitHub, Other, ReactLogo, Speakers, Twitter, Venue, Workshops
 } from '@Icons';
 
 
@@ -8,21 +8,16 @@ function LandingPage() {
     <div className='hidden'>
       <svg>
         <defs>
-          <symbol id="icon-arrow-up-right">
-            <ArrowUpRight />
-          </symbol>
-
-          <symbol id="icon-github">
-            <GitHub />
-          </symbol>
-
-          <symbol id="icon-react-logo">
-            <ReactLogo />
-          </symbol>
-
-          <symbol id="icon-twitter">
-            <Twitter />
-          </symbol>
+          <ArrowUpRight />
+          <Drinks />
+          <Food />
+          <GitHub />
+          <Other />
+          <ReactLogo />
+          <Speakers />
+          <Twitter />
+          <Venue />
+          <Workshops />
         </defs>
       </svg>
     </div>

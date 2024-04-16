@@ -65,7 +65,7 @@
   }
 
 
-  @media (--desktop) {
+  @media (--laptop), (--desktop), (--wide) {
     h1 {
       font-size: var(--64px);
     }

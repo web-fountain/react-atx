@@ -40,12 +40,8 @@
   text-decoration: none;
 }
 
-.logo {
-  width: var(--32px);
-  height: var(--32px);
-}
 
-@media (--desktop) {
+@media (--laptop), (--desktop), (--wide) {
   .container {
     padding-inline: 72px;
   }

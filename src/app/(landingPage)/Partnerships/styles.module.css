@@ -1,49 +1,75 @@
-.container {
-  padding: 24px 16px;
-  margin-right: -24px;
-  margin-left: -24px;
+@import url('@Styles/mediaQueries.css');
 
-  border: 3px solid var(--primary-color);
 
-  & > h1 {
-    margin-bottom: 16px;
-  }
+.layout {
+  width: 100%;
+  padding-block: 66px;
 
-  & > h3 {
-    margin-bottom: 35px;
-    font-size: var(--24px);
-    line-height: 36px;
+  div {
+    padding-block: 20px 40px;
+    padding-inline: 24px;
+    border: 3px solid var(--primary-color);
+
+    h2 {
+      font-size: var(--32px);
+    }
+
+    h3 {
+      font-size: var(--24px);
+      line-height: 36px;
+    }
   }
 }
 
-.partnership-form {
+.form {
   width: 100%;
 
-  & .list-info {
+  .text-input-list {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin: 35px 0;
+    padding-block: 16px;
 
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
   }
 
-  & .list-options {
+  .sponsor-selection-list {
+    padding-block: 16px 32px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4px;
-    margin: 35px 0;
   }
 
-  & > p {
-    margin-bottom: 8px;
+  h3 {
+    width: 296px;
+    margin-inline: auto;
     text-align: center;
   }
+}
 
-  & > button {
-    margin: 0 auto;
+
+@media (--tablet), (--laptop), (--desktop), (--wide) {
+  .layout {
+    padding-inline: 72px;
+  }
+
+  .form {
+    .text-input-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    h3 {
+      width: 100%;
+    }
+  }
+}
+
+@media (--desktop), (--wide) {
+  .layout {
+    div {
+      padding-inline: 64px;
+    }
   }
 }

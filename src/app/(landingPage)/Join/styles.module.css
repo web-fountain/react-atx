@@ -106,7 +106,7 @@
   }
 }
 
-@media (--desktop), (--wide) {
+@media (--laptop), (--desktop), (--wide) {
   .layout {
     padding-inline: 72px;
   }

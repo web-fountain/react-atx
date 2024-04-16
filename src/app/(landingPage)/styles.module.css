@@ -15,7 +15,7 @@
 }
 
 
-@media (--desktop) {
+@media (--tablet), (--laptop), (--desktop) {
   .middle-background-image {
     background-position-y: 725px;
     background-size: auto;
