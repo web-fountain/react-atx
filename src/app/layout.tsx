@@ -33,6 +33,7 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
         </main>
 
         <Footer />
+        <div className="bottom-background-image" />
       </body>
 
     </html>

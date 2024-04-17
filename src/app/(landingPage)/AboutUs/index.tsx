@@ -1,9 +1,11 @@
+'use server';
+
 import styles from './styles.module.css';
 
 
-function AboutUs() {
+async function AboutUs() {
   return (
-    <section id='about-us' className={styles.container}>
+    <section id='aboutus' className={styles['layout']}>
         <h1>About Us</h1>
         <p>
           There are some React meetups but don&apos;t seem to be consistently
@@ -25,13 +27,14 @@ function AboutUs() {
           min) get in contact! Bring a Laptop, and remember, be NICE!
         </p>
 
-      <ul className={styles.hostList}>
+      <ul className={styles['host-list']}>
         <li>
           <div className={styles['background-image']}>
           </div>
-          <h4 className={styles.position}>
-            Position: <span>HOST</span>
-          </h4>
+          <h3 className={styles.position}>
+            Han Solo
+          </h3>
+          <span className={styles['border-line']} />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
             distinctio in sit culpa consequatur ratione, rem veritatis debitis
@@ -41,9 +44,10 @@ function AboutUs() {
         <li>
           <div className={styles['background-image']}>
           </div>
-          <h4 className={styles.position}>
-            Position: <span>HOST</span>
-          </h4>
+          <h3 className={styles.position}>
+            Landonis Balthazar "Lando" Calrissian III
+          </h3>
+          <span className={styles['border-line']} />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
             distinctio in sit culpa consequatur ratione, rem veritatis debitis
@@ -53,9 +57,10 @@ function AboutUs() {
         <li>
           <div className={styles['background-image']}>
           </div>
-          <h4 className={styles.position}>
-            Position: <span>HOST</span>
-          </h4>
+          <h3 className={styles.position}>
+            Chewbacca
+          </h3>
+          <span className={styles['border-line']} />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
             distinctio in sit culpa consequatur ratione, rem veritatis debitis

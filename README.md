@@ -92,6 +92,7 @@ To add an icon requires to manipulate four files:
 ## SVGs
 1. [svg-icons](https://www.jacobparis.com/content/svg-icons)
 2. [svg-in-js](https://kurtextrem.de/posts/svg-in-js)
+3. [svg-store](https://github.com/FWeinb/grunt-svgstore/issues/16)
 
 To style SVGs you must target the `<use>` element
 1. [stackoverflow](https://stackoverflow.com/questions/46353027/changing-css-with-svg-symbols-on-hover)

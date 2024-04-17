@@ -22,6 +22,18 @@
   --56px: 3.5rem;
   --60px: 3.75rem;
   --64px: 4rem;
+  --80px: 5rem;
+  --96px: 6rem;
+  --112px: 7rem;
+  --128px: 8rem;
+  --144px: 9rem;
+  --160px: 10rem;
+  --80px: 5rem;
+  --96px: 6rem;
+  --112px: 7rem;
+  --128px: 8rem;
+  --144px: 9rem;
+  --160px: 10rem;
 
   /*
    * PRIMITIVES
@@ -62,6 +74,8 @@
 }
 
 [data-theme="dark"] {
+  --white: #FFFFFF;
+
   --primary-color: #2658cb;
   --secondary-color: #2A363F;
   --bg-color: #0F0F0F;
@@ -84,15 +98,15 @@
   --text-light-blue: #ACDDFF;
 
   --header-bg-linear-gradient: linear-gradient(0deg, rgba(15, 15, 15, 0.1) 0%, rgb(0, 0, 0) 100%);
-  --header-bg-image: url(~@Images/header-net-dark_1440x274.png);
+  --header-bg-image: url(~@Images/header-net-dark_1440x272.png);
   --body-bg-image: url(~@Images/body-net-dark_1440x814.png);
-  --footer-bg-image: url(~@Images/footer-net-dark.png);
+  --footer-bg-image: url(~@Images/footer-net-dark_1440x272.png);
 
-  --white: #FFFFFF;
 
   @media (--wide) {
     --header-bg-image: url(~@Images/header-net-dark_1920x362.png);
     --body-bg-image: url(~@Images/body-net-dark_1920x1086.png);
+    --footer-bg-image: url(~@Images/footer-net-dark_1920x362.png);
   }
 }
 
