@@ -1,50 +1,63 @@
-.container {
+@import url('@Styles/mediaQueries.css');
+
+
+.layout {
   width: 100%;
-  max-width: 1292px;
-  margin: 32px auto;
+  max-width: 1440px;
+  padding-block: 66px;
+  padding-inline: 24px;
 
-  & > h1 {
-    margin-bottom: 16px;
-    line-height: 38px;
-  }
-
-  & > p {
-    margin-bottom: 48px;
+  > p {
+    margin-block-end: var(--32px);
   }
 }
 
-.hostList {
+.host-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
-  gap: 24px;
+  gap: var(--32px);
 
-  & > li {
-    border-top: 3px solid var(--primary-color);
-    padding: 0.5rem 0;
+  li {
+    width: 100%;
+    max-width: 416px;
+    padding-block: var(--8px);
+
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 414px;
+    border-top: 3px solid var(--primary-color);
 
-    & > .background-image {
+    .background-image {
       background-color: grey;
-      height: 399px;
+      height: 400px; /* placeholder */
       width: 100%;
     }
 
-    & > h4 {
-      border-bottom: 3px solid var(--primary-color);
-
-      & > span {
-        color: var(--primary-color);
-      }
+    .border-line {
+      width: 50%;
+      height: 2px;
+      background-color: var(--primary-color);
     }
 
-    & > p {
-      margin-top: 16px;
-      margin-bottom: 0;
+    p {
+      margin-block-start: var(--8px);
     }
   }
 }
 
+
+@media (--tablet), (--laptop), (--desktop), (--wide) {
+  .layout {
+    padding-inline: 72px;
+  }
+}
+
+@media (--desktop), (--wide) {
+  .layout {
+    padding-inline: 64px;
+  }
+
+  .host-list li {
+    border-block: 3px solid var(--primary-color);
+  }
+}

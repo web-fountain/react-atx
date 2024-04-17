@@ -22,14 +22,11 @@ async function Page() {
   return (
     <>
       <Hero />
-
       <Community />
-
       <Join />
-
       <Partnerships />
       <Speakers />
-      {/* <AboutUs /> */}
+      <AboutUs />
     </>
   );
 }
