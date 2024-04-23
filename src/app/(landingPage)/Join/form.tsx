@@ -1,123 +1,138 @@
+// 'use client'
+
+// import { FC, useRef } from 'react'
+// import { useForm } from 'react-hook-form'
+// import { useFormState, useFormStatus } from 'react-dom'
+// import loginPasswordless from './actions';
+// import { z } from 'zod';
+// import { zodResolver } from '@hookform/resolvers/zod';
+
+
+// const joinFormSchema = z
+//   .object({
+//     email: z.string()
+//       .min(6, { message: 'Email is required' })
+//       .max(254)
+//   });
+
+// const JoinForm: FC = () => {
+//   const formRef = useRef<HTMLFormElement>(null)
+
+//   const [state, formAction] = useFormState(loginPasswordless, null)
+
+//   const { trigger, formState } = useForm({
+//     resolver: zodResolver(joinFormSchema),
+//     mode: 'onBlur',
+//     defaultValues: {
+//       email: '',
+//       ...(state?.fields ?? {}),
+//     },
+//   })
+
+//   const SubmitButton = () => {
+//     const { pending } = useFormStatus()
+
+//     return (
+//       <button
+//         disabled={pending}
+//         type="submit"
+//         className="mt-4 w-full"
+//       >
+//         {pending ? 'Processing...' : 'Continue'}
+//       </button>
+//     );
+//   }
+
+//   return (
+//     <>
+//         <form
+//           ref={formRef}
+//           action={formAction}
+//           onSubmit={e => {
+//             console.log('triggering here');
+//             trigger()
+//             if (formState.isValid) {
+//               formRef.current?.requestSubmit()
+//             } else {
+//               e.preventDefault()
+//             }
+//           }}
+//           className="mt-8"
+//         >
+//           <div>
+//             <input
+//               id='email'
+//               className="w-full"
+//               name="email"
+//               placeholder="Enter your email"
+//             />
+//           </div>
+//           <SubmitButton />
+//         </form>
+//     </>
+//   )
+// }
+
 'use client';
 
-import { useEffect, useId } from 'react';
-import { useFormState } from 'react-dom';
-
-
-import Ajv from 'ajv';
-import ajvErrors from 'ajv-errors';
-import ajvFormats from 'ajv-formats';
-import { useForm } from 'react-hook-form';
-
-import formSchema from './schema';
+import useFForm from '@Hooks/useFForm'
+import joinEmailSchema from './schema';
 import joinEmailAction from './actions';
 
-import SubmitButton from '@/components/SubmitButton';
+import SubmitButton from '@Components/SubmitButton';
 import styles from './styles.module.css';
 
 
-const ajv = new Ajv({
-  allErrors: true,
-  allowUnionTypes: true,
-  coerceTypes: true
-});
-ajvFormats(ajv, ['email']);
-ajvErrors(ajv, {
-  keepErrors: false,
-  singleError: false
-});
-const validate = ajv.compile(formSchema);
-
 function JoinForm() {
-  const inputId = useId();
-  const { clearErrors, formState: { errors }, getValues, register, setError } = useForm({
-    mode: 'onSubmit'
+  // NOTE: if user does not use `handleSubmit`, they will need to use `startTransition` & `setErrors`
+  const { handleAction, handleSubmit, actionState, isPending, errors } = useFForm({
+    formSchema: joinEmailSchema,
+    formAction: joinEmailAction,
+    initialFormActionState: { success: false, errors: null, data: null }
   });
 
-  const initialState = { success: null, errors: [] };
-  const [server, formAction] = useFormState(joinEmailAction, initialState);
-
-  async function handleAction(FormData: FormData) {
-    clearErrors();
-
-    try {
-      const data = await validate({ email: FormData.get('email') });
-
-      return formAction(data);
-    } catch (error) {
-      if (!(error instanceof Ajv.ValidationError)) throw error;
-
-      error.errors.forEach(err => {
-        const { instancePath, message } = err;
-        // Errors are set on RHF fields
-        console.log(err);
-        setError(instancePath.replace('/', ''), {
-          message
-        });
-      });
-
-      return;
-    }
-  };
-
-  // handle responses from the server
-  useEffect(() => {
-    if (!server.success) {
-      server.errors.forEach(err => {
-        console.log('err', err);
-        const { instancePath, message } = err;
-        if (!instancePath) return;
-
-        setError(instancePath.replace('/', ''), {
-          message
-        });
-      });
-    }
-
-  }, [server]);
-
   return (
-    <>
-      <form name="JoinForm" className={styles['form']} action={handleAction}>
-        <div className={styles['error-message']}>
-          {errors.email?.message || server.errors.email?.message}
-        </div>
+    <div className={styles['content']}>
+      <h1>Join the<br />Community</h1>
 
-        <div className={styles['actions']}>
-          <input
-            type="text"
-            {...register('email')}
-            placeholder="example@mail.com"
-          />
+      {actionState.success
+        ? <AlmostDone email={actionState.data?.email} />
+        : <>
+            <p>Subscribe to our newsletter and get notified of upcoming events</p>
+            <form
+              id="JoinForm"
 
-          <div className={styles['button-wrapper']}>
-            <SubmitButton className={styles['button']} label="Submit" />
-          </div>
-        </div>
-      </form>
-      {/* {server.success
-        ? <AlmostDone email={getValues('email')} />
-        : server.errors && server.errors[0]?.server
-          ? <div className={styles['error-message']}>
-              <p>Something went wrong!<br/>Please try again laters.</p>
-            </div>
-          : <form name="JoinForm" className={styles['form']} action={handleAction}>
-              <p id={inputId}>Subscribe to our newsletter and get notified of upcoming events</p>
+              name="JoinForm"
+              className={styles['form']}
+              action={handleAction}   // server
+              onSubmit={handleSubmit} // client
+            >
+              <p className={styles['error-message']}>
+                {errors.email?.message}
+              </p>
 
-              <div className={styles['error-message']}>
-                {errors.email?.message || server.errors.email?.message}
+              <div className={styles['actions']}>
+                <input
+                  id="email"
+                  name="email"
+                  type="text"
+                  minLength={6}
+                  placeholder="example@mail.com"
+                  required={true}
+                />
+
+                <div className={styles['button-wrapper']}>
+                  <SubmitButton
+                    disabled={isPending}
+                    formId="JoinForm"
+                    label="Submit"
+                  />
+                </div>
               </div>
-              <input
-                type="text"
-                {...register('email')}
-                placeholder="example@mail.com"
-                aria-describedby={inputId}
-              />
-
-              <SubmitButton label="Submit" />
             </form>
-      } */}
-    </>
+          </>
+      }
+    </div>
   );
 }
 

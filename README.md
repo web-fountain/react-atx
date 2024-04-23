@@ -101,6 +101,8 @@ To style SVGs you must target the `<use>` element
 
 ## React
 1. [when to use: useCallback](https://www.joshwcomeau.com/react/usememo-and-usecallback/#inside-generic-custom-hooks-7)
+2. [avoid: useFormStatus](https://allanlasser.com/posts/2024-01-26-avoid-using-reacts-useformstatus)
+3. [useActionState](https://github.com/facebook/react/pull/28491)
 
 ## Self-Hosting
 https://nextjs.org/docs/app/building-your-application/deploying#self-hosting
@@ -115,3 +117,6 @@ https://nextjs.org/docs/app/building-your-application/deploying#self-hosting
 
 ## Accessibility
 * [dropdown list](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only)
+
+## Email Validation
+* [minimum length](https://stackoverflow.com/questions/1423195/what-is-the-actual-minimum-length-of-an-email-address-as-defined-by-the-ietf)

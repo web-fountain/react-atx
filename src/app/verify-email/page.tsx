@@ -1,5 +1,7 @@
 'use server';
 
+import type { Metadata } from 'next/types';
+
 import { cache, Suspense } from 'react';
 import { redirect } from 'next/navigation';
 
