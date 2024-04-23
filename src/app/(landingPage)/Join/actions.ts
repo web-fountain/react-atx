@@ -1,21 +1,3 @@
-// export const loginPasswordless = async (prevState: any, data: FormData) => {
-//   console.log({ data });
-//   const formData = Object.fromEntries(data)
-
-//   const fields: Record<string, string> = {}
-
-//   for (const key of Object.keys(formData)) {
-//     fields[key] = formData[key].toString()
-//   }
-
-//   console.log('responding');
-//   return {
-//     status: 'error',
-//     message: 'something went wrong',
-//     fields
-//   }
-// }
-
 'use server';
 
 import { cache } from 'react';
@@ -23,7 +5,6 @@ import postgres from 'postgres';
 
 import WelcomeAboardEmail from '@EmailTemplates/welcomeAboard';
 import joinFormSchema from './schema';
-
 
 
 const sql = postgres({
