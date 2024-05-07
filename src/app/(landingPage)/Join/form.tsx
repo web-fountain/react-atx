@@ -75,7 +75,7 @@
 
 'use client';
 
-import useForm from '@Hooks/useFForm'
+import useForm from '@Hooks/useForm'
 import joinEmailSchema from './schema';
 import joinEmailAction from './actions';
 
