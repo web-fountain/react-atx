@@ -75,7 +75,7 @@
 
 'use client';
 
-import useFForm from '@Hooks/useFForm'
+import useForm from '@Hooks/useFForm'
 import joinEmailSchema from './schema';
 import joinEmailAction from './actions';
 
@@ -85,7 +85,7 @@ import styles from './styles.module.css';
 
 function JoinForm() {
   // NOTE: if user does not use `handleSubmit`, they will need to use `startTransition` & `setErrors`
-  const { handleAction, handleSubmit, actionState, isPending, errors } = useFForm({
+  const { handleAction, handleSubmit, actionState, isPending, errors } = useForm({
     formSchema: joinEmailSchema,
     formAction: joinEmailAction,
     initialFormActionState: { success: false, errors: null, data: null }
@@ -101,7 +101,6 @@ function JoinForm() {
             <p>Subscribe to our newsletter and get notified of upcoming events</p>
             <form
               id="JoinForm"
-
               name="JoinForm"
               className={styles['form']}
               action={handleAction}   // server

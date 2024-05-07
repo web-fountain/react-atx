@@ -1,35 +1,35 @@
+'use client';
+
 import type { SyntheticEvent } from 'react';
 import type { ZodSchema } from 'zod';
 
-import { useState, useTransition } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useState } from 'react';
 
 
-interface UseFFormHook<FormState> {
-  handleAction: (payload: FormData) => void;
-  handleSubmit: (event: SyntheticEvent<HTMLFormElement>) => void;
+interface UseFormHook<FormState, Payload> {
+  handleAction: (payload: Payload) => void;
+  handleSubmit: (event: SyntheticEvent<HTMLFormElement>) => Promise<void>;
   isPending: boolean;
   actionState: FormState;
   errors: Record<string, { message: string }>;
   setErrors: (errors: Record<string, { message: string }>) => void;
 }
 
-function useFForm<FormState>({ formSchema, formAction, initialFormActionState }: {
+function useForm<State, Payload>({ formSchema, formAction, initialFormActionState }: {
   formSchema: ZodSchema,
   formAction: (
-    formState: Awaited<FormState>,
-    formData: FormData
+    formState: Awaited<State>,
+    payload: Payload
   ) => Promise<any>,
-  initialFormActionState: Awaited<FormState>
-}): UseFFormHook<FormState> {
-  const [actionState, handleAction] = useFormState(formAction, initialFormActionState);
+  initialFormActionState: Awaited<State>
+}): UseFormHook<State, Payload> {
+  const [actionState, handleAction, isPending] = useActionState(formAction, initialFormActionState);
   const [errors, setErrors] = useState({});
-  const [isPending, startTransition] = useTransition();
 
-  function handleSubmit(event: SyntheticEvent<HTMLFormElement>) {
+  async function handleSubmit(event: SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setErrors({});
+    setErrors({});  // reset errors
     const validationErrors = {};
     const formData = new FormData(event.currentTarget);
     const validation = formSchema.safeParse({
@@ -37,9 +37,7 @@ function useFForm<FormState>({ formSchema, formAction, initialFormActionState }:
     });
 
     if (validation.success ) {
-      startTransition(async () => {
-        await handleAction(formData);
-      });
+      await handleAction(formData as Payload);
     } else {
       for (const issue of validation.error.issues) {
         const { path, message } = issue;
@@ -61,4 +59,4 @@ function useFForm<FormState>({ formSchema, formAction, initialFormActionState }:
 }
 
 
-export default useFForm;
+export default useForm;

@@ -6,16 +6,15 @@ import postgres from 'postgres';
 import WelcomeAboardEmail from '@EmailTemplates/welcomeAboard';
 import joinFormSchema from './schema';
 
-
-const sql = postgres({
-  host: process.env.POSTGRES_HOST!,
-  user: process.env.POSTGRES_USER!,
-  password: process.env.POSTGRES_PASSWORD!,
-  database: process.env.POSTGRES_DATABASE!,
-  max: 20,
-  idle_timeout: 30,
+const connectionString = process.env.POSTGRES_URL!;
+const sql = postgres(connectionString, {
+  max: 10,
+  idle_timeout: 30,       // close idle connection after 30 seconds
+  max_lifetime: 60 * 15,  // close connection after 15 minutes
   connect_timeout: 30,
-//   ssl: true
+  connection: {
+    application_name: 'nextjs_react_atx'
+  },
   debug: (connection, query, params, type) => {
     console.log('connection', { connection });
     console.log('query', { query });
@@ -38,7 +37,7 @@ type Row = {
 };
 
 
-const getJoinEmail = cache(async (email: string): Promise<Row | Result> => {
+const getJoinEmail = cache(async (email: string): Promise<Row | any> => {
   try {
     const data = await sql`
       SELECT
@@ -53,11 +52,7 @@ const getJoinEmail = cache(async (email: string): Promise<Row | Result> => {
   }
   catch (error) {
     console.error('ServerAction:SQLerror', error);
-
-    return {
-      success: false,
-      errors: { server: { message: 'Server error' }}
-    };
+    return { error };
   }
 });
 
@@ -81,7 +76,14 @@ async function joinEmail(prevState: Result, formData: FormData): Promise<Result>
     };
   }
 
-  const { isNewMember, isVerified, token } = await getJoinEmail(email);
+  const { isNewMember, isVerified, token, error } = await getJoinEmail(email);
+
+  if (error) {
+    return {
+      success: false,
+      errors: { server: { message: 'Server error' } }
+    };
+  }
 
   console.info({ isNewMember, isVerified });
 

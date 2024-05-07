@@ -32,8 +32,8 @@
       "@Sprites": ["./src/sprites"],
       "@Styles/*": ["./src/assets/styles/*"],
       "@Styles": ["./src/assets/styles"],
-      "@Utils/*": ["./src/utils/*"],
-      "@Utils": ["./src/utils"]
+      "@Utilities/*": ["./src/utilities/*"],
+      "@Utilities": ["./src/utilities"]
     }
   },
   "include": [
