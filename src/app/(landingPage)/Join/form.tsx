@@ -84,7 +84,7 @@ import styles from './styles.module.css';
 
 
 function JoinForm() {
-  // NOTE: if user does not use `handleSubmit`, they will need to use `startTransition` & `setErrors`
+  // NOTE: if user does not use `handleSubmit`, they will need to `setErrors`
   const { handleAction, handleSubmit, actionState, isPending, errors } = useForm({
     formSchema: joinEmailSchema,
     formAction: joinEmailAction,

@@ -1,0 +1,29 @@
+@import url('@Styles/mediaQueries.css');
+
+
+.layout {
+  max-width: 1440px;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  padding-inline: 24px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  h1, h3 {
+    text-align: center;
+  }
+
+  a {
+    color: var(--text-secondary);
+    text-decoration-line: underline;
+  }
+}
+
+
+@media (--tablet), (--laptop), (--desktop), (--wide) {
+  .layout {
+    padding-inline: 72px;
+  }
+}
