@@ -8,7 +8,7 @@ import { useActionState, useState } from 'react';
 
 interface UseFormHook<FormState, Payload> {
   handleAction: (payload: Payload) => void;
-  handleSubmit: (event: SyntheticEvent<HTMLFormElement>) => Promise<void>;
+  handleSubmit: (event: SyntheticEvent<HTMLFormElement>) => void;
   isPending: boolean;
   actionState: FormState;
   errors: Record<string, { message: string }>;
@@ -26,7 +26,7 @@ function useForm<State, Payload>({ formSchema, formAction, initialFormActionStat
   const [actionState, handleAction, isPending] = useActionState(formAction, initialFormActionState);
   const [errors, setErrors] = useState({});
 
-  async function handleSubmit(event: SyntheticEvent<HTMLFormElement>) {
+  function handleSubmit(event: SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
 
     setErrors({});  // reset errors
@@ -37,7 +37,7 @@ function useForm<State, Payload>({ formSchema, formAction, initialFormActionStat
     });
 
     if (validation.success ) {
-      await handleAction(formData as Payload);
+      handleAction(formData as Payload);
     } else {
       for (const issue of validation.error.issues) {
         const { path, message } = issue;

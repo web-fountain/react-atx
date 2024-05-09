@@ -2,6 +2,11 @@
 
 
 @layer layouts {
+  :root {
+    --header-height: 64px;
+    --footer-height: 144px;
+  }
+
   body {
     position: relative;
 
@@ -53,13 +58,18 @@
   }
 
   @media (--laptop), (--desktop) {
+    :root {
+      --header-height: 100px;
+      --footer-height: 68px;
+    }
+
     body {
       grid-template-rows: 100px auto auto;
       justify-content: center;
     }
 
     .main-layout {
-      margin-block-end: 128px;
+      /* margin-block-end: 128px; */
     }
     .top-background-image {
       background-position: left top;
@@ -71,13 +81,18 @@
   }
 
   @media (--wide) {
+    :root {
+      --header-height: 100px;
+      --footer-height: 68px;
+    }
+
     body {
       grid-template-rows: 100px auto auto;
       justify-content: center;
     }
 
     .main-layout {
-      margin-block-end: 300px;
+      /* margin-block-end: 300px; */
     }
     .top-background-image {
       background-size: contain;

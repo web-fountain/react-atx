@@ -26,7 +26,7 @@ const sql = postgres(connectionString, {
 type Result = {
   success: boolean;
   errors?: null | Record<string, { message: string }>;
-  data?: any;
+  data?: unknown;
 };
 
 type Row = {
