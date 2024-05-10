@@ -64,7 +64,7 @@ function Partnerships() {
             <TextInput
               id="name"
               name="name"
-              label="Name *"
+              label="Name*"
               placeholder="name..."
               value={formData.name}
               onChange={handleChange}
@@ -72,7 +72,7 @@ function Partnerships() {
             <TextInput
               id="email"
               name="email"
-              label="Email *"
+              label="Email*"
               placeholder="email"
               value={formData.email}
               onChange={handleChange}

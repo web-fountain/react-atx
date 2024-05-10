@@ -1,6 +1,10 @@
 @import url('@Styles/mediaQueries.css');
 
 
+.icon-arrow-up-right {
+  fill: var(--icon-primary);
+}
+
 .icon-twitter {
   width: 26px;
   height: 22px;
