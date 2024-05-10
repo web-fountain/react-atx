@@ -1,13 +1,21 @@
+
 import Link from 'next/link';
+import type { UrlObject } from 'node:url';
 
 import Icon from '@Icons';
 import styles from './styles.module.css';
 
 
-function ButtonLink({ text, href, icon }) {
+type Props = {
+  text: string;
+  href: UrlObject;
+  icon: string;
+};
+
+function ButtonLink({ text, href, icon }: Props) {
   return (
     <Link
-      href={`${href}`}
+      href={href}
       className={styles['container']}
     >
       <div className={styles['text-box']}>

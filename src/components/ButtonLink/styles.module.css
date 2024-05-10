@@ -26,19 +26,19 @@
   transition: background-color 0.3s;
 
   background-color: transparent;
-}
 
-.text-box > span {
-  display: flex;
-  column-gap: var(--12px);
+  span {
+    display: flex;
+    column-gap: var(--12px);
 
-  font-size: var(--20px);
-  font-weight: var(--medium);
-  color: var(--text-white);
-}
+    font-size: var(--20px);
+    font-weight: var(--medium);
+    color: var(--text-white);
 
-.text-box > span > svg > path {
-  fill: var(--text-white);
+    :global .icon-arrow-up-right {
+      fill: var(--text-white);
+    }
+  }
 }
 
 .container:hover {

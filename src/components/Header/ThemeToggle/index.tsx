@@ -6,7 +6,7 @@ import Icon from '@Icons';
 import styles from './styles.module.css';
 
 
-function setTheme(theme: string='dark') {
+function setTheme(theme: string) {
   const rootTag = document.documentElement;
   rootTag.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
@@ -17,8 +17,7 @@ function ThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle') as HTMLInputElement;
 
     // set theme listener on toggle
-    themeToggle.addEventListener('input', event => {
-      //@ts-ignore
+    themeToggle.addEventListener('change', event => {
       const isChecked =  event.target.checked;
 
       isChecked
@@ -28,13 +27,13 @@ function ThemeToggle() {
 
     // check localstorage if theme is set (default: dark)
     const theme = localStorage.getItem('theme');
-    if (!theme) setTheme();
+    if (!theme) setTheme('dark');
     if (theme === 'light') themeToggle.click();
   }, []);
 
   return (
     <div className={styles['theme-toggle']}>
-      <input type="checkbox" id="theme-toggle" />
+      <input id="theme-toggle" type="checkbox"  />
       <label htmlFor="theme-toggle">
         <Icon name="sun" className='sun'/>
         <Icon name="moon" className='moon'/>

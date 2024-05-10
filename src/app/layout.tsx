@@ -11,13 +11,13 @@ import { Footer, Header } from '@Components';
 
 async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html data-theme="dark" lang="en">
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         {/* #Favicon.1 */}
-        <link rel="icon" sizes="any" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml"  href="/favicon/icon.svg" />
-        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="favicon/manifest.webmanifest" />
+        <link rel="icon" sizes="any"          href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/icon.svg" />
+        <link rel="apple-touch-icon"          href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest"                  href="/favicon/manifest.webmanifest" />
 
         <style>@layer fonts, typography, base, layouts, themes, utilities;</style>
       </head>

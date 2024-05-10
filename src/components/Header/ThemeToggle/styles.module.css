@@ -44,7 +44,7 @@
   background-color: var(--primary-color);
 }
 .theme-toggle input[type='checkbox']:checked ~ label::after {
-  background-color: var(--text-primary);
+  background-color: var(--bg-color-white);
   transform: translateX(-26px);
 }
 .theme-toggle input[type='checkbox']:checked ~ label :global svg.sun {

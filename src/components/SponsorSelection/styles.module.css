@@ -36,7 +36,7 @@
     transition: background-color 0.25s, clip-path 0.25s;
 
     &:hover {
-      background-color: var(--primary-color);
+      background-color: var(--sponsorship-selection-bg);
       clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
     }
 
