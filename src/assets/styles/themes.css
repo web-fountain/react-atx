@@ -1,6 +1,5 @@
 @import url('@Styles/mediaQueries.css');
 
-
 :root {
   /* PM to REM */
   --2px: 0.125rem;
@@ -35,79 +34,78 @@
   --144px: 9rem;
   --160px: 10rem;
 
-  --text-white: #FFFFFF;
+  --text-white: #ffffff;
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   /*
    * PRIMITIVES
    */
 
   /* colors */
-  --white: #FFFFFF;
+  --white: #ffffff;
 
-  --primary-color: #007AFF;
-  --secondary-color: #C6E6E6;
-  --bg-color: #F5FBFF;
-  --bg-color-secondary: #C6E6FF;
-  --bg-color-tertiary: #FFFFFF;
-  --bg-color-white: #FFFFFF;
-  --text-primary: #14273A;
-  --text-secondary: #638CB6;
-  --text-secondary-light: #638CB6;
+  --primary-color: #007aff;
+  --secondary-color: #c6e6e6;
+  --bg-color: #f5fbff;
+  --bg-color-secondary: #c6e6ff;
+  --bg-color-tertiary: #ffffff;
+  --bg-color-white: #ffffff;
+  --text-primary: #14273a;
+  --text-secondary: #638cb6;
+  --text-secondary-light: #638cb6;
   --text-success: ;
-  --text-error: #FF5F5F;
-  --text-danger: #E76E6E;
-  --text-warning: #E76E6E;
+  --text-error: #ff5f5f;
+  --text-danger: #e76e6e;
+  --text-warning: #e76e6e;
   --text-info: ;
-  --text-light: #B5B7B9;
+  --text-light: #b5b7b9;
   --text-dark: ;
   --text-muted: ;
-  --text-inactive: #A5A5A5;
-  --text-light-blue: #14273A;
+  --text-inactive: #a5a5a5;
+  --text-light-blue: #14273a;
 
-  --header-bg-linear-gradient: linear-gradient(0deg, rgba(245,251,255,0.1) 0%, rgb(255, 255, 255) 100%);
+  --header-bg-linear-gradient: linear-gradient(0deg, rgba(245, 251, 255, 0.1) 0%, rgb(255, 255, 255) 100%);
   --header-bg-image: url(~@Images/header-net-light_1440x272.png);
   --body-bg-image: url(~@Images/body-net-light_1440x814.png);
   --footer-bg-image: url(~@Images/footer-net-light_1440x272.png);
   --box-lid-image: url("data:image/svg+xml,%3Csvg width='327' height='58' viewBox='0 0 327 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.9606 0.0170898H303.942L327 57.0171H0L22.9606 0.0170898Z' fill='url(%23paint0_linear_799_31096)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_799_31096' x1='163.752' y1='-63.8781' x2='163.752' y2='61.8437' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.378845' stop-color='%23007AFF' stop-opacity='0'/%3E%3Cstop offset='0.70318' stop-color='%23007AFF' stop-opacity='0.44'/%3E%3Cstop offset='1' stop-color='%23007AFF' stop-opacity='0.7'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E ");
   --react-quarter-image: url(~@Images/react-quarter-logo-light.png);
 
-  --icon-primary: #14273A;
-  --join-form-input-placeholder: #ACDDFF;
-  --sponsorship-selection-bg: #C6E6FF;
-
+  --icon-primary: #14273a;
+  --join-form-input-placeholder: #acddff;
+  --sponsorship-selection-bg: #c6e6ff;
 
   @media (--tablet), (--laptop), (--desktop), (--wide) {
     --box-lid-image: url("data:image/svg+xml,%3Csvg width='1296' height='124' viewBox='0 0 1296 124' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M91 0L1207 2L1296 124H0L91 0Z' fill='url(%23paint0_linear_878_43395)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_878_43395' x1='649' y1='-139' x2='649' y2='134.5' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.378845' stop-color='%23007AFF' stop-opacity='0'/%3E%3Cstop offset='0.70318' stop-color='%23007AFF' stop-opacity='0.44'/%3E%3Cstop offset='1' stop-color='%23007AFF' stop-opacity='0.7'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
   }
 }
 
-[data-theme="dark"] {
-  --white: #FFFFFF;
+[data-theme='dark'] {
+  --white: #ffffff;
 
   --primary-color: #2658cb;
-  --secondary-color: #2A363F;
-  --bg-color: #0F0F0F;
-  --bg-color-secondary: #2A363F;
+  --secondary-color: #2a363f;
+  --bg-color: #0f0f0f;
+  --bg-color-secondary: #2a363f;
   --bg-color-tertiary: #182229;
-  --bg-color-white: #FFFFFF;
-  --text-primary: #FFFFFF;
-  --text-secondary: #ACDDFF;
-  --text-secondary-light: #ACDDFF80;
+  --bg-color-white: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #acddff;
+  --text-secondary-light: #acddff80;
   --text-success: ;
-  --text-danger: #E76E6E;
-  --text-warning: #E76E6E;
+  --text-danger: #e76e6e;
+  --text-warning: #e76e6e;
   --text-info: ;
-  --text-light: #B5B7B9;
+  --text-light: #b5b7b9;
   --text-dark: ;
   --text-muted: ;
-  --text-inactive: #A5A5A5;
+  --text-inactive: #a5a5a5;
 
-  --text-light-blue: #ACDDFF;
+  --text-light-blue: #acddff;
 
   --icon-primary: var(--white);
-  --join-form-input-placeholder: #ACDDFF;
+  --join-form-input-placeholder: #acddff;
   --sponsorship-selection-bg: #2658cb;
 
   --header-bg-linear-gradient: linear-gradient(0deg, rgba(15, 15, 15, 0.1) 0%, rgb(0, 0, 0) 100%);
