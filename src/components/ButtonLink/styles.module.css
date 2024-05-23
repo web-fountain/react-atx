@@ -48,3 +48,11 @@
 .text-box:hover {
   background-color: var(--bg-color);
 }
+
+[data-theme="light"] .text-box:hover span {
+  color: var(--text-primary);
+
+  :global .icon-arrow-up-right {
+    fill: var(--text-primary);
+  }
+}
