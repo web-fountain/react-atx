@@ -10,7 +10,7 @@ function Hero() {
 
         <div className={styles['intro']}>
           <span>React ATX</span>
-          <h1>Join Austin's <br></br>React Community</h1>
+          <h1>Join Austin's <br/>React Community</h1>
           <p>We're a community of developers that come together to learn, share, and explore the world of frontend with React</p>
         </div>
 

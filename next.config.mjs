@@ -21,6 +21,7 @@ const nextConfig = {
   // Only load the modules you are actually using, while still giving you the convenience of
   // writing import statements with many named exports.
   experimental: {
+    reactCompiler: true,
     optimizePackageImports: [],
     ppr: true,
     // turbotrace: {

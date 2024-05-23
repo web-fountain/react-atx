@@ -52,6 +52,7 @@
   --bg-color-secondary: #C6E6FF;
   --bg-color-tertiary: #FFFFFF;
   --bg-color-white: #FFFFFF;
+
   --text-primary: #14273A;
   --text-secondary: #638CB6;
   --text-secondary-light: #638CB6;
@@ -64,6 +65,8 @@
   --text-dark: ;
   --text-muted: ;
   --text-inactive: #A5A5A5;
+
+  /* TODO: combine --text-primary & --text-light-blue */
   --text-light-blue: #14273A;
 
   --header-bg-linear-gradient: linear-gradient(0deg, rgba(245,251,255,0.1) 0%, rgb(255, 255, 255) 100%);
@@ -92,6 +95,7 @@
   --bg-color-secondary: #2A363F;
   --bg-color-tertiary: #182229;
   --bg-color-white: #FFFFFF;
+
   --text-primary: #FFFFFF;
   --text-secondary: #ACDDFF;
   --text-secondary-light: #ACDDFF80;
@@ -103,7 +107,6 @@
   --text-dark: ;
   --text-muted: ;
   --text-inactive: #A5A5A5;
-
   --text-light-blue: #ACDDFF;
 
   --icon-primary: var(--white);
