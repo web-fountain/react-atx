@@ -1,6 +1,5 @@
 @import url('@Styles/mediaQueries.css');
 
-
 @layer layouts {
   :root {
     --header-height: 64px;
@@ -14,10 +13,9 @@
     grid-template-columns: minmax(375px, 1fr);
     grid-template-rows: var(--64px) auto auto;
     grid-template-areas:
-      "header"
-      "main"
-      "footer"
-    ;
+      'header'
+      'main'
+      'footer';
   }
 
   .top-background-image {
@@ -68,9 +66,9 @@
       justify-content: center;
     }
 
-    .main-layout {
-      /* margin-block-end: 128px; */
-    }
+    /* .main-layout {
+      margin-block-end: 128px;
+    } */
     .top-background-image {
       background-position: left top;
     }
@@ -91,9 +89,9 @@
       justify-content: center;
     }
 
-    .main-layout {
-      /* margin-block-end: 300px; */
-    }
+    /* .main-layout {
+      margin-block-end: 300px;
+    } */
     .top-background-image {
       background-size: contain;
     }
