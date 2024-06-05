@@ -1,6 +1,5 @@
 @import url('@Styles/mediaQueries.css');
 
-
 .layout {
   width: 100%;
   max-width: 1440px;
@@ -10,11 +9,8 @@
 
 .box-lid {
   height: 57px;
-
-  background-image: var(--box-lid-image);
-  background-color: var(--bg-color);
-  background-repeat: no-repeat;
-  clip-path: polygon(10% 0%, 93% 0%, 100% 100%, 0% 100%);
+  background-image: linear-gradient(to top, var(--primary-color), var(--bg-color));
+  clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
 }
 
 .content {
@@ -95,9 +91,9 @@
 
 @media (--tablet) {
   .box-lid {
-    height: 129px;
-    background-image: var(--box-lid-image);
-    clip-path: polygon(12% 0%, 88% 0%, 100% 96%, 0% 96%);
+    height: 124px;
+    background-image: linear-gradient(to top, var(--primary-color), var(--bg-color));
+    clip-path: polygon(12% 0%, 88% 0%, 100% 100%, 0% 100%);
   }
   .content {
     h1 {
@@ -113,7 +109,7 @@
 
   .box-lid {
     height: 124px;
-    background-image: var(--box-lid-image);
+    background-image: linear-gradient(to top, var(--primary-color), var(--bg-color));
   }
 
   .form .actions {
