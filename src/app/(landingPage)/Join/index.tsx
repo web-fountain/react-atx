@@ -1,20 +1,16 @@
-'use client';
+"use client";
 
-import JoinForm from './form';
-import styles from './styles.module.css';
-
+import JoinForm from "./form";
+import styles from "./styles.module.css";
 
 function Join() {
-  return (
-    <section id='join' className={styles['layout']}>
-      <div className={styles['box-lid']} />
+	return (
+		<section id="join" className={styles["layout"]}>
+			<div className={styles["box-lid"]} />
 
-      <JoinForm />
-
-    </section>
-  );
+			<JoinForm />
+		</section>
+	);
 }
-
-
 
 export default Join;

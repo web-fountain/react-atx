@@ -1,5 +1,4 @@
-import postgres from 'postgres';
-
+import postgres from "postgres";
 
 // const sql = postgres({
 //   host: process.env.POSTGRES_HOST!,
@@ -19,30 +18,27 @@ import postgres from 'postgres';
 // });
 
 async function GET(request: Request) {
-  // const { token } = context.params;
+	// const { token } = context.params;
 
-  // let client;
-  // try {
-  //   client = await sql`
-  //     SELECT
-  //       isVerified,
-  //       isNewMember,
-  //       token,
-  //       expiresAt
-  //     FROM join_member(${ ajvData.email });
-  //   `;
-  // } catch (error) {
-  //   console.error('ServerAction:SQLerror', error);
-  //   return {
-  //     success: false,
-  //     errors: [{server: { message: 'Server error' }}]
-  //   };
-  // }
+	// let client;
+	// try {
+	//   client = await sql`
+	//     SELECT
+	//       isVerified,
+	//       isNewMember,
+	//       token,
+	//       expiresAt
+	//     FROM join_member(${ ajvData.email });
+	//   `;
+	// } catch (error) {
+	//   console.error('ServerAction:SQLerror', error);
+	//   return {
+	//     success: false,
+	//     errors: [{server: { message: 'Server error' }}]
+	//   };
+	// }
 
-
-  return new Response('Thank you for verifying your email.');
+	return new Response("Thank you for verifying your email.");
 }
 
-
 export { GET };
-
