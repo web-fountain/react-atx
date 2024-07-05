@@ -39,8 +39,12 @@ function Speakers() {
     lightningTalk: false
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    // const { name, value, type, checked } = e.target;
+    const name = e.target.name;
+    const type = e.target.type;
+    const value = e.target.value;
+    const checked = e.target;
 
     setFormData((prevFormData) => ({
       ...prevFormData,
@@ -110,6 +114,7 @@ function Speakers() {
                   id="summary"
                   name="Summary"
                   value={formData.summary}
+                  onChange={handleChange}
                   placeholder="Summary of your talk..."
                   rows={10}
                 />
