@@ -35,8 +35,8 @@
     font-weight: var(--medium);
     color: var(--text-white);
 
-    :global .icon-arrow-up-right {
-      fill: var(--text-white);
+    .icon-arrow-up-right {
+      color: var(--text-white);
     }
   }
 }
@@ -52,7 +52,7 @@
 [data-theme="light"] .text-box:hover span {
   color: var(--text-primary);
 
-  :global .icon-arrow-up-right {
-    fill: var(--text-primary);
+  .icon-arrow-up-right {
+    color: var(--text-primary);
   }
 }

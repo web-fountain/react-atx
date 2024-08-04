@@ -135,4 +135,10 @@
   body {
     background-color: var(--bg-color);
   }
+
+  .icon {
+    width: var(--icon-width);
+    height: var(--icon-height);
+    color: var(--icon-primary);
+  }
 }

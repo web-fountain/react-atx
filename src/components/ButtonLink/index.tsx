@@ -21,7 +21,7 @@ function ButtonLink<T extends string>({ text, href, icon }: Props<T>) {
       <div className={styles['text-box']}>
         <span>
           {text}
-          {icon && <Icon name={icon} />}
+          {icon && <Icon name={icon} className={styles[`icon-${icon}`]} />}
         </span>
       </div>
     </Link>

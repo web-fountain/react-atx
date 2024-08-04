@@ -5,7 +5,6 @@ import '@Styles/layouts.css';
 import '@Styles/themes.css';
 import '@Styles/utilities.css';
 
-import Sprites from '@Components/Sprites';
 import { Footer, Header } from '@Components';
 
 
@@ -23,8 +22,6 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
       </head>
 
       <body>
-        <Sprites />
-
         <div className="top-background-image" />
         <Header />
 

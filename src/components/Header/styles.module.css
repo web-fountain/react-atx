@@ -17,6 +17,11 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+
+  .logo {
+    width: var(--32px);
+    height: var(--32px);
+  }
 }
 .container > nav { width: 100% }
 
@@ -44,10 +49,10 @@
 @media (--laptop), (--desktop), (--wide) {
   .container {
     padding-inline: 72px;
-  }
 
-  .logo {
-    width: var(--64px);
-    height: var(--64px);
+    .logo {
+      width: var(--64px);
+      height: var(--64px);
+    }
   }
 }

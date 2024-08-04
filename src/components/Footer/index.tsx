@@ -12,8 +12,8 @@ function Footer() {
         </span>
 
         <div className={styles['social-media']}>
-          <Icon name="twitter" />
-          <Icon name="github" />
+          <Icon name="twitter" className={styles['icon-twitter']} />
+          <Icon name="github" className={styles['icon-github']} />
         </div>
 
         <div className={styles['policy']}>

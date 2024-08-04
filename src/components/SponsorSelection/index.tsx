@@ -13,13 +13,16 @@ interface Props {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function SponsorSelection({
-  checked, icon, id, label, name, onChange
-}: Props) {
+function SponsorSelection({ checked, icon, id, label, name, onChange }: Props) {
   return (
     <li className={styles['sponsor-selection-item']}>
       <label htmlFor={id}>
-        <Icon name={`${icon}`} />
+        {icon &&
+          <Icon
+            name={icon}
+            className={styles[`icon-${icon}`]}
+          />
+        }
         <span>{label}</span>
       </label>
 

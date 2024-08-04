@@ -40,6 +40,16 @@
       clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
     }
 
+    .icon-venue,
+    .icon-food,
+    .icon-drinks,
+    .icon-speakers,
+    .icon-workshops,
+    .icon-other {
+      width: 54px;
+      height: 54px;
+    }
+
     span {
       display: flex;
       flex-direction: column;
@@ -56,11 +66,22 @@
   .sponsor-selection-item {
     label {
       padding-block: 30px;
-    }
-    span {
-      font-size: var(--24px);
-      font-weight: var(--medium);
-      line-height: var(--leading-normal);
+
+      .icon-venue,
+      .icon-food,
+      .icon-drinks,
+      .icon-speakers,
+      .icon-workshops,
+      .icon-other {
+        width: 64px;
+        height: 64px;
+      }
+
+      span {
+        font-size: var(--24px);
+        font-weight: var(--medium);
+        line-height: var(--leading-normal);
+      }
     }
   }
 }
@@ -69,6 +90,16 @@
   .sponsor-selection-item {
     label {
       height: 212px;
+
+      .icon-venue,
+      .icon-food,
+      .icon-drinks,
+      .icon-speakers,
+      .icon-workshops,
+      .icon-other {
+        width: 88px;
+        height: 88px;
+      }
 
       span {
         font-size: var(--28px);
