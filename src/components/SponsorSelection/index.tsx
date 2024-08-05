@@ -1,5 +1,4 @@
 import Icon from '@Icons';
-import Venue from '@Icons/Venue';
 import styles from './styles.module.css';
 
 

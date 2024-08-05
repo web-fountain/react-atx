@@ -20,18 +20,37 @@
 }
 
 
-@media (--laptop), (--desktop), (--wide) {
+@media (--tablet) {
+  .content {
+    margin-block-end: 450px;
+  }
+}
+
+@media (--laptop) {
+  .content {
+    margin-block-end: 250px;
+  }
+}
+
+@media (--desktop) {
   .layout{
     padding-inline: 72px;
   }
   .content {
-    & > h1,
-    & > p {
+    margin-block-end: 300px;
+
+    h1, p {
       max-width: 724px;
     }
 
-    & > p:first-of-type {
+    p:first-of-type {
       margin-block-start: var(--32px);
     }
+  }
+}
+
+@media (--wide) {
+  .content {
+    margin-block-end: 600px;
   }
 }

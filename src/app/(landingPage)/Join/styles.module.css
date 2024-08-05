@@ -11,9 +11,7 @@
 .box-lid {
   height: 57px;
 
-  background-image: var(--box-lid-image);
-  background-color: var(--bg-color);
-  background-repeat: no-repeat;
+  background-image: var(--box-lid);
   clip-path: polygon(10% 0%, 93% 0%, 100% 100%, 0% 100%);
 }
 
@@ -95,9 +93,7 @@
 
 @media (--tablet) {
   .box-lid {
-    height: 129px;
-    background-image: var(--box-lid-image);
-    clip-path: polygon(12% 0%, 88% 0%, 100% 96%, 0% 96%);
+    height: 124px;
   }
   .content {
     h1 {
@@ -113,7 +109,6 @@
 
   .box-lid {
     height: 124px;
-    background-image: var(--box-lid-image);
   }
 
   .form .actions {

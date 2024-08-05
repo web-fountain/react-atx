@@ -1,11 +1,15 @@
 'use client';
 
+import type { ChangeEvent, FormEvent } from 'react';
 import { useState } from 'react';
-import { useFormStatus } from 'react-dom';
+
+import useForm from '@Hooks/useForm'
+import speakersSchema from './schema';
+import speakersAction from './actions';
 
 import Icon from '@Icons';
 import TextInput from '@Components/TextInput';
-import Button from '@Components/SubmitButton';
+import SubmitButton from '@Components/SubmitButton';
 
 import styles from './styles.module.css';
 
@@ -20,7 +24,12 @@ interface SpeakerFormTypes {
 }
 
 function Speakers() {
-  const { pending } = useFormStatus();
+  const { handleAction, handleSubmit, actionState, isPending, errors } = useForm({
+    formSchema: speakersSchema,
+    formAction: speakersAction,
+    initialFormActionState: { success: false, errors: null, data: null }
+  });
+
   const [formData, setFormData] = useState<SpeakerFormTypes>({
     name: '',
     jobTitle: '',
@@ -34,19 +43,19 @@ function Speakers() {
     lightningTalk: false
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (evt: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = evt.target;
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === 'checkbox' ? (evt.target as HTMLInputElement).checked : value
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('formdata', formData);
-  };
+  // const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
+  //   evt.preventDefault();
+  //   console.log('formdata', formData);
+  // };
 
   return (
     <section id="speakers" className={styles['layout']}>
@@ -54,7 +63,13 @@ function Speakers() {
         <h2>Speakers</h2>
         <h3>Interested in speaking at our next event? Please fill out the form below</h3>
 
-        <form className={styles['form']} onSubmit={handleSubmit}>
+        <form
+          id="SpearkersForm"
+          name="SpearkersForm"
+          className={styles['form']}
+
+          onSubmit={handleSubmit}
+        >
           <ul className={styles['text-input-list']}>
             <TextInput
               id="name"
@@ -107,14 +122,17 @@ function Speakers() {
                   value={formData.summary}
                   placeholder="Summary of your talk..."
                   rows={10}
+                  onChange={handleChange}
                 />
               </li>
             </div>
           </ul>
 
-          <Button formStatus={pending}>
-            Submit
-          </Button>
+          <SubmitButton
+            disabled={isPending}
+            formId="SpeakersForm"
+            label="Submit"
+          />
         </form>
       </div>
     </section>

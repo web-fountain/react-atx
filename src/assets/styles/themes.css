@@ -53,6 +53,10 @@
   --bg-color-tertiary: #FFFFFF;
   --bg-color-white: #FFFFFF;
 
+  --gradient-from: #163887;
+  --gradient-to: #1E48A7;
+  --box-lid: linear-gradient(180deg, rgba(var(--gradient-from), 0.00) 0%, rgba(var(--gradient-to), 0.70) 100%);
+
   --text-primary: #14273A;
   --text-secondary: #638CB6;
   --text-secondary-light: #638CB6;
@@ -95,6 +99,10 @@
   --bg-color-secondary: #2A363F;
   --bg-color-tertiary: #182229;
   --bg-color-white: #FFFFFF;
+
+  --gradient-from:  22, 56, 135; /*#163887*/
+  --gradient-to:    30, 72, 167; /*#1E48A7*/
+  --box-lid: linear-gradient(180deg, rgba(var(--gradient-from), 0.00) 0%, rgba(var(--gradient-to), 0.70) 100%);
 
   --text-primary: #FFFFFF;
   --text-secondary: #ACDDFF;
