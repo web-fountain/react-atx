@@ -8,11 +8,12 @@ const metadata = {
 
 function Events() {
   return (
-    <main className="main-layout">
-      <section className={styles.container}>
-        {/* <EventLayout /> */}
+    <>
+      <title>React ATX | Events</title>
+      <section className={styles['layout']}>
+        <h1>Coming soon!</h1>
       </section>
-    </main>
+    </>
   );
 }
 

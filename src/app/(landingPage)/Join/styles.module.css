@@ -36,11 +36,6 @@
     margin-bottom: var(--20px);
     color: var(--text-white);
   }
-
-  /* &.success{
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  } */
 }
 
 .form {

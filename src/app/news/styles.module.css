@@ -1,5 +1,19 @@
+.layout {
+  width: 100%;
+  max-width: 1440px;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+
+  padding-block: 96px 66px;
+  padding-inline: 24px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .news {
-    background-image: none;
-    max-width: 1292px;
-    margin: 0 auto;
+  background-image: none;
+  max-width: 1292px;
+  margin: 0 auto;
 }

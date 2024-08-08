@@ -7,8 +7,12 @@ import styles from './styles.module.css';
 
 function News() {
   return (
-    <main className={`${styles.news} main-layout`}>
-    </main>
+    <>
+      <title>React ATX | News</title>
+      <section className={styles['layout']}>
+        <h1>Coming REAL soon!</h1>
+      </section>
+    </>
   );
 }
 
