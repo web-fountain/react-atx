@@ -20,7 +20,7 @@ function SubmitButton({ className='', disabled=false, formId='', label='submit',
       aria-disabled={disabled}
       className={`${styles['button']} ${className}`}
     >
-      {label}
+      {disabled ? '...pending' : label}
     </button>
   );
 }

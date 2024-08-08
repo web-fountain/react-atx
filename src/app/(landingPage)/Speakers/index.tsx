@@ -25,8 +25,8 @@ interface SpeakerFormTypes {
 
 function Speakers() {
   const { handleAction, handleSubmit, actionState, isPending, errors } = useForm({
-    formSchema: speakersSchema,
-    formAction: speakersAction,
+    schema: speakersSchema,
+    action: speakersAction,
     initialFormActionState: { success: false, errors: null, data: null }
   });
 
@@ -60,8 +60,8 @@ function Speakers() {
   return (
     <section id="speakers" className={styles['layout']}>
       <div>
-        <h2>Speakers</h2>
-        <h3>Interested in speaking at our next event? Please fill out the form below</h3>
+        <h1>Speakers</h1>
+        <h2>Interested in speaking at our next event? Please fill out the form below</h2>
 
         <form
           id="SpearkersForm"

@@ -22,7 +22,7 @@
 
 @media (--tablet) {
   .content {
-    margin-block-end: 450px;
+    /* margin-block-end: 450px; */
   }
 }
 

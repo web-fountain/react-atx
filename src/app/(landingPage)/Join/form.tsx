@@ -75,24 +75,33 @@
 
 'use client';
 
+import SubmitButton from '@Components/SubmitButton';
 import useForm from '@Hooks/useForm'
+
 import joinEmailSchema from './schema';
 import joinEmailAction from './actions';
-
-import SubmitButton from '@Components/SubmitButton';
 import styles from './styles.module.css';
 
 
 function JoinForm() {
   // NOTE: if user does not use `handleSubmit`, they will need to `setErrors`
-  const { handleAction, handleSubmit, actionState, isPending, errors } = useForm({
-    formSchema: joinEmailSchema,
-    formAction: joinEmailAction,
-    initialFormActionState: { success: false, errors: null, data: null }
+  const {
+    handleAction, handleSubmit,
+    actionState, isPending,
+    validationErrors, errors
+  } = useForm({
+    schema: joinEmailSchema,
+    action: joinEmailAction,
+    initialActionState: { success: false, errors: null, data: null }
   });
 
   return (
-    <div className={styles['content']}>
+    <div
+      className={`
+        ${styles['content']}
+        ${actionState.success ? styles['success'] : ''}
+      `}
+    >
       <h1>Join the<br />Community</h1>
 
       {actionState.success
@@ -107,7 +116,7 @@ function JoinForm() {
               onSubmit={handleSubmit} // client
             >
               <p className={styles['error-message']}>
-                {errors.email?.message}
+                {validationErrors.email?.message}
               </p>
 
               <div className={styles['actions']}>
@@ -144,7 +153,7 @@ function AlmostDone({ email }:{ email: string }) {
         <br />
         <span className={styles['email-sent-to']}>{email}</span>
         <br />
-        Click the link to finish your registration
+        Click the link in the email to finish your registration
       </p>
     </div>
   );

@@ -10,15 +10,6 @@
     padding-block: 20px 40px;
     padding-inline: 24px;
     border: 3px solid var(--primary-color);
-
-    h2 {
-      font-size: var(--32px);
-    }
-
-    h3 {
-      font-size: var(--24px);
-      line-height: 36px;
-    }
   }
 }
 
@@ -50,7 +41,7 @@
 }
 
 
-@media (--tablet), (--laptop), (--desktop), (--wide) {
+@media (--laptop), (--desktop), (--wide) {
   .layout {
     padding-inline: 72px;
   }

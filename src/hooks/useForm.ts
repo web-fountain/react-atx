@@ -3,7 +3,7 @@
 import type { SyntheticEvent } from 'react';
 import type { ZodSchema } from 'zod';
 
-import { useActionState, useState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 
 
 interface UseFormHook<FormState, Payload> {
@@ -13,48 +13,65 @@ interface UseFormHook<FormState, Payload> {
   actionState: FormState;
   errors: Record<string, { message: string }>;
   setErrors: (errors: Record<string, { message: string }>) => void;
+  validationErrors: Record<string, { message: string }>;
+  setValidationErrors: (errors: Record<string, { message: string }>) => void;
 }
 
-function useForm<State, Payload>({ formSchema, formAction, initialFormActionState }: {
-  formSchema: ZodSchema,
-  formAction: (
+function useForm<State, Payload>({ schema, action, initialActionState }: {
+  schema: ZodSchema,
+  action: (
     formState: Awaited<State>,
     payload: Payload
   ) => Promise<any>,
-  initialFormActionState: Awaited<State>
+  initialActionState: Awaited<State>
 }): UseFormHook<State, Payload> {
-  const [actionState, handleAction, isPending] = useActionState(formAction, initialFormActionState);
+  const [actionState, handleAction, isPending] = useActionState(action, initialActionState);
   const [errors, setErrors] = useState({});
+  const [validationErrors, setValidationErrors] = useState({});
 
   function handleSubmit(event: SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setErrors({});  // reset errors
-    const validationErrors = {};
+    setErrors({});            // reset errors
+    setValidationErrors({});  // reset validation errors
     const formData = new FormData(event.currentTarget);
-    const validation = formSchema.safeParse({
-      email: formData.get('email')
-    });
 
-    if (validation.success ) {
+    const _zodFormData: Record<string, string> = {};
+    for (const [name, value] of formData) {
+      if (name.startsWith('$ACTION')) continue;
+      _zodFormData[name] = value as string;
+    }
+
+    const _validationErrors: Record<string, { message: string }> = {};
+    const validation = schema.safeParse(_zodFormData);
+
+    if (validation.success) {
       handleAction(formData as Payload);
     } else {
       for (const issue of validation.error.issues) {
         const { path, message } = issue;
-        validationErrors[path[0]] = { message };
+        if (path && path[0]) {
+          _validationErrors[path[0]] = { message };
+        }
       }
 
-      console.info({ validationErrors });
-      setErrors(validationErrors);
+      setValidationErrors(_validationErrors);
     }
   }
 
-  console.info('server', actionState);
+  useEffect(() => {
+    if (actionState && actionState.errors && actionState.errors.validation) {
+      setValidationErrors(actionState.errors.validation);
+    }
+  }, [actionState, setValidationErrors]);
+
+  console.info('server: actionState', actionState);
 
   return {
     handleAction, handleSubmit,
     isPending, actionState,
-    errors, setErrors
+    errors, setErrors,
+    validationErrors, setValidationErrors
   };
 }
 

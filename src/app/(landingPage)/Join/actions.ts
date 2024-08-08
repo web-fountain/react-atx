@@ -25,7 +25,10 @@ const sql = postgres(connectionString, {
 
 type Result = {
   success: boolean;
-  errors?: null | Record<string, { message: string }>;
+  errors?: {
+    server?: { message: string };
+    validation?: Record<string, { message: string }>;
+  };
   data?: unknown;
 };
 
@@ -35,7 +38,6 @@ type Row = {
   token: string;
   expiresAt: string;
 };
-
 
 const getJoinEmail = cache(async (email: string): Promise<Row | any> => {
   try {
@@ -60,25 +62,28 @@ async function joinEmail(prevState: Result, formData: FormData): Promise<Result>
   console.group('ServerAction -- joinEmail');
   const email = formData.get('email') as string;
 
-  const validationErrors = {};
+  const validationErrors: Record<string, { message: string }> = {};
   const validation = joinFormSchema.safeParse({ email });
 
   if (!validation.success) {
     for (const issue of validation.error.issues) {
       const { path, message } = issue;
-      validationErrors[path[0]] = { message };
+      if (path && path[0]) {
+        validationErrors[path[0]] = { message };
+      }
     }
 
     console.warn({ validationErrors });
     return {
       success: false,
-      errors: validationErrors
+      errors: { validation: validationErrors }
     };
   }
 
   const { isNewMember, isVerified, token, error } = await getJoinEmail(email);
 
   if (error) {
+  // if (true) {
     return {
       success: false,
       errors: { server: { message: 'Server error' } }

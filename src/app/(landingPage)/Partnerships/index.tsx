@@ -56,8 +56,8 @@ function Partnerships() {
   return (
     <section id="partnership" className={styles['layout']}>
       <div>
-        <h2>Partnership</h2>
-        <h3>Interested in sponsoring?</h3>
+        <h1>Partnership</h1>
+        <h2>Interested in sponsoring?</h2>
 
         <form className={styles['form']} onSubmit={handleSubmit}>
           <ul className={styles['text-input-list']}>
