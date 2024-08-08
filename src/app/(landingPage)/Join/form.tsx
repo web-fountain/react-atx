@@ -102,11 +102,11 @@ function JoinForm() {
         ${actionState.success ? styles['success'] : ''}
       `}
     >
-      <h1>Join the<br />Community</h1>
 
       {actionState.success
         ? <AlmostDone email={actionState.data?.email} />
         : <>
+            <h1>Join the<br />Community</h1>
             <p>Subscribe to our newsletter and get notified of upcoming events</p>
             <form
               id="JoinForm"
